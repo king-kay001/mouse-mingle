@@ -1,0 +1,20 @@
+/* ---- Vertical menu styles ---- */
+
+.#{$ow-prefix}vertical_nav.#{$ow-prefix}vertical_menu,
+body .#{$ow-prefix}vertical_nav_item {
+    border-color: #eff2f5;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+.#{$ow-prefix}vertical_nav_item.selected {
+    background-color: #fff;
+}
+
+.#{$ow-prefix}moderation_wrap .#{$ow-prefix}moderation_sticked {
+    top: 70px;
+}
+
+
+/* ---- End of the Vertical menu styles ---- */

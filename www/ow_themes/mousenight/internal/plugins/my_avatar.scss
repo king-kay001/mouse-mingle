@@ -1,0 +1,70 @@
+/* ---- my avatar widget styles ---- */
+
+.#{$ow-prefix}box_wrap .#{$ow-prefix}jnmod_my_avatar_widget {}
+
+.#{$ow-prefix}jnmod_my_avatar_cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    margin-top: calc(-1 * var(--padd--md));
+    margin-left: calc(-1 * var(--padd--md));
+    margin-right: calc(-1 * var(--padd--md));
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.#{$ow-prefix}jnmod_my_avatar_widget {
+    .#{$ow-prefix}box_cap_body h3 {
+        margin-left: calc(-1 * (var(--padd--md)));
+        margin-right: calc(-1 * (var(--padd--md)));
+        padding: var(--padd--md);
+        font-size: 80%;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-top: 2px solid var(--divider--light);
+        border-bottom: 2px solid var(--divider--light);
+    }
+    @include do-list('ul', 'li', 'a', true);
+    li a span::before {
+        color: var(--color--text);
+    }
+}
+
+.#{$ow-prefix}jnmod_my_avatar {
+    position: relative;
+}
+
+.#{$ow-prefix}my_avatar_img {
+    position: relative;
+    z-index: 1;
+    .#{$ow-prefix}avatar {
+        width: var(--avatar-xlarge);
+        height: var(--avatar-xlarge);
+        img {
+            border: 5px solid var(--color--app);
+        }
+    }
+}
+
+.#{$ow-prefix}my_avatar_username {
+    display: inline-block;
+    color: var(--color--heading);
+    font-size: 120%;
+    margin-bottom: 10px;
+}
+
+.#{$ow-prefix}my_avatar_cont {}
+
+.#{$ow-prefix}my_avatar_cont span {
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+
+/* ---- end of my avatar widget styles ---- */

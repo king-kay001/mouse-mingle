@@ -1,0 +1,99 @@
+/* ---- Context Action styles ---- */
+
+.#{$ow-prefix}context_action_block {
+    display: inline-block;
+    text-align: left;
+}
+
+.ow_profile_action_toolbar,
+.ow_profile_action_toolbar_wrap
+{
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+
+.#{$ow-prefix}bl a,
+.#{$ow-prefix}context_action_value_block .#{$ow-prefix}context_action,
+.#{$ow-prefix}context_action {
+    padding: 6px 12px;
+    font-size: 14px;
+    white-space: nowrap;
+    
+}
+
+.#{$ow-prefix}bl a,
+.#{$ow-prefix}profile_toolbar_group .#{$ow-prefix}context_action {
+    margin-bottom: 0;
+
+}
+
+.ow_context_action_value_block{
+
+    .#{$ow-prefix}context_action {
+    
+        .#{$ow-prefix}context_more {
+            // 
+        }
+    }
+}
+
+.#{$ow-prefix}context_action_value,
+.#{$ow-prefix}context_action_value:hover {
+    // 
+}
+
+
+
+body .#{$ow-prefix}context_action_value_block .#{$ow-prefix}context_action .#{$ow-prefix}context_more,
+body .#{$ow-prefix}context_action_value_block .#{$ow-prefix}context_action:hover .#{$ow-prefix}context_more {
+    background-position: right 8px;
+}
+
+
+.#{$ow-prefix}context_action_list a {
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    color: #828894;
+}
+
+.#{$ow-prefix}context_action_list a:hover {
+    text-decoration: none;
+    background: #{$bg-alt-color};
+    color: #{$text-black};
+}
+
+.#{$ow-prefix}context_action .#{$ow-prefix}tooltip {
+    display: none;
+}
+
+.#{$ow-prefix}context_action_divider {
+    line-height: 1px;
+    height: 1px;
+    background: #eff2f5;
+    border-bottom: 1px solid #fff;
+    margin: 1px 0px 0px;
+}
+
+
+/* Context Action on Profile View */
+
+.#{$ow-prefix}profile_toolbar_group .#{$ow-prefix}context_action {
+    margin-bottom: 4px;
+    display: flex;
+    background-color: #fff;
+    color: #B3B3B3;
+    border-radius: 10px;
+    align-items: center;
+
+    a.ow_context_action_value{
+        color: #B3B3B3;
+        line-height: normal;
+        padding: 0;
+    }
+}
+
+
+/* ---- End of Context Action styles ---- */
+

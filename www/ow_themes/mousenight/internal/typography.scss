@@ -1,0 +1,34 @@
+/* Fonts Styles */
+
+html,
+body {
+    --font-iconfont: "IcoFont";
+    --font-fontawesome: "Font Awesome 5 Free";
+    --font-source-sans-pro: "Source Sans Pro", HelveticaNeue, Helvetica, Arial, Sans;
+    --font-roboto: "Inter", sans-serif;
+}
+
+[class*=" icofont-"],
+[class^=icofont-] {
+    line-height: unset;
+}
+
+
+/* Font Icons */
+
+.#{$ow-prefix}nav_close_btn::before,
+.#{$ow-prefix}console_btn::before,
+.#{$ow-prefix}console_console_close_btn::before,
+.#{$ow-prefix}attachments a:not(.#{$ow-prefix}btn_add_giphy)::before,
+.#{$ow-prefix}context_more,
+.#{$ow-prefix}card_cover_img:not(img),
+html body div *[class^="#{$ow-prefix}ic_"]:before,
+html body div *[class*="#{$ow-prefix}ic_"]:before,
+html body span[class*="#{$ow-prefix}ic_"]:before,
+.#{$ow-prefix}console_item:not(.#{$ow-prefix}user_profile_console) a.#{$ow-prefix}console_item_link::before,
+.#{$ow-prefix}more_menu_dropdown:before,
+.#{$ow-prefix}menu_icon_block .#{$ow-prefix}main_menu_item::before {
+    @include icofont();
+}
+
+@import 'fonts/ic.scss';

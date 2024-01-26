@@ -1,0 +1,476 @@
+/* ---- Form Elements styles ---- */
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=email],
+input[type=date],
+input[type=tel],
+select,
+textarea,
+div.jhtmlarea,
+.#{$ow-prefix}photo_upload_description,
+.#{$ow-prefix}photo_preview_edit .CodeMirror {
+    display: inline-block;
+    width: 100%;
+    font-family: var(--ps-primary-font);
+    background-color: $input-bg;
+    padding: $input-padding-y $input-padding-x;
+    color: $input-color;
+    background-clip: padding-box;
+    border: $input-border-width solid $input-border-color;
+    box-sizing: border-box;
+    &:not(.comments_fake_autoclick) {
+        font-size: 100%;
+        font-weight: $input-font-weight;
+        line-height: 40px; //$input-line-height;
+    }
+    // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+    @include border-radius($input-border-radius, 0);
+    @include box-shadow($input-box-shadow);
+    @include transition($input-transition);
+    @include browser-compatible(box-sizing, border-box);
+}
+
+.loveoncg_nuesignup{
+    input[type="text"]{
+        line-height: 16px;
+    }
+}
+
+input {
+    &[type="date"] {
+        appearance: none; // Fix appearance for date inputs in Safari
+    }
+    &[type="file"] {
+        overflow: hidden; // prevent pseudo element button overlap
+        &:not(:disabled):not([readonly]) {
+            cursor: pointer;
+        }
+    }
+    // Customize the `:focus` state to imitate native WebKit styles.
+    &:focus {
+        color: $input-focus-color;
+        background-color: $input-focus-bg;
+        border-color: $input-focus-border-color;
+        outline: 0;
+        @if $enable-shadows {
+            @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+        }
+        @else {
+            // Avoid using mixin so we can pass custom focus shadow properly
+            box-shadow: $input-focus-box-shadow;
+        }
+    }
+    // Add some height to date inputs on iOS
+    // https://github.com/twbs/bootstrap/issues/23307
+    // TODO: we can remove this workaround once https://bugs.webkit.org/show_bug.cgi?id=198959 is resolved
+    &::-webkit-date-and-time-value {
+        // Multiply line-height by 1em if it has no unit
+        height: if(unit($input-line-height)=="", $input-line-height * 1em, $input-line-height);
+    }
+    // Placeholder
+    &::placeholder {
+        color: $input-placeholder-color;
+        // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+        opacity: 1;
+    }
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &:disabled,
+    &[readonly] {
+        background-color: $input-disabled-bg;
+        border-color: $input-disabled-border-color;
+        // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+        opacity: 1;
+    }
+    // File input buttons theming
+    &::file-selector-button {
+        padding: $input-padding-y $input-padding-x;
+        margin: (-$input-padding-y) (-$input-padding-x);
+        margin-inline-end: $input-padding-x;
+        color: $form-file-button-color;
+        @include gradient-bg($form-file-button-bg);
+        pointer-events: none;
+        border-color: inherit;
+        border-style: solid;
+        border-width: 0;
+        border-inline-end-width: $input-border-width;
+        border-radius: 0; // stylelint-disable-line property-disallowed-list
+        @include transition($btn-transition);
+    }
+    &:hover:not(:disabled):not([readonly])::file-selector-button {
+        background-color: $form-file-button-hover-bg;
+    }
+    &::-webkit-file-upload-button {
+        padding: $input-padding-y $input-padding-x;
+        margin: (-$input-padding-y) (-$input-padding-x);
+        margin-inline-end: $input-padding-x;
+        color: $form-file-button-color;
+        @include gradient-bg($form-file-button-bg);
+        pointer-events: none;
+        border-color: inherit;
+        border-style: solid;
+        border-width: 0;
+        border-inline-end-width: $input-border-width;
+        border-radius: 0; // stylelint-disable-line property-disallowed-list
+        @include transition($btn-transition);
+    }
+    &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+        background-color: $form-file-button-hover-bg;
+    }
+}
+
+body form div.jhtmlarea {
+    background: #fff;
+    width: 100% !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body .toolbar {
+    padding: 2px 2px 0px;
+    height: 22px;
+    background: #fff;
+    border: none;
+}
+
+body .toolbar ul li {
+    margin: 0px;
+}
+
+body .toolbar ul li a {
+    background-image: url(#{$image-path}wysiwyg.png);
+    border: none;
+    width: 20px;
+    height: 20px;
+}
+
+body .toolbar ul li a:hover {
+    border: none;
+}
+
+body .jhtmlarea .toolbar ul {
+    height: 24px;
+}
+
+.jhtmlarea .input_ws_cont {
+    padding: 8px;
+}
+
+body.htmlarea_styles {
+    margin: 0px;
+}
+
+select {
+    background-image: none;
+    width: auto;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type=checkbox]~label,
+input[type=radio]~label {
+    vertical-align: top;
+}
+
+textarea.invitation,
+input[type=text].invitation,
+input[type=password].invitation {
+    color: #999;
+}
+
+input[type=text].#{$ow-prefix}inputready,
+textarea.#{$ow-prefix}inputready {
+    color: #999999;
+}
+
+input[type=submit].submit {
+    background-color: #00aa00;
+    color: #fff;
+}
+
+input[type=submit].alert {
+    background-color: #ff6666;
+    color: #fff;
+}
+
+ul.#{$ow-prefix}radio_group li {
+    float: left;
+}
+
+ul.#{$ow-prefix}checkbox_group li {
+    float: left;
+}
+
+.form_auto_click textarea.invitation {
+    height: 50px;
+}
+
+form .error {
+    color: red;
+}
+
+form input[type=text].hasDatepicker {
+    width: 87%;
+}
+
+.#{$ow-prefix}multiselect select {
+    width: 120px;
+    padding: 2px;
+}
+
+.#{$ow-prefix}multiselect input[type=button] {
+    padding-left: 20px;
+}
+
+.form_auto_click .#{$ow-prefix}submit_auto_click {
+    display: none;
+}
+
+
+/* ---- Positive and Negative buttons ---- */
+
+html body div .#{$ow-prefix}positive {
+    input[type=submit],
+    input[type=button] {
+        &:not(.btn-primary) {
+            color: var(--color--primary);
+        }
+    }
+}
+
+.#{$ow-prefix}negative input[type=submit],
+.#{$ow-prefix}negative input[type=button] {
+    background: none;
+    padding-right: 2px;
+}
+
+body:not(:-moz-handler-blocked) .#{$ow-prefix}negative input[type=submit],
+body:not(:-moz-handler-blocked) .#{$ow-prefix}negative input[type=button] {
+    padding-right: 2px;
+}
+
+
+/* ---- End of Positive and Negative buttons ---- */
+
+
+/* Color buttons */
+
+html body div .#{$ow-prefix}green,
+span.#{$ow-prefix}blitem.#{$ow-prefix}green input[type=submit],
+span.#{$ow-prefix}blitem.#{$ow-prefix}green input[type=button],
+.#{$ow-prefix}bl a.#{$ow-prefix}green:hover {
+    color: #3ac565;
+}
+
+html body div .#{$ow-prefix}red,
+span.#{$ow-prefix}blitem.#{$ow-prefix}red input[type=submit],
+span.#{$ow-prefix}blitem.#{$ow-prefix}red input[type=button],
+.#{$ow-prefix}bl a.#{$ow-prefix}red:hover {
+    color: #f55e55;
+}
+
+html body div .#{$ow-prefix}mild_red,
+span.#{$ow-prefix}blitem.#{$ow-prefix}mild_red input[type=submit],
+span.#{$ow-prefix}blitem.#{$ow-prefix}mild_red input[type=button],
+.#{$ow-prefix}bl a.#{$ow-prefix}mild_red:hover {
+    color: #f2c014;
+}
+
+html body div .#{$ow-prefix}mild_green,
+span.#{$ow-prefix}blitem.#{$ow-prefix}mild_green input[type=submit],
+span.#{$ow-prefix}blitem.#{$ow-prefix}mild_green input[type=button],
+.#{$ow-prefix}bl a.#{$ow-prefix}mild_green:hover {
+    color: #14c1df;
+}
+
+html body .#{$ow-prefix}button.#{$ow-prefix}red,
+html body .#{$ow-prefix}button.#{$ow-prefix}mild_red,
+html body .#{$ow-prefix}button.#{$ow-prefix}green,
+html body .#{$ow-prefix}button.#{$ow-prefix}mild_green,
+.#{$ow-prefix}button .#{$ow-prefix}mild_red,
+.#{$ow-prefix}button .#{$ow-prefix}red,
+.#{$ow-prefix}button .#{$ow-prefix}green,
+.#{$ow-prefix}button .#{$ow-prefix}mild_green {
+    background-color: transparent;
+    border-color: transparent;
+    color: #5b646a;
+}
+
+input[type=submit].#{$ow-prefix}green,
+input[type=button].#{$ow-prefix}green,
+input[type=submit].#{$ow-prefix}mild_green,
+input[type=button].#{$ow-prefix}mild_green,
+input[type=submit].#{$ow-prefix}red,
+input[type=button].#{$ow-prefix}red,
+input[type=submit].#{$ow-prefix}mild_red,
+input[type=button].#{$ow-prefix}mild_red {
+    background-color: transparent;
+}
+
+
+/* wysiwyg styles */
+
+body.htmlarea_styles {
+    font-family: "Lucida Grande", "Verdana", "Tahoma";
+    /** key:commonFontFamily  **/
+    color: #828894;
+    font-size: 13px;
+    /** key:commonFontSize **/
+    line-height: 18px;
+}
+
+body.htmlarea_styles a {}
+
+body.htmlarea_styles p {
+    margin: 0;
+}
+
+
+/* tag styles */
+
+div.tagsinput {
+    background-color: #fff;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-color: #ccd6de;
+    font-size: 80%;
+}
+
+div.tagsinput span.tag {
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    background: #fff;
+    border-color: #eff2f5;
+}
+
+div.tagsinput span.tag a {
+    border-color: #eff2f5;
+    font-size: 0;
+}
+
+div.tagsinput span.tag span {
+    font-size: 13px;
+}
+
+div.tagsinput input {
+    color: #828894;
+}
+
+
+/* lbutton */
+
+a.#{$ow-prefix}lbutton,
+span.#{$ow-prefix}lbutton {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid transparent;
+    padding: 1px 3px;
+    line-height: 13px;
+    text-transform: uppercase;
+    text-shadow: none;
+    display: inline-block;
+    vertical-align: text-bottom;
+    color: #5b646a;
+}
+
+html body a.#{$ow-prefix}lbutton,
+html body span.#{$ow-prefix}lbutton {
+    font-size: 11px;
+}
+
+.#{$ow-prefix}lbutton:hover {
+    border-color: #eff2f5;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* ---- End of Form Elements styles ---- */
+
+
+/* ---- Suggest field styles ---- */
+
+.ac_results {
+    padding: 0px;
+    border: 1px solid #BBB;
+    background-color: #FFF;
+    overflow: hidden;
+    z-index: 105;
+    position: absolute;
+    display: none;
+    width: 100%;
+    top: -1px;
+}
+
+.ac_results ul {
+    list-style-position: outside;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ac_results iframe {
+    display: none;
+    /*sorry for IE5*/
+    display/**/
+    : block;
+    /*sorry for IE5*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: mask();
+    width: 3000px;
+    height: 3000px;
+}
+
+.ac_list_container {
+    width: 99.6%;
+    position: relative;
+}
+
+.ac_results li {
+    margin: 0px;
+    padding: 4px 5px;
+    cursor: pointer;
+    display: block;
+    width: 98%;
+    font: menu;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.ac_loading {
+    background: url(#{$image-path}ajax_preloader_button.gif) right center no-repeat;
+}
+
+.ac_over {
+    background-color: #F0F0F0;
+}
+
+.ac_match {}
+
+.#{$ow-prefix}suggest_field {
+    position: relative;
+}
+
+.#{$ow-prefix}suggest_invitation {
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    width: 12px;
+    height: 12px;
+    background: url(#{$image-path}miniic_corner.png) no-repeat center center;
+}
+
+
+/* ---- End of the Suggest field styles ---- */

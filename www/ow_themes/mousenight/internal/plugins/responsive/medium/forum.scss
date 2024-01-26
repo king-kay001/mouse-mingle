@@ -1,0 +1,14 @@
+body .forum_search_form {
+    display: none;
+}
+
+.#{$ow-prefix}forum {
+    word-wrap: break-word;
+}
+
+th,
+td {
+    &.ow_icon {
+        display: none;
+    }
+}

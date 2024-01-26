@@ -1,0 +1,164 @@
+/* ---- Forum styles ---- */
+
+.#{$ow-prefix}forum {
+    text-align: center;
+    width: 100%;
+    .#{$ow-prefix}name {
+        text-align: left;
+        width: percentage(divide(7, 12));
+    }
+    .#{$ow-prefix}topics {
+        width: percentage(divide(1, 12));
+    }
+    .#{$ow-prefix}replies {
+        width: percentage(divide(1, 12));
+    }
+    .#{$ow-prefix}action {
+        white-space: nowrap;
+        width: percentage(divide(3, 12));
+    }
+    .#{$ow-prefix}author {
+        width: percentage(divide(3, 12));
+    }
+    .#{$ow-prefix}posts {
+        text-align: center;
+        width: 1%;
+    }
+    .#{$ow-prefix}views {
+        text-align: center;
+        width: 1%;
+    }
+    .#{$ow-prefix}icon {
+        line-height: 14px;
+        text-align: center;
+        width: 8%;
+        .#{$ow-prefix}lbutton {
+            &:hover {
+                border-color: transparent;
+                cursor: default;
+            }
+        }
+    }
+    th {
+        background: var(--color--app--dark);
+        color: var(--color--app);
+        a {
+            color: var(--color--app);
+        }
+        &:first-child {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        &:last-child {
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+    }
+}
+
+.#{$ow-prefix}forum_topic_posts {
+    .#{$ow-prefix}post_comment {
+        background-repeat: no-repeat;
+        font-style: italic;
+        font-size: 11px;
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+    // First post in topic
+    &>.#{$ow-prefix}box_wrap {
+        &.#{$ow-prefix}no_cap {
+            border: none;
+            padding: 0px;
+            .#{$ow-prefix}ipc_info {
+                border-color: #ccd6de;
+            }
+        }
+        .#{$ow-prefix}ipc {
+            border-bottom: none;
+        }
+    }
+    .#{$ow-prefix}ipc {
+        border-bottom: solid 1px var(--divider);
+    }
+}
+
+.#{$ow-prefix}forum_post_area {
+    height: 240px;
+}
+
+.#{$ow-prefix}forum_status {
+    font-style: italic;
+}
+
+
+/* ---- Forum sortable ---- */
+
+.forum_placeholder {
+    border: 1px dashed #999;
+    background-color: #FFF9DB;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+tr.forum_placeholder td {
+    background-color: #FFF9DB;
+    border: 1px dashed #999;
+    height: 45px;
+    width: 100%;
+}
+
+.forum_section {
+    cursor: move;
+}
+
+.forum_section_tr {
+    height: 41px;
+}
+
+body {
+    .#{$ow-prefix}forum_attachment_icon {
+        width: 18px;
+        height: 18px;
+    }
+    .forum_search_wrap {
+        @include font-size($input-font-size);
+        line-height: $input-line-height;
+        font-weight: $input-font-weight;
+        display: block;
+        width: 100%;
+        font-family: var(--ps-primary-font);
+        background-color: $input-bg;
+        padding: $input-padding-y $input-padding-x;
+        color: $input-color;
+        background-clip: padding-box;
+        border: $input-border-width solid $input-border-color;
+        box-sizing: border-box;
+        // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+        @include border-radius($input-border-radius, 0);
+        @include box-shadow($input-box-shadow);
+        @include transition($input-transition);
+        @include browser-compatible(box-sizing, border-box);
+        .forum_search_input {
+            padding: 0;
+            width: auto;
+            input {
+                background-color: transparent;
+                font-size: 100%;
+                line-height: 100%;
+            }
+        }
+        .#{$ow-prefix}forum_search_context_menu {
+            .#{$ow-prefix}context_action {
+                background-color: transparent;
+                .#{$ow-prefix}context_more {
+                    font-size: 20px;
+                    color: var(--color--text);
+                    line-height: 20px
+                }
+            }
+        }
+    }
+}
+
+
+/* ---- End of Forum styles ---- */

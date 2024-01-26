@@ -1,0 +1,20 @@
+@mixin value-list-classes( $property, $classList, $prefix: '.#{$ow-prefix}') {
+    @if $classList {
+        #{$prefix} {
+            @each $class,
+            $value in $classList {
+                &#{$class} {
+                    #{$property}: #{$value};
+                }
+            }
+        }
+    }
+}
+
+@import 'ic.scss';
+@import 'browser.scss';
+@import 'spacing.scss';
+@import 'columns.scss';
+@import 'list.scss';
+@import 'classes.scss';
+@import 'elements.scss';

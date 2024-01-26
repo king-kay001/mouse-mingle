@@ -1,0 +1,6 @@
+@font-face {
+    font-family: IcoFont;
+    font-weight: 400;
+    font-style: Regular;
+    src: url(#{$font-path}icofont.woff2) format("woff2"), url(#{$font-path}icofont.woff) format("woff")
+}

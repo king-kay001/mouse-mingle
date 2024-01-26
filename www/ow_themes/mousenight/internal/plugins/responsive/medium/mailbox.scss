@@ -1,0 +1,32 @@
+/*------------- Messages --------------*/
+
+
+/* Hide Chat Dialog */
+
+// .#{$ow-prefix}chat_cont,
+// .#{$ow-prefix}chat_dialog_wrap,
+.#{$ow-prefix}mailbox_switch_to_chat {
+    display: none !important;
+}
+
+#conversationItemListWrapper::before{
+    display: none !important;
+}
+
+body{
+    .ow_mailbox_table{
+        .ow_mailbox_single_mode{
+            .ow_mailbox_convers_info.chats{
+                // padding: 8px 10px 8px 25px;
+            }
+        }
+        .ow_mailbox_conv_options{
+            // padding-left: 10px;
+        }
+        .ow_mailbox_search{
+            // padding: 16px 0;
+        }
+       
+        
+    }
+}

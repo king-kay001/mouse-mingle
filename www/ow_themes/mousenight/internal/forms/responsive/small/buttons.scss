@@ -1,0 +1,17 @@
+/*Buttons*/
+
+a.#{$ow-prefix}lbutton,
+span.#{$ow-prefix}lbutton {
+    font-weight: normal;
+}
+
+.#{$ow-prefix}attachments a {
+    height: 26px;
+    width: 26px;
+    background-position: -173px 2px;
+}
+
+.#{$ow-prefix}attachment_btn span.#{$ow-prefix}button input[type="submit"],
+.#{$ow-prefix}attachment_btn span.#{$ow-prefix}button input[type="button"] {
+    height: 26px;
+}

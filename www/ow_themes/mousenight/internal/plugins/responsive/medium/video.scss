@@ -1,0 +1,37 @@
+/*Video*/
+
+.#{$ow-prefix}video_list .clearfix.#{$ow-prefix}alt1,
+.#{$ow-prefix}video_list .clearfix.#{$ow-prefix}alt2 {
+    display: block;
+}
+
+.#{$ow-prefix}video_list_item {
+    float: left;
+    width: 100%;
+    margin: 0px;
+    padding: 24px 0 24px 24px;
+    border-bottom: 1px solid #eff2f5;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.#{$ow-prefix}video_list_item:first-child {
+    padding-top: 0;
+}
+
+.#{$ow-prefix}video_list_item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.#{$ow-prefix}video_list_item>a:first-child {
+    float: left;
+    margin-right: 8px;
+}
+
+.#{$ow-prefix}video_list>.#{$ow-prefix}alt1,
+.#{$ow-prefix}video_list>.#{$ow-prefix}alt2 {
+    background-color: #fff;
+    padding-left: 0;
+}

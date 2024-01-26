@@ -1,0 +1,114 @@
+html[dir="rtl"] body {
+    .landing-page{
+        .intro-section {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .title {
+            position: relative;
+            padding-left: 0;
+            padding-right: 100px;
+
+            &::before {
+                left: unset;
+                right: 0;
+            }
+        }
+
+    }
+
+    .general_master_page {
+        .ow_main_navigation .ow_main_menu {
+            gap: 10px;
+            margin-right: unset;
+            margin-left: -25px;
+
+            li a::before {
+                margin-right: 0;
+                margin-left: 4px;
+            }
+        }
+
+        .ow_console_navigation {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+
+        .ow_site_panel .panel_canvas .ow_logo {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+        .ow_console_items_wrap {
+            gap: 10px;
+        }
+    }
+    .menu_bubble {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .ow_mouse_notification_tabs .ow_content_menu li a {
+        span:nth-of-type(1){
+            text-align: right;
+            font-size: 14px;
+        }
+        span:nth-of-type(2){
+            &::before{
+                display: none !important;
+            }
+        }
+    }
+
+    .my_profile_wrap{
+        .profile_section{
+            .left {
+                width: 120%;
+                margin-left: 0;
+                margin-right: -28px;
+            }
+        }
+    }
+
+    .mobile_back_arrow .mobile_back {
+        display: inline-block;
+    }
+
+    // Hotlist
+    .ow_page_hotlist{
+        direction: ltr;
+    
+    }
+
+    .filter-button-wrap{
+        direction: ltr;
+    }
+
+    .mouse_mailbox_wrapper{
+        direction: ltr;
+    }
+
+    .ow_signin_label.landing_sign_in{
+        background-color: #fff !important;
+        color: #{$primary-color} !important;
+        border: 1px solid #{$primary-color} !important;
+        border-radius: 5px;
+        padding: 6px 12px;
+    }
+
+    .ow_site_panel .panel_canvas .ow_logo {
+        margin-right: 0;
+        margin-left: 15px;
+    }
+    .ow_profile_carousel{
+        direction: ltr;
+    }
+    .profile_wrap .profile_section.profile_top_section .avatar {
+        width: 116%;
+        margin-left: -28px;
+        margin-right: -28px;
+    }
+
+    .mobile_back_home{
+        z-index: 99;
+    }
+}

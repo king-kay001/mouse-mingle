@@ -1,0 +1,37 @@
+/* ---- Sort styles ---- */
+
+.#{$ow-prefix}sort_control {
+    padding: 4px 8px 4px 0px;
+}
+
+.#{$ow-prefix}sort_control a {
+    display: inline-block;
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+    padding: 0px 6px 0 7px;
+    outline: 0;
+    text-transform: uppercase;
+    border-right: 1px solid #4c4c4c;
+}
+
+.#{$ow-prefix}sort_control a span {
+    display: inline-block;
+}
+
+.#{$ow-prefix}sort_control a:last-child {
+    border-right-width: 0;
+}
+
+.#{$ow-prefix}sort_control a.active,
+.#{$ow-prefix}sort_control a:hover {
+    color: var(--color--primary);
+    text-decoration: none;
+}
+
+.#{$ow-prefix}sort_control_label {
+    padding: 0px 0px 0px 0px;
+}
+
+
+/* ---- End of Sort styles ---- */

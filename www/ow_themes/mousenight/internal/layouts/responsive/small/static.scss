@@ -1,0 +1,271 @@
+.static_master_page{
+    .ow_static_footer {
+        padding: 15px 0 0;
+        .ow_footer_static_links{
+            font-size: 10px;
+            padding: 10px;
+            margin-top: 40px;
+            .ow_footer_logo{
+                display: none;
+            }
+        }
+        .ow_static_copyright{
+            font-size: 10px;
+        }
+    }
+    .ow_logo_wrap{
+        a{
+            width: 70px;
+            height: 44px;
+            margin-left: -15px;
+        }
+    }
+    .ow_menu_wrap {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: none;
+        .ow_main_menu{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            width: 70%;
+            height: 100%;
+            flex-direction: column;
+            padding-top: 40px;
+        }
+    }
+    .ow_menu_cta{
+        padding-right: 10px;
+        width: 100%;
+        .ow_hamburger{
+            display: block !important;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            &::before{
+                content: '\efa2';
+                @include icofont();
+                font-size: 24px;
+            }
+        }
+    }
+}
+.ow_landing_wrapper {
+    $banner-height: 675px;
+    $banner-radius: 40px;
+    $font-15: 15px;
+    $font-34: 34px;
+    $line-height-24: 24px;
+    $line-height-48: 48px;
+    .ow_banner {
+        height: #{$banner-height};
+        background-size: cover;
+        &::before {
+            width: 178px;
+            height: 300px;
+            top: 454px;
+            right: 109px;
+        }
+        &::after {
+            width: 220px;
+            height: 347px;
+            top: 427px;
+            right: 70px;
+        }
+        .ow_banner_body {
+            height: #{$banner-height};
+            background-size: cover;
+            border-radius: inherit;
+            .ow_banner_content {
+                width: 100%;
+                padding-top: 70px;
+                margin-left: 20px;
+                h2 {
+                    font-size: 32px;
+                    line-height: 38px;
+                }
+                p {
+                    font-size: #{$font-15};
+                    line-height: #{$line-height-24};
+                }
+                .ow_button {
+                    margin-top: 20px;
+                    width: 100%;
+                    max-width: 150px;
+                }
+            }
+        }
+    }
+    .ow_home_wrapper {
+        padding: 0;
+        h2 {
+            font-size: #{$font-34};
+            line-height: #{$line-height-48};
+        }
+        h3{
+            font-size: 30px;
+            line-height: #{$line-height-48};
+
+        }
+        p {
+            font-size: #{$font-15};
+            line-height: #{$line-height-24};
+        }
+        .ow_intro {
+            width: 100%;
+        }
+        .ow_intro,
+        .ow_card_info_wrap{
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        .ow_card_info_wrap {
+            flex-wrap: wrap;
+            row-gap: 20px;
+            .ow_info_card {
+                width: 100%;
+            }
+        }
+        .ow_join_wrapper {
+            padding: 30px 0;
+            text-align: center;
+            .ow_laptop_wrapper {
+                width: 100%;
+                height: 180px;
+                .ow_laptop {
+                    width: 80%;
+                    margin-top: 45px;
+                    background-size: cover;
+                }
+            }
+            .ow_privacy_hint {
+                width: 90%;
+                margin: 0 auto 40px
+            }
+        }
+        .ow_middle_content {
+            padding-top: 100px;
+            flex-wrap: wrap;
+            .ow_bubble_box_right{
+                order:1;
+                margin-bottom: 40px;
+            }
+            .ow_signles_like_you{order:2}
+            .ow_bubble_box_left{order:3}
+            .ow_safer_community{order:4}
+
+            .ow_bubble {
+                width: 320px;
+                height: 320px;
+            }
+            .ow_signles_like_you,
+            .ow_safer_community {
+                width: 100%;
+                a {
+                    margin-top: 40px;
+                }
+            }
+            .ow_safer_community {
+                margin-top: 50px;
+            }
+            .ow_bubble_box_right{
+                width: 100%;
+                &::before {
+                    top: -60px;
+                    left: 26px;
+                    height: 340px;
+                    width: 205px;
+                }
+            }
+            .ow_bubble_box_left{
+                width: 100%;
+                &::after {
+                    top: -60px;
+                    left: 26px;
+                    height: 340px;
+                    width: 205px;
+                }
+            }
+        }
+        .ow_explore_on_cg {
+            $exp_avatar-xs: 50px;
+
+            width: 100%;
+            height: 450px;
+            margin: 50px auto;
+            padding: 20px;
+            box-sizing: border-box;
+            h2{font-size: 30px;}
+            .ow_join_btn {
+                background: #{$body-bg};
+                color: #{$black};
+                margin-top: 50px;
+            }
+
+            // Avatars
+            .ow_exp_avatar{
+                position: absolute;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 50%;
+            }
+            .ow_avatar_sm,
+            .ow_avatar_xs{
+                width: #{$exp_avatar-xs};
+                height: #{$exp_avatar-xs};
+            }
+            .ow_avatar_md,
+            .ow_avatar_lg{
+                display: none;
+            }
+            .ow_avatar_lsecond{
+                top: 160px;
+                left: 10px;
+                background-image: url('images/avatar/ava5.png');
+            }
+            .ow_avatar_rthird{
+                top: 20px;
+                right: 10px;
+                background-image: url('images/avatar/ava1.png');
+            }
+            .ow_avatar_lfourth{
+                bottom: 20px;
+                left: 10px;
+                background-image: url('images/avatar/ava2.png');
+            }
+            .ow_avatar_rfourth{
+                bottom: 140px;
+                right: 10px;
+                background-image: url('images/avatar/ava7.png');
+            }
+                
+                
+                
+
+               
+        }
+        .ow_about_cg {
+            width: 100%;
+            text-align: center;
+            margin: 50px auto;
+        }
+    }
+    .ow_join_btn {
+        background-image: #{$site-color-gradient};
+        display: inline-block;
+        width: 100%;
+        max-width: 200px;
+        padding: 20px;
+        text-align: center;
+    }
+    .ow_middle_content{
+        .ow_join_btn{
+            margin-left: calc(50% - 120px);
+        }
+    }
+}

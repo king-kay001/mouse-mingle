@@ -1,0 +1,71 @@
+@mixin make-checkfield() {
+    input[type="checkbox" i],
+    input[type="radio" i] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        border-radius: 10%;
+        -webkit-transition: all 0.15s ease-out 0;
+        -moz-transition: all 0.15s ease-out 0;
+        transition: all 0.15s ease-out 0;
+        background: var(--color--primary-alpha-hard);
+        border: none;
+        color: rgba(255, 255, 255, 0.97);
+        cursor: pointer;
+        display: inline-block;
+        outline: none;
+        position: relative;
+        margin-right: 1rem;
+    }
+
+    input[type="radio" i] {
+        float: left;
+    }
+
+    input[type="checkbox" i]:hover,
+    input[type="radio" i]:hover {
+        // background: var(--color--primary--shade);
+        background: var(--color--primary);
+    }
+
+    input[type="checkbox" i]:checked,
+    input[type="radio" i]:checked {
+        background: var(--color--primary);
+    }
+
+    input[type="checkbox" i]:checked::before {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        content: '\2716';
+        display: inline-block;
+        font-size: 20.66667px;
+        text-align: center;
+        line-height: 25px;
+    }
+
+    input[type="radio" i]:checked::before {
+        width: 24px;
+        height: 25px;
+        position: absolute;
+        content: '\2022';
+        display: inline-block;
+        font-size: 50.66667px;
+        text-align: center;
+        line-height: 29px;
+    }
+
+    input[type="checkbox" i]:checked::after,
+    input[type="radio" i]:checked::after {
+        background: #b0b3bd;
+        content: '';
+        display: block;
+        position: relative;
+        z-index: 100;
+    }
+}

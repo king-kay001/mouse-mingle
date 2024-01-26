@@ -1,0 +1,63 @@
+/* ----  Message (Feedback) styles ---- */
+
+@mixin notification-variant( $color) {
+   color: $color;
+    
+}
+
+$notification-nodes: ( "info": var(--color--success), "warning": var(--color--warning), "error": var(--color--abort));
+.#{$ow-prefix}message_cont {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    min-width: 356px;
+    
+    // z-index: var(--order--notification);
+    z-index: 999999999999;
+    
+    
+    .#{$ow-prefix}message_node {
+        font-size: 14px;
+        background: #fff;
+        text-align: center;
+        line-height: 24px;
+        margin: 15px;
+        padding: 7px 12px;
+        overflow: auto;
+        position: relative;
+        box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        div {
+            div {
+                padding-right: 24px;
+            }
+        }
+        a {
+            &.close_button {
+                display: block;
+                width: 13px;
+                height: 13px;
+                float: right;
+                position: absolute;
+                top: 13px;
+                right: 14px;
+                background-color: #ccc;
+                background-image: url(#{$image-path}message_btn_close.png);
+                background-repeat:  no-repeat;
+                background-position:  50% 50%;
+                border-radius: 5px;
+                
+            }
+        }
+        @each $node,
+        $color in $notification-nodes {
+            &.#{$node} {
+                @include notification-variant($color)
+            }
+        }
+    }
+}
+
+
+/* ---- End of the Message (Feedback) styles ---- */

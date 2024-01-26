@@ -1,0 +1,303 @@
+.#{$ow-prefix}dragndrop_content>.clearfix,
+#place_sections>div>div.clearfix {
+    width: 100%;
+}
+
+#place_sections .place_section.#{$ow-prefix}left {
+    padding-right: var(--ps-gutter-x);
+    box-sizing: border-box;
+}
+
+
+/* ---- Index customizer */
+
+.#{$ow-prefix}dragndrop_content {
+    float: left;
+    width: 100%;
+}
+
+.index_master_page {
+    .#{$ow-prefix}dragndrop_content {
+        width: 100%;
+    }
+}
+
+
+/* ---- User Dashboard customizer */
+
+.#{$ow-prefix}dragndrop_panel {
+    background: #fff;
+    margin-top: 5px;
+}
+
+.#{$ow-prefix}dashboard_box {
+    background: #FFF;
+    padding: 5px 10px 10px 10px;
+    margin-top: 5px;
+}
+
+.#{$ow-prefix}dnd_schem_item {
+    border: 1px solid #eff2f5;
+    cursor: move;
+    height: 30px;
+    margin: 2px 4px 2px 0;
+    padding: 0 5px;
+    position: relative;
+    font-size: 80%;
+    display: flex;
+    align-items: center;
+    span {
+        &.#{$ow-prefix}label {
+            overflow: hidden;
+            padding: 0px 5px;
+            height: 20px;
+        }
+        &.action {
+            line-height: 15px;
+            overflow: hidden;
+            width: 70px;
+            position: absolute;
+            right: 4px;
+            top: 2px;
+            .#{$ow-prefix}lbutton {
+                vertical-align: top;
+            }
+        }
+    }
+}
+
+.#{$ow-prefix}dnd_helper {
+    border: 1px dashed #000;
+}
+
+.#{$ow-prefix}dnd_freezed .#{$ow-prefix}dnd_schem_item {
+    background-color: #FFAAAA;
+}
+
+.#{$ow-prefix}dragndrop_sections .#{$ow-prefix}highbox {
+    margin-top: 6px;
+}
+
+.#{$ow-prefix}dnd_placeholder {
+    height: 10px;
+    border: 1px dashed #999999;
+    background-color: #fff;
+}
+
+.#{$ow-prefix}dnd_preloader {
+    height: 30px;
+}
+
+.#{$ow-prefix}dnd_configurable_component {
+  
+    .control {
+        display: inline-block;
+        width: 18px;
+        height: 16px;
+        text-decoration: none;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+.ow_dnd_widget_customize{
+    .ow_box_icons {
+  
+        display: flex;
+        align-items: center;
+    }
+}
+
+.#{$ow-prefix}dnd_content_components {
+    padding: 10px 0;
+    width: 74%;
+}
+
+.#{$ow-prefix}dnd_clonable_components {
+    border-left: 1px solid #eff2f5;
+    padding: 10px 0 10px 10px;
+    width: 24%;
+}
+
+
+/* Dnd Slider */
+
+.#{$ow-prefix}dnd_slider {
+    height: 6px;
+    background-color: #fafafa;
+    position: relative;
+    margin: 10px 3px 0;
+    cursor: pointer;
+}
+
+.#{$ow-prefix}dnd_slider_pusher {
+    float: left;
+    height: 1px;
+}
+
+.#{$ow-prefix}dnd_slider_marker {
+    width: 10px;
+    height: 1px;
+    float: left;
+}
+
+.#{$ow-prefix}dnd_slider_marker_point {
+    position: absolute;
+    width: 0px;
+    height: 6px;
+    border-left: 1px solid #999;
+    top: 0;
+}
+
+.#{$ow-prefix}dnd_slider_handle {
+    position: absolute;
+    top: -5px;
+    width: 22px;
+    height: 16px;
+    cursor: move;
+    z-index: 50;
+    background: transparent url(#{$image-path}ic_img/ic_move_horizontal.svg) no-repeat center;
+}
+
+.#{$ow-prefix}dnd_slider_helper {}
+
+.#{$ow-prefix}dnd_slider_in_move {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+body {
+    &.base_index_page_customize {
+        .ow_page{
+            width: 100%;
+        }
+        #place_sections {
+            &>.clearfix {
+                display: flex !important;
+                .#{$ow-prefix}dragndrop_content {
+                    width: 80%;
+                }
+                .#{$ow-prefix}sidebar {
+                    // position: absolute;
+                    // top: 53px;
+                    // right: 0;
+                    // width: 220px;
+                    // box-sizing: border-box;
+                    // background-color: #fff;
+                    padding-left: var(--ps-gutter-x);
+
+                    #loveoncg-groups-list_widget{
+                        .ow_lp_groups {
+                            .ow_lp_wrapper {
+                                width: var(--avatar-medium);
+                                height: var(--avatar-medium);
+                                border-radius: 50%;
+                                border: solid 1px var(--divider--light);
+                            }
+                        }
+                    }
+                    #groups-list_widget{
+                        .ow_lp_groups{
+                            .clearfix{
+                                margin-bottom: 10px;
+                            }
+                            .ow_lp_label{
+                                padding-right: 7px;
+                                margin: 3px 0 0 10px;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .#{$ow-prefix}dragndrop_sections {
+        .top_section,
+        .left_section,
+        .right_section,
+        .bottom_section,
+        .sidebar_section {
+            background-position: center 7px;
+            background-repeat: no-repeat;
+        }
+        .top_section {
+            background-image: url(#{$image-path}dnd-label-top.png)
+        }
+        .left_section {
+            background-image: url(#{$image-path}dnd-label-column1.png)
+        }
+        .right_section {
+            background-image: url(#{$image-path}dnd-label-column2.png)
+        }
+        .bottom_section {
+            background-image: url(#{$image-path}dnd-label-bottom.png)
+        }
+        .sidebar_section {
+            background-image: url(#{$image-path}dnd-label-sidebar.png)
+        }
+        .#{$ow-prefix}highbox {
+            margin-top: 6px;
+            background-color: #fff;
+            // padding: 10px 0 0 5px;
+            &.join_now_widget {
+                padding: 10px;
+            }
+            .#{$ow-prefix}highbox {
+                &.join_now_widget {
+                    background-image: none;
+                    border: none;
+                }
+            }
+        }
+    }
+    .#{$ow-prefix}dragndrop_panel {
+        .#{$ow-prefix}dnd_schem_item {
+            width: 134px;
+        }
+    }
+    &:not(.base_index_page_customize) {
+        .index_customize_box {
+            input {
+                &#goto_customize_btn {}
+                &#goto_customize_btn,
+                &#goto_customize_btn:hover {}
+            }
+        }
+    }
+}
+
+.join_now_widget {
+    text-transform: uppercase;
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.#{$ow-prefix}highbox_table {
+    .#{$ow-prefix}highbox {
+        .#{$ow-prefix}dnd_schem_item {
+            float: none;
+            margin-bottom: 4px;
+            margin-right: 0;
+            width: auto;
+        }
+    }
+}
+
+input[type=text].#{$ow-prefix}settings_input {
+    width: 40px;
+}
+
+
+/* Slideshow widget */
+
+.ow_slider_settings_image_preview,
+.ow_slider_settings_image_desc {
+    width: 100%;
+}
+
+.ow_slider_settings_image_desc {
+    word-break: break-all;
+}

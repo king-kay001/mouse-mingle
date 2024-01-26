@@ -1,0 +1,86 @@
+.jnmod_refine_search{
+    .#{$ow-prefix}jnmod_input {
+        border-bottom: solid 1px var(--divider);
+        padding: var(--padd) 0;
+        &:first-child{
+            padding-top: 0;
+        }
+        .#{$ow-prefix}label{
+            display: block;
+            padding-bottom: var(--padd);
+            font-size: 80%;
+            font-weight: bold;
+        }
+        &.input-birthdate{
+            .birthdate{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                input{
+                    width: 35% !important;
+                }
+                .#{$ow-prefix}agerange_to{
+                    width: 30%;
+                    text-align: center;
+                }
+            }
+        }
+        &.input-googlemap_location{
+            &>.#{$ow-prefix}value{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                &>*{
+                    width: 100%;
+                }
+                &>span{
+                    width: 50px;
+                    &.#{$ow-prefix}googlelocation_search_miles_from{
+                        width: calc(100% - 60px);
+                    }
+                    &,.googlelocation_address_div{
+                        display: block;
+                        margin: var(--padd--xs) 0;
+                    }
+                    &:last-child{
+                        width: 100%;
+                    }
+                }
+                .#{$ow-prefix}googlelocation_search_location {
+                    width: calc(100% - 1px);
+                }
+            }
+        }
+        &.#{$ow-prefix}jnmod_input_colapse{
+            &:not(.active){
+                &>.#{$ow-prefix}value{
+                    height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    padding: 0;
+                }
+                &>.#{$ow-prefix}label{
+                    padding: 0;
+                }
+            }
+            &>.#{$ow-prefix}label{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                label{
+                    display: inline-block;
+                }
+                &::after{
+                    @include icofont(18px);
+                    @include icon-name('down_arrow');
+                }
+            }
+            &>.#{$ow-prefix}value{
+                background-color: var(--color--app--darkgray);
+                padding: var(--padd);
+            }
+        }
+    }
+}

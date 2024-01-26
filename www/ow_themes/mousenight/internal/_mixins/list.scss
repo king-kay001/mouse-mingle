@@ -1,0 +1,122 @@
+@mixin list-wrap($flush: false) {
+    @if $flush {
+        margin-left: calc(-1 * (var(--padd--md)));
+        margin-right: calc(-1 * (var(--padd--md)));
+    }
+}
+
+@mixin list-item($flush, $clear-last: true) {
+    display: block;
+    font-size: 80%;
+    color: var(--color--text);
+    border-bottom: 1px solid var(--divider--light);
+    @if $flush {
+        padding: var(--padd) var(--padd--md);
+    }
+    @else {
+        padding: var(--padd) 0;
+    }
+    box-sizing: border-box;
+    &:hover {
+        background-color: var(--color--app--lightgray);
+    }
+    @if $clear-last {
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+@mixin list-content() {
+    color: var(--text-color);
+    display: block;
+}
+
+@mixin do-list($wrap, $item, $content, $flush: false, $clear-last: true, $extra:()) {
+    // $wrap-extra: map-get($map: $extra, $key: 'wrap');
+    // $item-extra: map-get($map: $extra, $key: 'item');
+    // $content-extra: map-get($map: $extra, $key: 'content');
+    @if $wrap {
+        #{$wrap} {
+            @include list-wrap($flush);
+            // @if $wrap-extra {
+            //     @include quote($wrap-extra);
+            // }
+            #{$item} {
+                @include list-item($flush, $clear-last);
+                // @if $item-extra {
+                //     @include unquote($item-extra);
+                // }
+                @if $content {
+                    #{$content} {
+                        @include list-content();
+                        // @if $content-extra {
+                        //     @include quote($content-extra);
+                        // }
+                    }
+                }
+            }
+        }
+    }
+    @else {
+        @include list-wrap($flush);
+        #{$item} {
+            @include list-item($flush);
+            @if $content {
+                #{$content} {
+                    @include list-content();
+                }
+            }
+        }
+    }
+}
+
+@mixin make-widget-list($list, $wrap, $item, $content: false, $clear-last: true) {
+    .#{$ow-prefix}box_wrap {
+        #{$list} {
+            @include do-list($wrap, $item, $content, true, $clear-last);
+        }
+    }
+    .#{$ow-prefix}box_empty_wrap {
+        #{$list} {
+            @include do-list($wrap, $item, $content, false, $clear-last);
+        }
+    }
+}
+
+$wrapper-image-size: 40px;
+@mixin widget-lp_wrapper($img-cont: false) {
+    margin: 0;
+    width: $wrapper-image-size;
+    height: $wrapper-image-size;
+    padding: var(--padd--xs);
+    box-sizing: border-box;
+    @if $img-cont {
+        #{$img-cont} {
+            display: block;
+            &,
+            img {
+                width: calc(#{$wrapper-image-size} - (2 * var(--padd--xs)));
+                height: calc(#{$wrapper-image-size} - (2 * var(--padd--xs)));
+            }
+        }
+    }
+    @else {
+        img {
+            width: calc(#{$wrapper-image-size} - (2 * var(--padd--xs)));
+            height: calc(#{$wrapper-image-size} - (2 * var(--padd--xs)));
+        }
+    }
+}
+
+@mixin widget-lp_label() {
+    color: var(--color--text);
+    font-size: calc((var(--font-size) * 17)/ 20);
+    height: 20px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: calc(100% - #{$wrapper-image-size});
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}

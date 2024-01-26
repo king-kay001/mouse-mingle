@@ -1,0 +1,42 @@
+.ow_panel_l{
+    margin-left: 20px;
+    box-sizing: border-box !important; 
+
+    .ow_panel_search{
+        width: 542px;
+        margin-right: 20px;
+        input{
+            width: 100%;
+            padding: 0 20px;
+            padding-left: 40px;
+            border-radius: 50px;
+            color: #{$text-light};
+            background-color: #f9f9f9;
+            border: 1px solid var(--divider--light);
+            background-image: url('./images/siteicons/search.svg');
+            background-position: 3%;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+           
+        }
+        .ow_suggest_field{
+            position: relative;
+
+        }
+    }
+    .jhtmlarea{
+        border:none;
+    }
+
+    .ow_new_post_btn{
+        .simpleselect{
+            .options{
+                .active{
+                    background-color: #{$bg-alt-color};
+                }
+            }
+        }
+    }
+ 
+}
+

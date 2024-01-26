@@ -1,0 +1,335 @@
+/* ---- Button List styles ---- */
+
+.#{$ow-prefix}bl {
+    padding: 0;
+}
+
+.#{$ow-prefix}bl li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 4px;
+}
+
+.#{$ow-prefix}bl a {
+    display: flex;
+    justify-content: center;
+    // border-radius: #{$radius};
+    // background-image: #{$action-button-bg-color};
+    // color: #{$action-button-color};
+}
+// .#{$ow-prefix}bl a {
+//     display: flex;
+//     display: block;
+//     z-index: 99;
+//     &::before{
+//         content: '';
+//         height: 30px;
+//         width: 100%;
+//         position: absolute;
+//         top: 0;
+//         border-radius: #{$radius};
+//         z-index: 1;
+//         background: #{$action-button-bg-color};
+//         color: #{$action-button-color};
+//     }
+// }
+
+.#{$ow-prefix}bl a:hover {
+    color: #fff;
+}
+
+.#{$ow-prefix}bl .#{$ow-prefix}context_action_list a:hover {
+    color: #fff;
+}
+
+.#{$ow-prefix}dnd_widget .#{$ow-prefix}box_empty .#{$ow-prefix}bl.#{$ow-prefix}box_toolbar li {
+    margin-bottom: 8px;
+}
+
+
+/* Button list in empty box toolbar 
+.#{$ow-prefix}dnd_widget .#{$ow-prefix}box_empty .#{$ow-prefix}box_toolbar_cont {
+    position: relative;
+    min-height: 44px;
+}
+.#{$ow-prefix}dnd_widget .#{$ow-prefix}box_empty .#{$ow-prefix}box_toolbar {
+    position: absolute;
+    bottom: -2px;
+    right: 0px;
+}
+
+.#{$ow-prefix}dnd_widget .#{$ow-prefix}box_empty .#{$ow-prefix}bl.#{$ow-prefix}box_toolbar li a {
+    border-bottom-width: 2px;
+    height: 27px;
+}
+.#{$ow-prefix}dnd_widget .#{$ow-prefix}box_empty .#{$ow-prefix}bl.#{$ow-prefix}box_toolbar li a:hover {
+    border-color: transparent transparent #2db395 transparent;
+    color: #828894;
+}*/
+
+
+/* Blitem */
+
+span.#{$ow-prefix}blitem {
+    background: none;
+    border: 1px solid transparent;
+    color: #5b646a;
+    padding: 0px 0px;
+    line-height: 22px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 4px 0px 0px;
+    font-size: 13px;
+}
+
+span.#{$ow-prefix}blitem span {
+    display: inline-block;
+}
+
+span.#{$ow-prefix}blitem input[type="submit"],
+span.#{$ow-prefix}blitem input[type="button"] {
+    border: none;
+    padding: 0px;
+    background: none;
+    font-weight: normal;
+    height: auto;
+    padding: 1px 5px 0 6px;
+    text-transform: none;
+    line-height: 18px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #5b646a;
+}
+
+span.#{$ow-prefix}blitem:hover,
+span.#{$ow-prefix}blitem input:hover {
+    border-color: #eff2f5;
+    color: #828894;
+}
+
+
+/* Button List Cover Image */
+
+.#{$ow-prefix}bg_controls span.#{$ow-prefix}blitem {
+    background: url(#{$image-path}btnl_black_bg.png) repeat-x center left;
+    border: none;
+    height: 24px;
+    line-height: 22px;
+}
+
+.#{$ow-prefix}bg_controls span.#{$ow-prefix}blitem:hover {
+    background: url(#{$image-path}btnl_black_hover_bg.png) repeat-x center left;
+}
+
+html body div .#{$ow-prefix}bg_controls .#{$ow-prefix}green {
+    color: #828894;
+}
+
+.#{$ow-prefix}bg_controls span.#{$ow-prefix}blitem input[type="submit"],
+.#{$ow-prefix}bg_controls span.#{$ow-prefix}blitem input[type="button"] {
+    color: #5b646a;
+}
+
+.#{$ow-prefix}bg_controls span.#{$ow-prefix}blitem input[type="submit"]:hover,
+.#{$ow-prefix}bg_controls span.#{$ow-prefix}blitem input[type="button"]:hover {}
+
+
+/* ---- End of Button List styles ---- */
+
+
+/* ---- Button List narrow styles ----- */
+
+.#{$ow-prefix}bl_narrow {
+    padding: 0;
+}
+
+.#{$ow-prefix}bl_narrow li {
+    list-style: none;
+}
+
+.#{$ow-prefix}bl_narrow li a {
+    display: block;
+    font-size: 14px;
+    padding: 5px 7px;
+    text-decoration: none;
+}
+
+.#{$ow-prefix}bl_narrow li a:hover {
+    background-color: #cad4dd;
+    color: #5b646a;
+}
+
+
+/* ---- End of Button List narrow styles ---- */
+.ow_mship_widget_btn{
+    .btn {
+    
+        display: inline-block;
+        margin: 0;
+        padding: var(--padd) var(--padd--md);
+        font-size: #{$font-size};
+        line-height: var(--line-height);
+        color: #{$action-button-color};
+        background: #{$site-color-gradient};
+        border: none;
+        border-radius: #{$radius};
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .btn-primary {
+        --bg:  #{$site-color-gradient};
+        --color: #{$action-button-color};
+        --bg--hover: #{$site-color-gradient};
+        --color--hover: #{$action-button-color};
+    }
+}
+
+
+.btn-sm,
+.#{$ow-prefix}attachment_btn .btn {
+    --font-size: 80%;
+    --line-height: 1.2;
+}
+
+.#{$ow-prefix}attachment_btn .btn {
+    padding: var(--padd--xs) var(--padd--sm);
+}
+
+.btn-xs,
+.btn-sm {
+    font-size: 80%;
+}
+
+.btn-xs {
+    padding: var(--padd);
+}
+
+/* Badge */
+
+.#{$ow-prefix}badge {
+    --badge--bg: var(--color--app--darker);
+    --badge--color: var(--color--text--invert);
+    background-color: var(--badge--bg) !important;
+    color: var(--badge--color) !important;
+    padding: var(--padd--sm);
+    border-radius: var(--border-radius--md);
+    font-size: 58%;
+}
+
+.#{$ow-prefix}badge.#{$ow-prefix}badge_active {
+    --badge--bg: var(--bubble-bg);
+}
+
+.#{$ow-prefix}badge.#{$ow-prefix}badge_primary {
+    --badge--bg: var(--color--primary);
+}
+
+.ow_button{
+    background-color: #{$primary-color};
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #{$action-button-color};
+    .ow_mild_green{
+        color: #{$action-button-color};
+    }
+    input{
+        color: #{$action-button-color};
+        background-color: #{$primary-color};
+        cursor: pointer;
+        &:focus{
+           outline: none;
+           box-shadow: none;
+
+        }
+    }
+}
+
+#matchmakingPreferencesForm{
+    .ow_right{
+        float: none;
+    }
+}
+
+.loveoncg-uh-head-panel-actions{
+    a{
+        .ow_ic_mail{
+            padding: 6px 6px;
+            border-radius: 50%;
+            border: 1px solid #{$border-color};
+            background-color: #{$action-bg-color};
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+            background-image: url('./images/siteicons/message.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 18px;
+            width: 20px;
+            height: 20px;
+            &:before{
+                display: none;
+            }
+        }
+    }
+}
+.loveoncg-uh-uinfo{
+    .ow_profile_gallery_action_toolbar{
+
+       .ow_context_action_block{
+           margin: 0 0 0 20px;
+       }
+    }
+}
+
+.ow_btn_soft {
+    background-color: #{$secondary-color};
+    border-radius: #{$radius-xl};
+    color: #{$primary-color} !important;
+    padding: 6px 12px;
+}
+
+.ow_txt_gradient {
+    background: #{$site-color-gradient};
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.ow_gradient_btn{
+    background-color: #fff;
+    border-radius: #{$radius-xl};
+}
+
+.ow_btn{
+    border-radius: #{$radius-xl};
+    padding: 6px 12px;
+    cursor: pointer;
+    &:disabled,
+    &[disabled]{
+        cursor: unset;
+        opacity: 0.4;
+    }
+
+    &.ow_btn{
+        &_soft{
+            background-color: #{$secondary-color};
+            color: #{$primary-color};
+        }
+        &_primary{
+            background-image: #{$action-button-bg-color};
+            color: #{$action-button-color}; 
+        }
+        &_secondary{
+            border: 1px solid #{$text-light};
+            color: #{$text-light};
+        }
+        &_full{
+            display: block !important;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 12px;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+/* ---- Ulist big Styles ---- */
+
+.#{$ow-prefix}ulist_big {
+    padding-top: 12px;
+    // padding: 12px 30px 0;
+    // margin-left: 30px;
+    // padding: 30px;
+   
+}
+
+.#{$ow-prefix}ulist_big_item {
+    float: left;
+    width: 25%;
+}
+#user-list{
+    // margin: 0 20px;
+}
+
+.#{$ow-prefix}ulist_big_item .#{$ow-prefix}miniic_live {
+    top: 2px;
+    left: 2px;
+    position: absolute;
+}
+
+.#{$ow-prefix}ulist_big_item_cont {
+    height: 260px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    position: relative;
+    width: 180px;
+}
+
+.#{$ow-prefix}ulist_big_avatar {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    position: relative;
+    width: 180px;
+}
+
+.#{$ow-prefix}ulist_big_avatar:hover {
+    box-shadow: 0 0 150px #000 inset;
+}
+
+.#{$ow-prefix}ulist_big_avatar_shadow {
+    display: block;
+    height: 180px;
+}
+
+.#{$ow-prefix}ulist_big_avatar>a.#{$ow-prefix}ulist_big_avatar_bookmark {
+    position: absolute;
+    bottom: 6px;
+    left: 8px;
+    color: #fff;
+    display: none;
+}
+
+.#{$ow-prefix}ulist_big_avatar:hover a.#{$ow-prefix}ulist_big_avatar_bookmark {
+    display: block;
+}
+
+.#{$ow-prefix}ulist_big_info {
+    margin-top: 4px;
+    position: absolute;
+    margin-bottom: 8px;
+}
+
+.#{$ow-prefix}ulist_big_info_name .#{$ow-prefix}small {
+    position: relative;
+}
+
+.#{$ow-prefix}ulist_big_info_name .#{$ow-prefix}small:hover {
+    text-decoration: underline;
+}
+
+.#{$ow-prefix}ulist_big_info_name {
+    float: left;
+    max-width: 160px;
+    max-height: 1.5em;
+    overflow: hidden;
+}
+
+
+/* ---- End of Ulist big Styles Styles ---- */

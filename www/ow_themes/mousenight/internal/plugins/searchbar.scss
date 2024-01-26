@@ -1,0 +1,39 @@
+/*Searchbar*/
+
+.#{$ow-prefix}searchbar {
+    border: 1px solid #eff2f5;
+    padding: 2px 4px 2px 6px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    background: #fff;
+    margin-top: -8px;
+}
+
+.#{$ow-prefix}searchbar .#{$ow-prefix}searchbar_ac {
+    border: 1px solid #eff2f5;
+    left: 9px;
+    right: 0;
+    top: 2px;
+}
+
+.#{$ow-prefix}searchbar_ac li {
+    background-color: #fff;
+    font-size: 13px;
+}
+
+.#{$ow-prefix}searchbar_ac li:hover {
+    background-color: #cad4dd;
+    color: #fff;
+}
+
+.#{$ow-prefix}searchbar .#{$ow-prefix}searchbar_btn {
+    background-position: center;
+}
+
+.#{$ow-prefix}searchbar .#{$ow-prefix}searchbar_input input[type="text"] {
+    border: none;
+    background: none;
+    line-height: 14px;
+    font-size: 12px;
+}

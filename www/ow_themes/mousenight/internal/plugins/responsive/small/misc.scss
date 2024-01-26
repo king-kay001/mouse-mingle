@@ -1,0 +1,92 @@
+.#{$ow-prefix}ipc_header {
+    margin-bottom: 4px;
+}
+
+.#{$ow-prefix}lp_label br {
+    margin: 6px 0;
+}
+
+body .#{$ow-prefix}searchbar input[type="text"] {
+    height: 28px;
+    line-height: 18px;
+}
+
+iframe {
+    width: 100% !important;
+    height: auto;
+}
+
+body .#{$ow-prefix}moderation_wrap {
+    margin-left: 0;
+}
+
+body .#{$ow-prefix}moderation_sticky {
+    width: 100%;
+    margin-left: 0;
+}
+
+body .#{$ow-prefix}forgot_password {
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0 20px;
+}
+
+body .customize_box {
+    display: none;
+}
+
+.#{$ow-prefix}box_menu,
+ul.#{$ow-prefix}bl a {
+    line-height: 25px;
+}
+
+.#{$ow-prefix}box_menu a,
+ul.#{$ow-prefix}bl a {
+    height: auto;
+}
+
+
+
+input[type="text"],
+input[type="password"],
+textarea,
+select,
+div.jhtmlarea,
+.#{$ow-prefix}photo_upload_description,
+.#{$ow-prefix}photo_preview_edit .CodeMirror {
+    font-size: 1.15rem;
+}
+
+.#{$ow-prefix}credits_links a {
+    font-size: 1rem;
+}
+
+
+
+.#{$ow-prefix}attachment_btn span.#{$ow-prefix}button input[type="submit"],
+.#{$ow-prefix}attachment_btn span.#{$ow-prefix}button input[type="button"] {
+    line-height: 21px;
+}
+
+body .#{$ow-prefix}box_toolbar {
+    font-size: 0.95rem;
+}
+
+
+/*Avatar size*/
+
+.#{$ow-prefix}comments_item_header {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+/*Forum*/
+
+.forum_add_post .#{$ow-prefix}left,
+.forum_add_post .#{$ow-prefix}right {
+    width: 100% !important;
+    float: none;
+}

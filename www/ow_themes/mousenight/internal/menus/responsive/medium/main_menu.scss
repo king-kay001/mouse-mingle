@@ -1,0 +1,93 @@
+.#{$ow-prefix}main_menu li span{
+    font-size: 0;
+}
+.general_master_page{
+    .ow_main_navigation{
+        .ow_main_menu{
+            gap: 10px;
+            
+            margin-right: -25px;
+
+            
+        }
+    }
+    .ow_console_navigation{
+        margin-left: 20px;
+        margin-right: -15px;
+    }
+}
+
+.mobile-navigation-wrap{
+    .#{$ow-prefix}main_menu {
+        font-family: var(--ps-primary-font);
+        li {
+            padding: 0;
+            &:first-child {
+                a {
+                    // padding-left: 0px;
+                }
+            }
+            &:last-child{
+                a{
+                    padding-right:0;
+                }
+            }
+            
+            &.usearch_menu_item_search{
+                a {
+                    color: #000;
+                    &::before {
+                        content: "\ed11";
+                        margin-right: 10px;
+                        line-height: 2rem;
+                        @include icofont();
+                    }
+                   
+                }
+            }
+            &.mouse_message{
+                a {
+                    &::before {
+                        content: "";
+                        margin-right: 10px;
+                        line-height: 2rem;
+                        background-image: url(#{$image-path}mouse-icons/Chat-dark.svg);
+                        width: #{$console-icon-wh};
+                        height: #{$console-icon-wh};
+                    }
+                }
+            }
+            &.mouse_notification{
+                a {
+                    &::before {
+                        content: "";
+                        margin-right: 10px;
+                        line-height: 2rem;
+                        background-image: url(#{$image-path}mouse-icons/Notification-on-dark.svg);
+                        width: #{$console-icon-wh};
+                        height: #{$console-icon-wh};
+                    }
+                }
+            }
+            &.base_main_menu_my_profile{
+                a {
+                    &::before {
+                        content: "";
+                        margin-right: 10px;
+                        line-height: 2rem;
+                        background-image: url(#{$image-path}mouse-icons/User-dark.svg);
+                        width: #{$console-icon-wh};
+                        height: #{$console-icon-wh};
+                    }
+                }
+            }
+    
+        }
+    }
+}
+
+.menu_bubble{
+    width: 8px;
+    height: 8px;
+    margin-left: -7px;
+}

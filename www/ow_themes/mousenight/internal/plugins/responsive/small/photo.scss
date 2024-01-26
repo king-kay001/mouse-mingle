@@ -1,0 +1,116 @@
+/*-------------------------Photo-------------------------*/
+
+body {
+    .#{$ow-prefix}photo_list_wrap.#{$ow-prefix}photo_no_sidebar div.#{$ow-prefix}photo_item_wrap,
+    .#{$ow-prefix}photo_list_wrap.#{$ow-prefix}photo_no_sidebar .#{$ow-prefix}photo_list.#{$ow-prefix}photo_pint_mode .#{$ow-prefix}photo_item_wrap,
+    .#{$ow-prefix}photo_list_wrap.#{$ow-prefix}photo_no_sidebar div.#{$ow-prefix}photo_item_wrap.#{$ow-prefix}photo_album,
+    .#{$ow-prefix}photo_list.#{$ow-prefix}photo_pint_mode .#{$ow-prefix}photo_item_wrap {
+        width: calc(100% / 2);
+        position: static;
+    }
+    .#{$ow-prefix}photo_list_wrap.#{$ow-prefix}photo_no_sidebar .#{$ow-prefix}photo_list.#{$ow-prefix}photo_pint_mode div.#{$ow-prefix}photo_item_wrap {
+        height: 300px;
+        overflow: hidden;
+    }
+    .#{$ow-prefix}photo_list.#{$ow-prefix}photo_pint_mode .#{$ow-prefix}photo_item_wrap .#{$ow-prefix}photo_pint_album img {
+        min-height: 100%;
+    }
+    .#{$ow-prefix}photo_list_wrap div.#{$ow-prefix}photo_item,
+    .#{$ow-prefix}photo_pint_album {
+        height: 100%;
+    }
+    .#{$ow-prefix}photo_list.#{$ow-prefix}photo_pint_mode .#{$ow-prefix}photo_item_wrap .#{$ow-prefix}photo_pint_album {
+        overflow: hidden;
+        text-align: center;
+    }
+    .#{$ow-prefix}photo_list.#{$ow-prefix}photo_pint_mode .#{$ow-prefix}photo_item_wrap .#{$ow-prefix}photo_pint_album img {
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+    }
+    .#{$ow-prefix}photo_item .#{$ow-prefix}photo_item_info_description {
+        display: none !important;
+    }
+    .#{$ow-prefix}photo_list_wrap .#{$ow-prefix}photo_item_wrap .#{$ow-prefix}photo_item_info {
+        display: none !important;
+    }
+    .#{$ow-prefix}photo_preview_x,
+    .#{$ow-prefix}photo_preview_rotate {
+        display: block;
+    }
+    #photo-list-search {
+        float: none;
+    }
+    .#{$ow-prefix}fw_menu .#{$ow-prefix}fw_btns {
+        margin-bottom: 8px;
+    }
+    .#{$ow-prefix}fw_menu {
+        border: none;
+        padding: 0;
+    }
+    .#{$ow-prefix}fw_menu .#{$ow-prefix}searchbar {
+        margin-top: 4px;
+        padding-right: 24px;
+        width: 100%;
+        display: inline-block !important;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    .#{$ow-prefix}fw_menu .#{$ow-prefix}searchbar_input,
+    .#{$ow-prefix}fw_menu .#{$ow-prefix}searchbar_input input {
+        width: 100% !important;
+    }
+    .#{$ow-prefix}fw_menu .#{$ow-prefix}searchbar .#{$ow-prefix}searchbar_btn {
+        margin-right: -24px;
+    }
+    .#{$ow-prefix}photo_upload_bottom>.#{$ow-prefix}left,
+    .#{$ow-prefix}photo_upload_wrap .#{$ow-prefix}suggest_field input {
+        width: 100% !important;
+    }
+    .#{$ow-prefix}photo_upload_wrap .#{$ow-prefix}photo_preview_block_wrap .#{$ow-prefix}photo_preview_edit {
+        width: 48%;
+        margin-left: 1% !important;
+        margin-right: 1% !important;
+        margin-bottom: 10px !important;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    .#{$ow-prefix}photo_preview_action {
+        overflow: hidden;
+    }
+    .CodeMirror-scroll,
+    .CodeMirror-sizer {
+        width: 100%;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+    .CodeMirror-hscrollbar {
+        display: none !important;
+    }
+    .new-album textarea {
+        margin-bottom: 16px;
+    }
+    .#{$ow-prefix}photoview_info_wrap {
+        display: none !important;
+    }
+    .#{$ow-prefix}photoview_stage_wrap {
+        width: 100% !important;
+    }
+    .#{$ow-prefix}photoview_wrap {
+        .#{$ow-prefix}photo_context_action {
+            right: unset;
+            left: 16px;
+            .#{$ow-prefix}tooltip {
+                right: unset;
+                left: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@mixin make-base-grids( $prefix) {
+    /* Grid */
+    .#{$ow-prefix}#{$prefix} {
+        &flex_row {
+            display: flex;
+            flex-wrap: wrap;
+            >* {
+                width: 100%;
+            }
+        }
+        &narrow {
+            width: 40%;
+            overflow: hidden;
+        }
+        &wide {
+            width: 60%;
+            overflow: hidden;
+        }
+        &superwide {
+            width: 80%;
+            overflow: hidden;
+        }
+        &supernarrow {
+            width: 20%;
+            overflow: hidden;
+        }
+        &column {
+            width: 50%;
+            overflow: hidden;
+        }
+    }
+    /* Columns */
+    @for $col from 1 through 12 {
+        .#{$ow-prefix}column_#{$prefix}#{$col} {
+            $width: divide($col, 12);
+            width: if($width==0, 0, percentage($width));
+        }
+    }
+    /* Column Fix */
+    .#{$ow-prefix}column_#{$prefix}equal_fix {
+        padding-bottom: 20001px !important;
+        margin-bottom: -20000px !important;
+    }
+    /* Columns end */
+    /* Item Sets (Avatar list, Groups, Googgle popup)*/
+    @for $set from 1 through 5 {
+        .#{$ow-prefix}item_#{$prefix}set#{$set} {
+            $width: divide(1, $set);
+            width: if($width==0, 0, percentage($width));
+        }
+    }
+}

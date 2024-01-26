@@ -1,0 +1,59 @@
+.ow_group_list{
+    .ow_flex_row{
+        .ow_item_md_set2{
+            width: 48%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            .ow_card_cover{
+                height: 88px;
+            }
+            .ow_card_info{
+                padding: 10px;
+                .ow_gcard_content{
+                    color: #999;
+                }
+                .ow_display_md_flex{
+                    margin-bottom: 20px;
+                    justify-content: center;
+                    .ow_gcard_ucount{
+                        text-align: center;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .ow_card_header{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .ow_gcard_ulist{
+                
+                width: 100%;
+                justify-content: center;
+                margin-right: 0;
+                img{
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                }
+                img:not(img:nth-of-type(1)){
+                    margin-left: -10px;
+                }
+            }
+            
+            .ow_card_toolbar{
+                border: none;
+                background-color: #{$bg-color};
+                border-radius: 25px;
+                li{
+                    a{
+                        font-size: 13px;
+                        font-weight: 500;
+                        background: #{$site-color-gradient};
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

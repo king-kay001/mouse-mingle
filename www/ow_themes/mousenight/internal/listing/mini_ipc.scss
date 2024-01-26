@@ -1,0 +1,21 @@
+/* ---- Mini Item Picture Content ---- */
+
+.#{$ow-prefix}mini_ipc_picture {
+    float: left;
+    margin-right: -56px;
+    width: 56px;
+}
+
+.#{$ow-prefix}mini_ipc_info {
+    margin-left: 56px;
+    padding-top: 0;
+}
+
+.#{$ow-prefix}mini_ipc_info .mipc_url {}
+
+.#{$ow-prefix}mini_ipc_content {
+    margin-top: 5px;
+}
+
+
+/* ---- End of the Mini Item Picture Content ---- */

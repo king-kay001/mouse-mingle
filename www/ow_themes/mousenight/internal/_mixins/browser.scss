@@ -1,0 +1,9 @@
+// add browser compatibility style
+@mixin browser-compatible( $property, $value) {
+    $prefixes-by-browser: ("firefox": moz, "safari": webkit, "ie": ms);
+    @each $browser,
+    $engine in $prefixes-by-browser {
+        -#{$engine}-#{$property}: $value;
+    }
+    #{$property}: $value;
+}

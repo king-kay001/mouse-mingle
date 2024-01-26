@@ -1,0 +1,11 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="coins-01">
+<path id="Vector" d="M20.6667 17.3333C25.4531 17.3333 29.3333 16.1394 29.3333 14.6667C29.3333 13.1939 25.4531 12 20.6667 12C15.8802 12 12 13.1939 12 14.6667C12 16.1394 15.8802 17.3333 20.6667 17.3333Z" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round"/>
+<path id="Vector_2" d="M29.3333 20.6667C29.3333 22.1395 25.4532 23.3333 20.6667 23.3333C15.8801 23.3333 12 22.1395 12 20.6667" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round"/>
+<path id="Vector_3" d="M29.3333 14.6667V26.4C29.3333 28.02 25.4532 29.3333 20.6667 29.3333C15.8801 29.3333 12 28.02 12 26.4V14.6667" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round"/>
+<path id="Vector_4" d="M11.3327 8.00001C16.1192 8.00001 19.9993 6.8061 19.9993 5.33334C19.9993 3.86058 16.1192 2.66667 11.3327 2.66667C6.54621 2.66667 2.66602 3.86058 2.66602 5.33334C2.66602 6.8061 6.54621 8.00001 11.3327 8.00001Z" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round"/>
+<path id="Vector_5" d="M9.33268 14.6667C6.66602 14.6667 3.15923 13.566 2.66602 12M9.33268 21.3333C6.66602 21.3333 3.15923 20.2327 2.66602 18.6667" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round"/>
+<path id="Vector_6" d="M9.33268 28C6.66602 28 3.15923 26.8993 2.66602 25.3333V5.33333" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round"/>
+<path id="Vector_7" d="M20 9.33333V5.33333" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+</svg>

@@ -1,0 +1,167 @@
+// generate border classes
+@mixin make-base-classes( $prefix) {
+    $classPrefix: '.#{$ow-prefix}#{$prefix}';
+    /* Float */
+    @include value-list-classes(float, ('left': left, 'right': right, 'none': none, 'unset': unset), $classPrefix);
+    /* Text align */
+    @include value-list-classes(text-align, ('center': center, 'txtleft': left, 'txtcenter': center, 'txtright': right), $classPrefix);
+    /* Display */
+    @include value-list-classes(display, ('block': block, 'inline': inline, 'inline_block': inline-block, 'flex': flex, 'none': none), '.#{$ow-prefix}display_#{$prefix}');
+    /* Cursor */
+    @include value-list-classes(cursor, ('pointer': pointer, 'default': default), '.#{$ow-prefix}cursor_#{$prefix}');
+    /* Justify content */
+    @include value-list-classes(justify-content, ('between': space-between, 'around': space-around, 'center': center, 'flex_end': flex-end), '.#{$ow-prefix}justify_content_#{$prefix}');
+    /* Misc */
+    .#{$ow-prefix} {
+        &#{$prefix} {
+            // Layout
+            &automargin {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &std_margin {
+                margin-bottom: 25px;
+            }
+            &stdmargin {
+                margin-bottom: 28px;
+            }
+            &smallmargin {
+                margin-bottom: 8px;
+            }
+            &nowrap {
+                white-space: nowrap;
+            }
+            &break_word {
+                word-wrap: break-word;
+            }
+            &normal {
+                font-size: var(--font-size);
+            }
+            &small {
+                font-size: calc((var(--font-size) * 17) / 20);
+                &.#{$ow-prefix}desc{
+                    font-size: 90%;
+                }
+            }
+            &tiny {
+                font-size: calc((var(--font-size) * 13) / 20);
+            }
+            &hidden {
+                display: none;
+            }
+            &visible {
+                display: block;
+            }
+            &overflow_hidden {
+                overflow: hidden;
+            }
+            &nocontent {
+                padding: 20px 0px;
+                text-align: center;
+            }
+            &highlight {
+                background: #aaffaa;
+            }
+            &outline {
+                color: var(--color--primary);
+                //** OW_Control type:color, section:2. Colors, key:txtValue, label:5. Numeric values **/
+                font-family: var(--ps-primary-font);
+            }
+            &lightweight {
+                font-weight: normal;
+            }
+            &txt_value {
+                font-family: var(--ps-primary-font);
+                color: #949a9d;
+                //** OW_Control type:color, section:2. Colors, key:txtValue, label:5. Numeric values **/
+            }
+            &remark {
+                color: #828894;
+            }
+            &high {
+                &1 {
+                    background-color: #fff;
+                }
+                &2 {
+                    background-color: #fff;
+                }
+            }
+            &anno {
+                background: #fff url(#{$image-path}ic_img/ic_warning.svg) no-repeat scroll 15px 45%;
+                border: 1px solid #ccd6de;
+                padding: 10px;
+            }
+            &disabled {
+                background: #fff;
+                opacity: 0.3;
+            }
+            &rounded_circle {
+                border-radius: 100%;
+            }
+            &section {
+                background: #fff;
+                padding: 60px 30px;
+            }
+            &section_padding {
+                padding: 100px 0;
+            }
+            &section_text {
+                margin-bottom: 40px;
+            }
+            &section_header {
+                padding-bottom: 60px;
+                h2 {
+                    font-size: 36px;
+                    padding-bottom: 10px;
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+            }
+            &divider_heading {
+                color: #a1b1bc;
+            }
+            &w100 {
+                width: 100%;
+            }
+            &w50 {
+                width: 50%;
+            }
+        }
+        &align_items_#{$prefix}center {
+            align-items: center;
+        }
+        // Border
+        &border_#{$prefix} {
+            &1 {
+                border-bottom: 2px solid var(--divider);
+                padding-bottom: 30px;
+            }
+            &2 {
+                border-bottom: 2px double var(--divider);
+                padding-bottom: 30px;
+            }
+            &3 {
+                padding-top: 30px;
+                border-bottom: 2px dashed var(--divider);
+            }
+            &4 {
+                padding-top: 30px;
+                border-bottom: 2px dotted var(--divider);
+            }
+            &5 {
+                border-bottom: 2px dotted var(--divider);
+                padding: 2px;
+            }
+            &6 {
+                border-bottom: 2px solid var(--divider);
+                padding-top: 30px;
+            }
+        }
+    }
+    /* Padding */
+    @include create-spacing-list('#{$prefix}p', '', 4, 0.5, padding);
+    /* Margin */
+    @include create-spacing-list('#{$prefix}m', '', 4, 0.5, margin);
+}

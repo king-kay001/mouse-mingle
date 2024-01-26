@@ -1,0 +1,69 @@
+body {
+    .ow_newsfeed {
+        .ow_newsfeed_avatar{
+            margin: 20px 10px 20px 10px;
+            $avatar-size: 40px;
+            .ow_avatar{
+                width: #{$avatar-size} !important;
+                height: #{$avatar-size} !important;
+                img{
+                    width: #{$avatar-size} !important;
+                    height: #{$avatar-size} !important;
+                }
+            }
+        }
+        .ow_newsfeed_item {
+            .ow_newsfeed_content {
+                padding: 10px 10px 0 10px;
+            }
+        }
+    }
+    .ow_newsfeed_body {
+        .ow_newsfeed_context_menu_wrap {
+            .ow_newsfeed_string {
+                padding: 10px 20px 10px 60px;
+                font-size: 10px;
+            }
+        }
+    }
+    #feed1{
+        .ow_newsfeed_btns{
+            padding: 0 10px;
+            .ow_newsfeed_date{
+                left: 60px;
+            }
+        }
+    }
+    $avatar-size: 40px;
+    .ow_comments_item_picture{
+        width: #{$avatar-size};
+        height: #{$avatar-size};
+        .ow_avatar{
+            width: #{$avatar-size};
+            height: #{$avatar-size};
+            padding: 0;
+        }
+    }
+    .ow_comments_item_info{
+        padding-left: 0; 
+    }
+    .ow_comments_form_wrap{
+        .ow_comments_input_wrap{
+            padding-left: 5px !important;
+            .ow_comments_item_picture{
+                margin-right: 20px;
+            }
+        }
+    }
+}
+.ow_newsfeed_photo_grid {
+    row-gap: 10px;
+    .ow_newsfeed_photo_grid_item:nth-of-type(odd) {
+        margin-right: 3%;
+    }
+    .ow_newsfeed_photo_grid_item:last-child {
+        margin-right: 0;
+        margin-top: 0;
+    }
+}
+

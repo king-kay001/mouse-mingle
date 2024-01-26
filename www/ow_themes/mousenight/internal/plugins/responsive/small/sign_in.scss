@@ -1,0 +1,22 @@
+.#{$ow-prefix}sign_in_wrap form .#{$ow-prefix}sign_in {
+    width: 100%;
+    float: none;
+}
+
+.#{$ow-prefix}sign_in_wrap {
+    width: 100%;
+}
+
+.#{$ow-prefix}sign_in_wrap form .#{$ow-prefix}sign_up {
+    margin: 16px 0 0 0;
+    width: 100%;
+    text-align: center;
+}
+
+.#{$ow-prefix}sign_in_wrap form .#{$ow-prefix}sign_up p br {
+    height: 1px;
+}
+
+.floatbox_container .#{$ow-prefix}sign_in_wrap form {
+    padding: 0;
+}

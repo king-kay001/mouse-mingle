@@ -1,0 +1,97 @@
+
+.base_sign_in{
+    .sign_in_master_page{
+        .ow_sign_in_cont {
+            width: 920px;
+            margin: 20px auto;
+            padding-left: 374px;
+            box-sizing: border-box;
+            border-radius: #{$radius-sm};
+            background-image: url('./images/sign_in_img.png');
+            background-repeat: no-repeat;
+            background-position: left;
+
+            
+        
+            .ow_sign_in_wrap{
+                position: relative;
+                top: 0;
+                margin: 0;
+                left: 0;
+                background-color: #{$bg-color};
+                border-radius: #{$radius-sm};
+                padding: 79px 119px;
+                .clearfix{
+                    display: flex;
+                    flex-direction: column-reverse;
+
+                    .ow_sign_up{
+                        p:nth-of-type(odd){
+                            
+                            img{
+                                width: 150px !important;
+                                
+                            }
+                            span{
+                                color: #{$text-light} !important; 
+                                font-size: 14px;
+                            }
+                        }
+                        p{
+                            text-align: center;
+                        }
+                        hr{
+                            display: none;
+                        }
+                    }
+                    .ow_sign_in{
+                        .ow_box_cap{
+                            h3{
+                                padding: 0;
+                            }
+                        }
+                        .ow_box{
+                            padding: 15px 0;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            .ow_form_options{
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                            }
+                        }
+                        input[type="text"],
+                        input[type="password"]{
+                            background-color: var(--alt-bg-color);
+                            border-radius: 8px;
+                            padding: 12px 16px;
+                            line-height: 16px;
+                        }
+                        .ow_box_bottom_left,
+                        .ow_box_bottom_right,
+                        .ow_box_bottom_body{
+                            display: none;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

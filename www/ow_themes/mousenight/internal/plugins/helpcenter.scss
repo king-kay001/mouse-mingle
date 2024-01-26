@@ -1,0 +1,13 @@
+body {
+    .#{$ow-prefix}helpcenter_entry {
+        h2,
+        .#{$ow-prefix}helpcenter_entry_content {
+            font-size: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+        h2 {
+            font-size: 150%;
+        }
+    }
+}

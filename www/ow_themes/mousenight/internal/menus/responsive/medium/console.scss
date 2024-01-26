@@ -1,0 +1,98 @@
+.#{$ow-prefix}console_dropdown_hover:hover .#{$ow-prefix}ConsoleItemContent,
+.#{$ow-prefix}console_dropdown_hover:active .#{$ow-prefix}ConsoleItemContent {
+    display: block !important;
+}
+
+.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link {
+    pointer-events: none;
+}
+
+.ow_console_membership_btn{
+    display: none;
+}
+
+.console_tooltip.ow_tooltip_top_right.ow_tooltip {
+    right: 2px;
+    top: var(--c-gc-header-height) !important;
+    // bottom: 75px !important;
+    // right: 20px;
+}
+
+
+
+.ow_console,
+.ow_console_body{
+    width: 100%;
+}
+.ow_console_items_wrap > *{
+    flex-grow: 1;
+}
+
+.ow_console_mobile_links {display:block;}
+.ow_console_button.ow_console_item a.ow_console_item_link{
+    padding: 0;
+}
+
+.index_master_page{
+    .ow_signin_label,
+    .ow_console_item a.ow_console_item_link
+    {
+        padding: 3px 6px;
+        white-space: nowrap;
+    }
+
+}
+
+.#{$ow-prefix}console_items_wrap{
+    gap: 10px;
+}
+
+.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link{
+    font-size: 0;
+}
+
+.#{$ow-prefix}console_items_wrap .#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before{
+    font-size: 22px;
+}
+
+.mobile-navigation-wrap{
+    .mobile-console-nav{
+        display: none;
+    }
+    .#{$ow-prefix}mailbox_items_list.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+        background-image: url(#{$image-path}mouse-icons/Chat-dark.svg);
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    
+    
+    .#{$ow-prefix}mailbox_items_list.#{$ow-prefix}console_dropdown_pressed.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+        background-image: url(#{$image-path}mouse-icons/Chat-dark.svg);
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    
+    .#{$ow-prefix}notification_list.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+        background-image: url(#{$image-path}mouse-icons/Notification-on-dark.svg);
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    
+    
+    .#{$ow-prefix}notification_list.#{$ow-prefix}console_dropdown_pressed.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+        background-image: url(#{$image-path}mouse-icons/Notification-on-dark.svg);
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        
+    }
+    .#{$ow-prefix}console_dropdown_hover a.#{$ow-prefix}console_item_link::before {
+        display: inline-block;
+        background-image: url(#{$image-path}mouse-icons/User-dark.svg);
+        font-size: 20px;
+        margin-right: 10px;
+    }
+}

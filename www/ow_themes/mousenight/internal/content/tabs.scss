@@ -1,0 +1,15 @@
+body{
+    .#{$ow-prefix}tab_content_wrap {
+        background-color: var(--color--app);
+        border-radius: var(--border-radius--md);
+        @include browser-compatible(box-shadow, var(--box-shadow--hard));
+        margin: 0 var(--padd--md);
+        .#{$ow-prefix}content_menu_wrap {
+            margin: 0;
+        }
+        .#{$ow-prefix}tab_content{
+            background-color: var(--color--app);
+            padding: var(--padd);
+        }
+    }
+}

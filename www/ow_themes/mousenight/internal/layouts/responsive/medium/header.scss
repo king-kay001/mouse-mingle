@@ -1,0 +1,13 @@
+.#{$ow-prefix}site_panel{
+    .panel_canvas{
+        height: 60px;
+        .#{$ow-prefix}logo {
+            background-size: 100% auto; 
+            width: 109px;
+            height: 18px;
+            margin-right: 20px;
+        }
+    }
+}
+
+

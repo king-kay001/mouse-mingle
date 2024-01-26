@@ -1,0 +1,537 @@
+// SIGN IN START
+.base_sign_in{
+    .static_master_page{
+        .ow_page{
+            background-color: #{$bg-alt-color};
+        }
+    }
+}
+    .static_master_page {
+        .ow_sign_in_cont {
+            box-sizing: border-box;
+            width: 920px;
+            margin: 20px auto;
+            padding-left: 374px;
+            box-sizing: border-box;
+            border-radius: #{$radius-sm};
+            background-image: url('./images/sign_in_img.png');
+            background-repeat: no-repeat;
+            background-position: left;
+            .ow_sign_in_wrap {
+                position: relative;
+                top: 0;
+                margin: 0;
+                left: 0;
+                background-color: #{$bg-color};
+                border-radius: #{$radius-sm};
+                padding: 50px 119px;
+                .ow_sign_in_text_invite{
+                    text-align: center;
+                    .ow_sign_in_logo{
+                        width: 200px;
+                        height: 80px;
+                        margin: 0 auto 20px;
+                        background-image: url('./images/logo2.png');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
+                
+                   
+                .ow_sign_in {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        box-sizing: border-box;
+                    
+                    input[type="text"],
+                    input[type="password"] {
+                        background-color: var(--alt-bg-color);
+                        border-radius: 8px;
+                        padding: 12px 16px;
+                        line-height: 16px;
+                    }
+                    .ow_box_bottom_left,
+                    .ow_box_bottom_right,
+                    .ow_box_bottom_body {
+                        display: none;
+                    }
+                    .ow_sign_in_options {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 20px;
+                        .ow_remember_me{
+                            input[type="checkbox"]{
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                    .connect_button_cont{
+                        flex-direction: column;
+                        gap: 15px;
+                        box-sizing: border-box;
+                    }
+                }
+                
+            }
+        }
+    }
+// END SIGN IN
+
+.static_master_page{
+    .ow_page{
+        background-color: #{$body-bg};
+    }
+}
+.ow_landing_wrapper {
+    $banner-height: 647px;
+    $banner-radius: 40px;
+    $font-20: 20px;
+    $font-48: 48px;
+    $line-height-30: 30px;
+    $line-height-60: 60px;
+    .ow_page {
+        background-color: #{$bg-color};
+    }
+    color: #{$text-light};
+    .ow_banner {
+        height: #{$banner-height};
+        background-image: url('./images/banner/banner.png');
+        background-position: center;
+        border-radius: #{$banner-radius};
+        background-repeat: no-repeat;
+        background-size: cover;
+        &::before {
+            content: "";
+            width: 336px;
+            height: 490px;
+            background-image: url('./images/banner/phone-spool.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 213px;
+            right: 131px;
+        }
+        &::after {
+            content: "";
+            width: 375px;
+            height: 596px;
+            background-image: url(./images/banner/phone.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 190px;
+            right: 131px;
+        }
+        .ow_banner_body {
+            height: #{$banner-height};
+            background-image: url(./images/banner/banner-overlay.png);
+            background-repeat: no-repeat;
+            .ow_banner_content {
+                color: #{$bg-color};
+                width: 546px;
+                padding-top: 130px;
+                margin-left: 130px;
+                h2 {
+                    font-size: 64px;
+                    line-height: 74px;
+                    font-weight: 700;
+                    color: #{$bg-color};
+                }
+                p {
+                    font-size: #{$font-20};
+                    line-height: #{$line-height-30};
+                }
+                .ow_btn {
+                    background-image: #{$site-color-gradient};
+                    display: inline-block;
+                    margin-top: 20px;
+                    width: 100%;
+                    max-width: 150px;
+                    padding: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .ow_home_wrapper {
+        padding: 0 30px;
+        h2 {
+            font-size: #{$font-48};
+            line-height: #{$line-height-60};
+            font-weight: 600;
+            color: #{$black};
+        }
+        h3{
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 30px;
+            color: #{$black};
+            margin-top: 30px;
+        }
+        p {
+            font-size: #{$font-20};
+            line-height: #{$line-height-30};
+        }
+        .ow_intro {
+            width: 824px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px 0;
+            
+        }
+        .ow_card_info_wrap {
+            .ow_info_card {
+                width: 248px;
+                background-color: #{$secondary-color};
+                padding: 20px;
+                border-radius: #{$radius-md};
+                line-height: 20px;
+                .ow_icon_wrapper {
+                    width: 90px;
+                    height: 90px;
+                    background-color: #{$bg-color};
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    margin-bottom: 40px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    &.ow_guest_icon_mode{
+                        background-image: url('./images/siteicons/low-key.svg');
+                    }
+                    &.ow_guest_icon_username{
+                        background-image: url('./images/siteicons/user-tick.svg');
+                    }
+                    &.ow_guest_icon_albums{
+                        background-image: url('./images/siteicons/album.svg');
+                    }
+                    &.ow_guest_icon_aloud{
+                        background-image: url('./images/siteicons/megaphone.svg');
+                    }
+                }
+                .ow_card_info_content {
+                    text-align: center;
+                    h4 {
+                        font-weight: 600;
+                        margin-bottom: 15px;
+                    }
+                    p {
+                        font-size: 14px;
+                        letter-spacing: -0.17px;
+                        
+                    }
+                }
+            }
+        }
+        .ow_join_wrapper {
+            padding: 30px 0;
+            text-align: center;
+            .ow_laptop_wrapper {
+                width: 1022px;
+                height: 460px;
+                overflow: hidden;
+                background-color: #{$secondary-color};
+                margin: 40px auto;
+                border-radius: #{$radius-md};
+                display: flex;
+                justify-content: center;
+                .ow_laptop {
+                    width: 800px;
+                    margin-top: 45px;
+                    background-image: url('./images/siteicons/profileview.svg');
+                    background-repeat: no-repeat;
+                }
+            }
+            .ow_privacy_hint {
+                width: 649px;
+                margin: 0 auto 40px
+            }
+        }
+        .ow_middle_content {
+            padding-top: 100px;
+            flex-wrap: wrap;
+            .ow_bubble {
+                width: 486px;
+                height: 486px;
+                border-radius: 50%;
+                background-color: #{$secondary-color};
+                margin: auto;
+            }
+            .ow_signles_like_you,
+            .ow_safer_community {
+                width: 495px;
+                margin: 0 auto;
+                a {
+                    margin-top: 40px;
+                }
+            }
+            .ow_bubble_box_right {
+                position: relative;
+                width: 50%;
+                &::before {
+                    content: "";
+                    background-image: url(./images/siteicons/android2.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: absolute;
+                    top: -60px;
+                    left: 120px;
+                    height: 500px;
+                    width: 305px;
+                }
+            }
+            .ow_safer_community {
+                margin-top: 150px;
+            }
+            .ow_bubble_box_left {
+                position: relative;
+                width: 50%;
+                margin-top: 150px;
+                &::after {
+                    content: "";
+                    background-image: url(./images/siteicons/android3.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: absolute;
+                    top: -60px;
+                    left: 50px;
+                    height: 500px;
+                    width: 305px;
+                }
+                .ow_bubble {
+                    position: relative;
+                    margin: 0;
+                }
+            }
+        }
+        .ow_explore_on_cg {
+            $exp_avatar-xs: 80px;
+            $exp_avatar-sm: 90px;
+            $exp_avatar-md: 100px;
+            $exp_avatar-lg: 120px;
+
+            width: 850px;
+            height: 250px;
+            margin: 50px auto;
+            background-image: #{$site-color-gradient};
+            border-radius: #{$radius};
+            text-align: center;
+            padding: 100px 140px;
+            position: relative;
+            h2,
+            a {
+                color: #{$body-bg};
+            }
+            .ow_join_btn {
+                background: #{$body-bg};
+                margin-top: 50px;
+                span{
+                    background-image: #{$site-color-gradient};
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            // Avatars
+            .ow_exp_avatar{
+                position: absolute;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 50%;
+            }
+            .ow_avatar_xs{
+                width: #{$exp_avatar-xs};
+                height: #{$exp_avatar-xs};
+            }
+            .ow_avatar_sm{
+                width: #{$exp_avatar-sm};
+                height: #{$exp_avatar-sm};
+            }
+            .ow_avatar_md{
+                width: #{$exp_avatar-md};
+                height: #{$exp_avatar-md};
+            }
+            .ow_avatar_lg{
+                width: #{$exp_avatar-lg};
+                height: #{$exp_avatar-lg};
+            }
+            .ow_avatar_lfirst{
+                top: 70px;
+                left: 60px;
+                background-image: url('images/avatar/ava1.png');
+            }
+
+            .ow_avatar_rfirst{
+                top: 70px;
+                right: 30px;
+                background-image: url('images/avatar/ava2.png');
+            }
+            .ow_avatar_lsecond{
+                top: 190px;
+                left: 150px;
+                background-image: url('images/avatar/ava5.png');
+            }
+            .ow_avatar_rsecond{
+                top: 190px;
+                right: 150px;
+                background-image: url('images/avatar/ava3.png');
+            }
+            .ow_avatar_lthird{
+                top: 275px;
+                left: 60px;
+                background-image: url('images/avatar/ava4.png');
+            }
+            .ow_avatar_rthird{
+                top: 275px;
+                right: 60px;
+                background-image: url('images/avatar/ava6.png');
+            }
+
+            .ow_avatar_lfourth{
+                bottom: 20px;
+                left: 200px;
+                background-image: url('images/avatar/ava8.png');
+            }
+            .ow_avatar_rfourth{
+                bottom: 30px;
+                right: 180px;
+                background-image: url('images/avatar/ava7.png');
+            }
+                
+                
+                
+
+               
+        }
+        .ow_about_cg {
+            width: 900px;
+            text-align: center;
+            margin: 50px auto;
+        }
+    }
+    .ow_join_btn {
+        background-image: #{$site-color-gradient};
+        display: inline-block;
+        width: 100%;
+        max-width: 150px;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    a,
+    a:hover,
+    a:visited,
+    a:focus{
+        color: #fff;
+    }
+}
+
+// STATIC MASTER PAGE FOOTER
+.static_master_page {
+    .ow_logo_wrap {
+        margin-top: 5px;
+        a {
+            font-size: 0;
+            display: block;
+            width: 157px;
+            height: 57px;
+            background-size: contain;
+            background-position: center;
+            background-image: #{$app-logo};
+            background-repeat: no-repeat;
+            margin-top: -10px;
+        }
+    }
+    .ow_menu_cta{
+        padding-right: 20px;
+    }
+    .ow_static_footer {
+        padding: 15px 100px 0;
+        .ow_static_socials {
+            width: 220px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            .ow_loveoncg_social_link {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                border: 1px solid #{$border-color};
+                background-position: center;
+                background-repeat: no-repeat;
+                font-size: 0;
+                &.facebook {
+                    background-image: url('./images/siteicons/fb.svg');
+                }
+                &.instagram {
+                    background-image: url('./images/siteicons/ig.svg');
+                }
+                &.twitter {
+                    background-image: url('./images/siteicons/tw.svg');
+                }
+                &.linkedin {
+                    background-image: url('./images/siteicons/in.svg');
+                }
+            }
+        }
+        .ow_footer_static_links {
+            margin-top: 80px;
+            height: 70px;
+            border-top: 1px solid #{$border-color};
+            border-bottom: 1px solid #{$border-color};
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+            line-height: 24px;
+            .ow_footer_logo {
+                width: 157px;
+                height: 57px;
+                margin-top: 5px;
+                background-image: #{$app-logo};
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .ow_static_links {
+                a {
+                    padding: 0 10px;
+                }
+                .ow_footer_menu {
+                    padding-left: 0;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    font-size: 10px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .ow_static_copyright {
+            text-align: center;
+            line-height: 24px;
+            color: #{$text-lighter};
+            padding: 15px 0;
+        }
+    }
+
+}
+.ow_password{
+    position:relative;
+    .toggle_pass_icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30px;
+        height: 100%;
+        background-image: url(./images/siteicons/eye-closed.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        &.visible{
+            background-image: url(./images/siteicons/eye-opened.svg);
+        }
+    }
+}
+
+
+

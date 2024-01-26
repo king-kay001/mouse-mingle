@@ -1,0 +1,99 @@
+.jnmod_reaction_control {
+    position: relative;
+}
+
+.#{$ow-prefix}newsfeed_control,
+.jnmod_reaction_control {
+    display: inline-block;
+    width: 100%;
+}
+
+.jnmod_reaction_control_panel {
+    &,
+    .jnmod_reaction_js_toggle,
+    .jnmod_reaction_data {
+        display: flex;
+        align-items: center;
+    }
+    .jnmod_reaction_emoji,
+    .jnmod_reaction_js_toggle span::before {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+    }
+    .jnmod_reaction_js_toggle {
+        display: inline-block;
+        text-transform: capitalize;
+        span {
+            &::before {
+                background: url(#{$image-path}reactions/thumbs-up.svg) no-repeat center center;
+                content: "";
+                margin-right: 5px;
+            }
+        }
+    }
+    .jnmod_reaction_info {
+        margin-left: 2px;
+        .jnmod_reaction_data {
+            font-size: 80%;
+            background-color: var(--bg);
+            border: 1px solid var(--divider--light);
+            border-radius: var(--border-radius--md);
+            position: relative;
+            padding: 0px 4px 0px 14px;
+            color: var(--text-color);
+            .jnmod_reaction_users_emoji_list {
+                margin-right: 2px;
+                .jnmod_reaction_emoji {
+                    margin-left: -12px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+.jnmod_reaction_list {
+    position: absolute;
+    --icon-size: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    left: 0;
+    top: calc(-90% - 10px);
+    z-index: 30;
+    background-color: var(--ps-color--app);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
+    border-radius: var(--border-radius--md);
+    max-width: 100%;
+    &:not(.active) {
+        display: none;
+    }
+    .jnmod_reaction_list_item {
+        display: inline-block;
+        padding: var(--padd--sm);
+        a {
+            display: block;
+            min-height: var(--icon-size);
+            transition: all .2s ease;
+            padding-left: var(--icon-size);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            cursor: pointer;
+        }
+    }
+}
+
+// emoji image list
+$emoji-image-list: ( 'love': 'love.svg', 'angry': 'angry.svg', 'happy': 'happy.svg', 'celebrate': 'celebrate.svg', 'sad': 'sad.svg', 'cheeky': 'cheeky.svg', 'rest': 'rest.svg', 'crying': 'crying.svg', 'wink': 'wink.svg', 'like': 'like.svg', 'shocked': 'shocked.svg');
+// create emoji classes
+@each $emoji,
+$image in $emoji-image-list {
+    .jnmod_reaction_emoji[name='#{$emoji}'],
+    .jnmod_reaction_js_toggle[name='#{$emoji}'] span::before,
+    .jnmod_reaction_emoticon_#{$emoji} {
+        background-image: url(#{$image-path}reactions/#{$image});
+    }
+}

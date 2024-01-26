@@ -1,0 +1,29 @@
+
+<div class="ow_page_wrap index_master_page">
+	<div class="ow_site_panel">
+		<div class="panel_canvas">
+            <a class="ow_logo" href="{$siteUrl}"></a>
+            <div class="ow_navigation_wrap">
+                {component class='BASE_CMP_Console' cssClass='index_signin_button'}
+            </div>
+        </div>
+	</div>		
+	<div class="ow_page_container">
+        {$content}
+	</div>
+    <div class="ow_footer">   
+        <div class="footer_content">
+            <div class="footer_about">
+                <a class="ow_logo" href="{$siteUrl}"></a>
+                <p class="footer_body">{text key="mouse+landing_page_footer_text"}</p>
+                {component class='MOUSE_CMP_SwitchLanguage'}
+            </div>
+            {$bottom_menu}
+        </div>
+        <div class="footer_copyright">
+            <span>&copy;  {text key="mouse+all_right_reserved"}</span>
+        </div>
+    </div>
+</div>
+  
+{decorator name='floatbox'}

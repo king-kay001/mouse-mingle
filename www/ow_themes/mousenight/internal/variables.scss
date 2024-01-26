@@ -1,0 +1,106 @@
+$weight-500: 500;
+$weight-600: 600, semibold;
+$weight-700: 700;
+
+$font-size: 16px;
+$small-font-size: 14px;
+$xsmall-font-size: 12px;
+
+$line-hight: 24px;
+$small-line-height: 19.88px;
+$xsmall-line-height: 15.6px;
+
+$letter-spacing: 1.68%;
+$md-letter-spacing: 3%;
+$lg-letter-spacing: 5%;
+
+$primary-color: #DE2600;
+$secondary-color:#FFF2F3;
+$text-light: #666666;
+$text-lighter: #949494;
+$text-black: #000;
+$text-white: #FFF;
+$text-dark: #413A38;
+$bg-light: #E7E7ED;
+
+
+$radius: 25px;
+$radius-sm: 5px;
+$radius-md: 8px;
+$radius-lg: 50px;
+$radius-xl: 100px;
+
+$bg-color: #fff;
+$bg-alt-color: #FAFAFA;
+$border-color: #ECECEC;
+
+$padd-canvas: 140px;
+$console-icon-wh: 24px;
+$console-avatar: 60px;
+$pad-sm: 8px;
+
+$avatar-40: 40px;
+$photo-height: 179px;
+$photo-height-lg: 272px;
+
+// $input-line-height: 40px;
+
+
+
+// Configuration
+@function set-config($value, $type, $sectionLabel, $key, $label){
+    @return unquote("#{$value}; /** OW_Control type:#{$type}, section:#{$sectionLabel}, key:#{$key}, label:#{$label} **/");
+}
+
+
+
+$action-bg-color: #fef0ee;
+$image-path: 'images/' !default;
+$font-path: 'webfonts/' !default;
+$internal-path: 'internal' !default;
+$external-path: 'external' !default;
+$ow-prefix: 'ow_' !default;
+$internal-components: ('common', 'content', 'forms', 'layouts', 'listing', 'menus', 'plugins', 'thumbnail'); // scss-docs-start grid-breakpoints
+$max-breakpoints: ( xxl: 1400px, xl: 1200px, lg: 992px, md: 768px, sm: 576px, xs: 0) !default;
+$chat-message-font-size: calc((var(--font-size) * 14)/ 19);
+$header-width: 200px;
+
+//Theme settings
+$sectionImage: '1. Image Section';
+$app-logo: set-config(url(./images/common-ground-logo.png),'image', $sectionImage,'appLogo','App Logo');
+
+$sectionColor: "2. Colors";
+
+//set gradient color
+$site-color-gradient: linear-gradient(94.33deg,var(--gradient-first-color) -3.3%,var(--gradient-second-color) -3.29%,var(--gradient-third-color) 33.07%,var(--gradient-first-color) 63.12%,var(--gradient-fourth-color) 97.91%);
+
+$header-bg-color: set-config('#000','color',$sectionColor,'headerBgColor', 'Header Background Color');
+
+$site-bg-color: set-config('#FFF','color', $sectionColor,'bodyBg', 'Page background color');
+$site-alt-bg-color: set-config('#FAFAFA','color', $sectionColor,'bodyBg', 'Page Alt background color');
+$site-color: set-config('#494954','color', $sectionColor,'bodyColor', 'Site color');
+
+$menu-color: set-config('#fff','color', $sectionColor,'menuColor', 'Main Menu Color');
+$menu-bg: set-config('#fff','color', $sectionColor,'menuBg', 'Main Menu Background Color');
+$menu-active-bg-color: set-config('#FFF2F3','color', $sectionColor,'activeMenuBgColor', 'Active Menu Background Color');
+$menu-active-color: set-config('red','color', $sectionColor,'activeMenuColor', 'Active Menu Color');
+
+$action-button-bg-color: #{$site-color-gradient};
+$action-button-color: set-config('#fff','color', $sectionColor,'actionButtonColor', 'Action Button Color');
+
+
+
+
+
+
+
+
+
+
+
+// scss-docs-end grid-breakpoints
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/utilities";
+@import "_mixins/init.scss";

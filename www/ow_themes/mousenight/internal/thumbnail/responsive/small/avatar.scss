@@ -1,0 +1,36 @@
+body{
+    .general_master_page,
+    .index_master_page{
+        .ow_loveoncg_users_cmp{
+            .ow_loveoncg_users_cmp_list {
+                overflow-x: scroll;
+                padding-bottom: 10px;
+                gap: 20px;
+                a.ow_loveoncg_users_cmp_list_item{
+                    .ow_avater{
+                        width: 60px !important;
+                        height: 60px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body{
+    .ow_newsfeed{
+        $avatar-size: 40px;
+        .ow_newsfeed_avatar{
+            width: #{$avatar-size};
+            height: #{$avatar-size};
+            .ow_avatar{
+                width: #{$avatar-size};
+                height: #{$avatar-size};
+                img{
+                    width: #{$avatar-size};
+                    height: #{$avatar-size};
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.ow_box_cap{
+    border: none;
+    .ow_box_cap_body{
+        .ow_ic_comment{
+            color: #{$text-light};
+            font-weight: 600, semibold;
+            line-height: 19.36px;
+        }
+    }
+}
+
+.ow_lp_item_label{
+    flex: 1;
+    margin-top: 8px;
+    margin-left: 8px;
+
+    .ow_lp_item_title{
+        margin-bottom: 0.3rem;
+        a{
+            font-weight: 700;
+            color: #000;
+            text-transform: capitalize;
+            font-size: 13px;
+        }
+    }
+
+    .ow_lp_item_info{
+        display: flex;
+        justify-content: space-between;
+
+        .ow_lp_item_info_gender{
+            color: #{$text-lighter};
+        }
+        .ow_live_on{
+            margin-right: 0;
+        }
+        .ow_remark{
+            font-size: 10px;
+        }
+    }
+}

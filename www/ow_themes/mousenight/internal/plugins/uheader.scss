@@ -1,0 +1,154 @@
+.#{$ow-prefix}jnmod_profile_header {
+    background-color: var(--color--app);
+}
+body{
+    .uh-avatar{
+        box-shadow: none;
+    }
+    .jnmod-uh-header {
+        div.uh-cover img.uh-scaler-img {
+            min-height: 130px;
+        }
+        .uh-avatar{
+            margin-top: -100px;
+            .uh-avatar-console {
+                div.hg-avatar-image{
+                    height: 150px;
+                    width: 150px;
+                }
+                .uh_avatar_change {
+                    left: 140px;
+                }
+            }
+        }
+        .uh-head-text {
+            margin-left: 200px;
+        }
+        .uh-info-line {
+            font-size: 100%;
+        }
+        .jnmod-uh-head-panel-actions{
+            li{
+                display: inline-block;
+                a{
+                    display: block;
+                    padding: 5px;
+                    background: rgba(0,0,0,.8);
+                    color: var(--color--app);
+                    font-size: 140%;
+                    &:not(.has_label) {
+                        span{
+                            &::before{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .uh-toolbox {
+            margin-left: 160px;
+        }
+        @mixin uheader-bl() {
+            background: var(--color--primary);
+            border: none;
+            height: 24px;
+            padding: 2px 4px;
+            font-size: 85%;
+            line-height: 20px;
+            @include browser-compatible(border-radius, 3px);
+        }
+
+        @mixin uheader-bla() {
+            color: var(--color--app);
+            line-height: 20px;
+            font-size: 85%;
+        }
+        
+        .uh-action-toolbar {
+            float: unset;
+            margin: 5px 0 0;
+            .ow_profile_gallery_action_toolbar{
+                display: flex !important;
+                align-items: center;
+                flex-wrap: wrap;
+                .ow_bl {
+                    float: unset;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    li{
+                        margin-bottom: 0;
+                        a{
+                            @include uheader-bl();
+                            @include uheader-bla();
+                        }
+                    }
+                    .ow_context_action {
+                        &>a{
+                            padding: 0;
+                            background: transparent;
+                            line-height: 100%;
+                            border: none;
+                            border-radius: unset;
+                        }
+                    }
+                }
+                .ow_profile_gallery_action_toolbar > div:nth-child(2) {
+                    margin: 0;
+                }
+            }
+            .ow_context_action_block {
+                float: unset;
+                &:nth-child(2) {
+                    margin-left: 0;
+                }
+                .ow_context_action {
+                    @include uheader-bl();
+                    margin-bottom: 0;
+                    &>a{
+                        @include uheader-bla();
+                    }
+                }
+            }
+        }
+        .jnmod-uh-uinfo-like-btn{
+            text-align: center;
+            font-size: 80%;
+            cursor: pointer;
+            display: block;
+            color: var(--color--primary--light);
+            &::before{
+                display: block;
+            }
+            &:hover,
+            &.ow_green {
+                color: var(--color--primary);
+            }
+        }
+    }
+}
+
+body {
+    .uh-cover-controls{
+        top: 5px;
+        div.uh-cover-add-btn-wrap{
+            .ow_context_action_block{
+                .ow_context_action {
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    .ow_context_action_value {
+                        line-height: inherit;
+                        color: var(--color--app);
+                    }
+                }
+            }
+        }
+    }
+    .uh-cover-no-cover {
+        .uh-cover {
+            height: 100px;
+        }
+    }
+}

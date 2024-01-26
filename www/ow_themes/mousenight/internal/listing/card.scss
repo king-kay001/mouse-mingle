@@ -1,0 +1,330 @@
+/* ---- Card  ---- */
+.ow_friend_request_list{
+    justify-content: space-between;
+    margin-bottom: 100px;
+    .ow_item_md_set2{
+        width: 48%;
+        padding-bottom: 20px;
+        background-color: #{$bg-color};
+        border-radius: 15px;
+        border: 1px solid #{$border-color};
+        li{
+            background-color: #{$bg-alt-color};
+            border-radius: 50px;
+            display: block;
+            width: 100%;
+        }
+    }
+}
+.#{$ow-prefix}card {
+    --card--padd: var(--padd);
+    display: block;
+    overflow: hidden;
+    &.#{$ow-prefix}user_card{
+        position: relative;
+    }
+    .#{$ow-prefix}card_cont {
+        .#{$ow-prefix}card_cover {
+            height: 200px;
+            overflow: hidden;
+            width: 100%;
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .#{$ow-prefix}card_cover_img {
+                width: 100%;
+                min-height: 130px;
+                &:not(.#{$ow-prefix}card_cover_default){
+                    &:not(img) {
+                        width: 100%;
+                        height: 100%;
+                        border: dashed 2px #ddd;
+                        box-sizing: border-box;
+                        border-bottom: solid 1px #ddd;
+                        &::after {
+                            content: "\ec5f";
+                            display: block;
+                            text-align: center;
+                            font-size: 8rem;
+                            line-height: 11rem;
+                            color: var(--ps-color--primary);
+                        }
+                    }
+                }
+            }
+        }
+        .#{$ow-prefix}card_header,
+        .#{$ow-prefix}card_body {
+            .ow_photo_userlist_info{
+                padding: 0;
+                color: #{$text-lighter};
+                margin: 5px 0 40px 0;
+            }
+            .ow_card_bl{
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                padding: 0 20px;
+                .ow_red{
+                    color: #fff;
+                }
+                .ow_ic_mail{
+                    &::before{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .#{$ow-prefix}card_info {
+            padding-top: 40px;
+            .#{$ow-prefix}card_header {
+                a {
+                    color: #{$black};
+                    font-weight: 600;
+                    line-height: 20px;
+                    text-transform: capitalize;
+                    &.#{$ow-prefix}card_avatar {
+                        display: inline-block;
+                        width: 100px;
+                        height: 100px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border: solid 2px #fff;
+                            border-radius: 100%;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+        }
+        .#{$ow-prefix}card_footer {
+            .ow_card_toolbar {
+                display: flex;
+                align-items: center;
+                border-top: solid 1px var(--divider);
+                li {
+                    flex-grow: 1;
+                    display: inline-block;
+                    border-right: solid 1px var(--divider);
+                    &>* {
+                        display: block;
+                        padding: .6rem .1rem;
+                        text-align: center;
+                        font-size: 60%;
+                        float: unset;
+                    }
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+        .#{$ow-prefix}gcard_privacy {
+            text-transform: capitalize;
+            display: inline-block;
+            padding: 3px 5px;
+            border: solid 1px #ddd;
+            font-size: 80%;
+        }
+    }
+    &.#{$ow-prefix}user_card {
+        .#{$ow-prefix}card_cover {
+            height: auto;
+            border-radius: 15px 15px 0 0;
+            .#{$ow-prefix}card_cover_img {
+                &.has_cover {
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: auto;
+                }
+                .#{$ow-prefix}card_avatar {
+                    padding: 15px 0;
+                    position: absolute;
+                    right: 0;
+                    top: 75px;
+                    left: 0;
+                    .#{$ow-prefix}avatar {
+                        width: 60px;
+                        height: 60px;
+                        background-color: var(--color--app);
+                        @include browser-compatible(border-radius, 100%);
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
+.ow_ucard{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #F6F8FD;
+    min-width: 220px; 
+    flex-grow: 1;
+    .ow_ucard_cont{
+      position: relative;
+      overflow: hidden;
+      height: 300px; 
+      .ow_ucard_image{
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+        .ow_ucard_icon{
+            width: 20px;
+            height: 20px;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            display: inline-block;
+        }
+  
+        .ow_ucard_top{
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-between;
+
+          .ow_ucard_top_left{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            *{
+                color: #fff;
+            }
+            .ow_ucard_photo_count{
+                padding: 3px;
+                border-radius: 5px;
+                background-color: rgba(0,0,0,0.2);
+                box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.3);
+
+                a{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .ow_ic_picture{
+                &::before{
+                    content: '';
+                }
+                background-image: url('images/mouse-icons/Camera-light.svg');
+                margin-right: 3px;
+            }
+            .ow_ic_video{
+                &::before{
+                    content: '';
+                }
+                background-image: url('images/mouse-icons/Video-fill.svg');
+                margin-right: 3px;
+            }
+          }
+
+          .ow_ucard_top_right{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 10px;
+                width: 50px;
+                height: 20px;
+
+                .ow_ucard_online_status{
+                    span{
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        display: inline-block;
+                    }
+
+                    .ow_ucard_online{
+                        background-color: rgb(10, 196, 10);
+                    }
+                    .ow_ucard_offline{
+                        background-color: red;
+                    }
+                }
+                .ow_ic_hot{
+                    
+                    border-radius: 50%;
+                    background-color: #fff;
+                    background-image: url('images/mouse-icons/Fire.svg');
+                    background-size: 10px 10px;
+                    background-position: center;
+                    width: 20px;
+                    height: 20px;
+                }
+          }
+        }
+
+        .ow_ucard_bottom{
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            .ow_ucard_username{
+                font-size: 16px;
+                font-weight: 700;
+
+            }
+            .ow_ucard_location{
+                margin-top: 5px;
+            }
+            *{
+                color: #fff;
+            }
+        }
+        
+    }
+
+    .ow_ucard_toolbar{
+        height: 80px;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+
+        .ow_ucard_icon{
+            width: 30px;
+            height: 30px;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
+        .ow_ic_mailbox{
+          background-image: url('images/mouse-icons/Chat.svg');
+        }
+        .ow_ic_gift{
+            &::before{
+                content: "";
+            }
+          background-image: url('images/mouse-icons/Gift.svg');
+          width: 20px;
+          height: 20px;
+        }
+        .ow_ic_bookmark{
+            &::before{
+                content: "";
+            }
+          background-image: url('images/mouse-icons/Heart.svg');
+          &.active{
+            background-image: url('images/mouse-icons/Heart-filled.svg');
+          }
+        }
+    }
+  }
+
+
+/* ---- End of Card  ---- */

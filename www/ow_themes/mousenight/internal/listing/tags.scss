@@ -1,0 +1,15 @@
+.#{$ow-prefix}tags_cont{
+    a{
+        display: inline-block;
+        background: var(--color--heading);
+        color: var(--color--app);
+        padding: var(--padd--sm);
+        margin: 1px;
+        font-size: 70% !important;
+        line-height: 100% !important;
+        &:hover{
+            background: var(--color--app--darker);
+        }
+    }
+
+}

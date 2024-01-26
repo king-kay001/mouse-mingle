@@ -1,0 +1,114 @@
+
+.#{$ow-prefix}table_1,
+.#{$ow-prefix}table_2,
+.#{$ow-prefix}table_3 {
+    margin-bottom: 25px;
+    width: 100%;
+
+    tr{
+        td {
+            background-color: var(--color--app);
+            border-bottom: none;
+        }
+        &.#{$ow-prefix}alt2{
+            td{
+                background-color: var(--color--app--lightgray);
+            }
+        }
+        &.#{$ow-prefix}tr_last,
+        &:last-child{
+            td{
+                border: none;
+            }
+        }
+        &.#{$ow-prefix}tr_delimiter{
+            display: none;
+        }
+    }
+}
+
+.#{$ow-prefix}table {
+    &_1,
+    &_2 {
+        --#{$variable-prefix}table-bg: #{$table-bg};
+        --#{$variable-prefix}table-accent-bg: #{$table-accent-bg};
+        --#{$variable-prefix}table-striped-color: #{$table-striped-color};
+        --#{$variable-prefix}table-striped-bg: #{$table-striped-bg};
+        --#{$variable-prefix}table-active-color: #{$table-active-color};
+        --#{$variable-prefix}table-active-bg: #{$table-active-bg};
+        --#{$variable-prefix}table-hover-color: #{$table-hover-color};
+        --#{$variable-prefix}table-hover-bg: #{$table-hover-bg};
+        width: 100%;
+        margin-bottom: $spacer;
+        color: $table-color;
+        vertical-align: $table-cell-vertical-align;
+        border-color: $table-border-color;
+        // Target th & td
+        // We need the child combinator to prevent styles leaking to nested tables which doesn't have a `.table` class.
+        // We use the universal selectors here to simplify the selector (else we would need 6 different selectors).
+        // Another advantage is that this generates less code and makes the selector less specific making it easier to override.
+        // stylelint-disable-next-line selector-max-universal
+        > :not(caption)>*>* {
+            padding: $table-cell-padding-y $table-cell-padding-x;
+            background-color: var(--#{$variable-prefix}table-bg);
+            border-bottom-width: $table-border-width;
+            box-shadow: inset 0 0 0 9999px var(--#{$variable-prefix}table-accent-bg);
+        }
+        >tbody {
+            vertical-align: inherit;
+        }
+        >thead {
+            vertical-align: bottom;
+        }
+        // Highlight border color between thead, tbody and tfoot.
+        > :not(:last-child)> :last-child>* {
+            border-bottom-color: $table-group-separator-color;
+        }
+        > :not(caption)>* {
+            border-width: $table-border-width 0;
+            // stylelint-disable-next-line selector-max-universal
+            >* {
+                border-width: 0 $table-border-width;
+            }
+        }
+    }
+    &_1 {
+        td {
+            .text {
+                color: #000;
+            }
+        }
+    }
+    &_2 {
+        td {
+            text-align: center;
+        }
+    }
+    &_3 {
+        border-collapse: separate;
+        td {
+            border-left-width: 0;
+            border-left-style: solid;
+            vertical-align: top;
+            &.#{$ow-prefix}value {
+                width: 50%;
+                padding-left: 10px;
+            }
+        }
+    }
+    &_4 {
+        border-collapse: separate;
+        border-spacing: 5px;
+        td {
+            vertical-align: top;
+            &.#{$ow-prefix}label {
+                border: none;
+                color: #5b646a;
+                text-align: right;
+            }
+            &.#{$ow-prefix}value {
+                padding-left: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,129 @@
+/* ---- Group styles ---- */
+
+body .#{$ow-prefix}group_brief_info .details {
+    padding-left: 8px;
+}
+
+
+/* ---- End of the Group styles ---- */
+
+
+/* ---- Groups styles ---- */
+
+.group-GROUPS_CMP_JoinButtonWidget .#{$ow-prefix}highbox {
+    padding: 0px;
+}
+
+.group-GROUPS_CMP_JoinButtonWidget h3>a {
+    text-transform: uppercase;
+    display: block;
+    line-height: 30px;
+    min-height: 30px;
+    padding: 4px 23px 4px 16px;
+    text-transform: uppercase;
+    background-color: #4C5358;
+    color: #fff;
+}
+
+.group-GROUPS_CMP_JoinButtonWidget h3>a:hover {
+    text-decoration: none;
+    background-color: #93999f;
+    color: #fff;
+}
+
+
+.ow_lp_groups{
+    .ow_lp_wrapper{
+        width: var(--avatar-medium);
+        height: var(--avatar-medium);
+        border-radius: 50%;
+        border: solid 1px var(--divider--light);
+        img{
+            width: var(--avatar-medium);
+            height: var(--avatar-medium);
+            border-radius: 50%;
+        }
+    }
+    .ow_lp_label{
+        margin: 7px 0 0 60px;
+        color: var(--color--text--light);
+        a{
+            display: inline-block;
+            padding-bottom: 5px;
+            font-weight: 700;
+            color: #000;
+        }
+        .ow_txt_value{
+            color: var(--color--text--light);
+        }
+    }
+    .ow_smallmargin{
+        margin-bottom: 10px;
+    }
+}
+
+.ow_group_list{
+    .ow_flex_row{
+        background-color: #fff;
+        box-sizing: border-box;
+        margin: 0;
+        border-radius: 5px;
+        justify-content: space-between;
+        .ow_item_md_set2{
+            width: 32%;
+            border-radius: 10px;
+            background-color: #{$bg-alt-color};
+            padding: 0;
+            margin-bottom: 15px;
+            .ow_card_cover{
+                height: 126px;
+            }
+            .ow_card_info{
+                padding: 20px 10px;
+                .ow_gcard_content{
+                    color: #999;
+                }
+                .ow_display_md_flex{
+                    margin-bottom: 20px;
+                    .ow_gcard_ucount,
+                    .ow_gcard_ucount span{
+                        color: #000;
+                    }
+                }
+            }
+            .ow_card_header{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .ow_gcard_ulist{
+                display: flex;
+                overflow: hidden;
+                width: 45%;
+                margin-right: 10px;
+                img{
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                }
+                img:not(img:nth-of-type(1)){
+                    margin-left: -14px;
+                }
+            }
+            
+            .ow_card_toolbar{
+                border: none;
+                background-color: #{$bg-color};
+                border-radius: 25px;
+                li{
+                    a{
+                        font-size: 13px;
+                        font-weight: 500;
+                        background: #{$site-color-gradient};
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

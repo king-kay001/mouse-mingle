@@ -1,0 +1,73 @@
+/* ---- Add content styles ---- */
+
+.#{$ow-prefix}add_content {
+    background-image: url(#{$image-path}ic_img/ic_add.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    float: left;
+    margin: 13px 0px 13px 3px;
+    overflow: hidden;
+    height: 35px;
+    text-align: center;
+    width: 33%;
+    font-size: 0%;
+}
+
+.#{$ow-prefix}add_content:hover {
+    text-decoration: none;
+}
+
+.#{$ow-prefix}add_content:nth-child(odd) {
+    margin-left: 0px;
+}
+
+html body div .#{$ow-prefix}add_content.#{$ow-prefix}ic_picture {
+    background-image: url(#{$image-path}ic_img/ic_Add_photo.svg);
+}
+
+html body div .#{$ow-prefix}add_content.#{$ow-prefix}ic_write {
+    background-image: url(#{$image-path}ic_img/ic_Add_blog.svg);
+}
+
+html body div .#{$ow-prefix}add_content.#{$ow-prefix}ic_files {
+    background-image: url(#{$image-path}ic_img/ic_Add_forum.svg);
+}
+
+html body div .#{$ow-prefix}add_content.#{$ow-prefix}ic_comment {
+    background-image: url(#{$image-path}ic_img/ic_Add_group.svg);
+}
+
+html body div .#{$ow-prefix}add_content.#{$ow-prefix}ic_calendar {
+    background-image: url(#{$image-path}ic_img/ic_Add_event.svg);
+}
+
+html body div .#{$ow-prefix}add_content.#{$ow-prefix}ic_video {
+    background-image: url(#{$image-path}ic_img/ic_Add_video.svg);
+}
+
+html body div .#{$ow-prefix}add_content.#{$ow-prefix}ic_picture:hover {
+    background-position: left -46px;
+}
+
+html body div .#{$ow-prefix}add_content.#{$ow-prefix}ic_write:hover {
+    background-position: left -47px;
+}
+
+html body div .#{$ow-prefix}add_content.#{$ow-prefix}ic_files:hover {
+    background-position: left -49px;
+}
+
+html body div .#{$ow-prefix}add_content.#{$ow-prefix}ic_comment:hover {
+    background-position: left -46px;
+}
+
+html body div .#{$ow-prefix}add_content.#{$ow-prefix}ic_calendar:hover {
+    background-position: left -43px;
+}
+
+html body div .#{$ow-prefix}add_content.#{$ow-prefix}ic_video:hover {
+    background-position: left -45px;
+}
+
+
+/* ---- End of Add content styles ---- */

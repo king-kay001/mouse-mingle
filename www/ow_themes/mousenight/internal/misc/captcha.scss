@@ -1,0 +1,24 @@
+/* ---- Captcha styles ---- */
+
+span.ic_refresh {
+    background: url(#{$image-path}ic_img/ic_refresh.svg) no-repeat;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+
+
+/* ---- End of the Captcha styles ---- */
+
+
+/* ---- Eye for hidden field styles ---- */
+
+.#{$ow-prefix}field_eye {
+    padding-left: 18px;
+    background: url(#{$image-path}miniic_field_eye.svg) 0 3px no-repeat;
+    background-size: 15px 15px;
+    display: inline-block;
+}
+
+
+/* ---- End of the Eye for hidden field styles ---- */

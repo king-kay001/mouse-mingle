@@ -1,0 +1,67 @@
+/* ---- Header styles ---- */
+
+
+.#{$ow-prefix}site_panel {
+    box-sizing: border-box;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #{$header-bg-color}; //var(--header-bg);
+    z-index: 999;
+    .panel_canvas{
+        height: var(--c-gc-header-height);
+        width: 100%;
+        max-width: 1820px;
+        padding: 21px 20px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: var(--font-size);
+
+        .#{$ow-prefix}logo {
+            background-repeat: no-repeat;
+            background-image: var(--logo);
+            background-size: 100% auto;
+            background-position: center;
+            width: 150px;
+            height: 36px;
+        
+        }
+    }
+}
+
+
+// .#{$ow-prefix}site_panel 
+
+.#{$ow-prefix}site_panel .#{$ow-prefix}navigation_wrap{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.ow_console_navigation{
+    // display: none;
+}
+
+a.#{$ow-prefix}logo:hover {
+    text-decoration: none;
+}
+
+.index_master_page{
+    .ow_join_button{
+        .index_signin_button{
+            background-color: #{$primary-color};
+            color: #{$text-white};
+            padding: 12px;
+            border-radius: #{$radius-sm};
+            font-size: 24px;
+        }
+    }
+}
+
+
+/* ---- End of the Header styles ---- */

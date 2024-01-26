@@ -1,0 +1,24 @@
+/* Index Join button */
+
+.index_join_wrap {
+    padding: 40px 0px 32px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.index_join_btn {
+    display: inline-block;
+    width: 301px;
+    height: 90px;
+    background: url(#{$image-path}index_join_btn.png) no-repeat 0 -90px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+}
+
+.index_join_btn:hover {
+    background-position: 0 16px;
+}
+
+
+/* ---- End of the Index Page styles ---- */

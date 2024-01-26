@@ -1,0 +1,114 @@
+html[dir="rtl"] body {
+    .landing-page{
+        .intro-section {
+            padding-left: 0;
+            padding-right: 100px;
+            background-position: left;
+        }
+        .title {
+            position: relative;
+            padding-left: 0;
+            padding-right: 100px;
+
+            &::before {
+                left: unset;
+                right: 0;
+            }
+        }
+
+    }
+
+
+    .ow_main_menu li a::before {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    .menu_bubble {
+        margin-left: 0;
+        margin-right: 6px;
+    }
+
+    .ow_console .ow_tooltip_top_right.ow_tooltip {
+        right: unset;
+        left: 0;
+    }
+
+    .ow_mouse_notification_tabs .ow_content_menu li a {
+        span:nth-of-type(1){
+            text-align: right;
+        }
+        span:nth-of-type(2){
+            left: 20px;
+            right: unset;
+        }
+    }
+
+
+    .ow_ucard .ow_ucard_cont {
+        .ow_ucard_bottom {
+            left: unset;
+            right: 10px;
+
+            .ow_ucard_username {
+                display: flex;
+            }
+        }
+    }
+
+    a.link{
+        padding-right: 50px;
+        padding-left: 10px;
+        span:nth-of-type(2){
+            display: flex;
+        }
+    }
+
+    // Hotlist
+    .ow_page_hotlist{
+        direction: ltr;
+    
+    }
+
+    .filter-button-wrap{
+        direction: ltr;
+    }
+
+    .mouse_mailbox_wrapper{
+        direction: ltr;
+    }
+
+    .ow_signin_label.landing_sign_in{
+        background-color: #fff !important;
+        color: #{$primary-color} !important;
+        border: 1px solid #{$primary-color} !important;
+        border-radius: 5px;
+        padding: 8px 16px;
+    }
+
+    .profile_wrap{
+        .profile_section{
+            .ow_profile_carousel{
+                direction: ltr;
+            }
+            .back_to_home{
+                right: unset;
+                left: 0;
+            }
+        }
+        .ow_profile_bottom{
+            .ow_profile_album_wrap {
+                left: unset;
+                right: 0;
+            }
+        }
+    }
+
+    .photo_content_menu_wrap{
+        direction: ltr;
+    }
+
+    .ow_fw_menu{
+        direction: ltr;
+    }
+}

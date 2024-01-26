@@ -1,0 +1,89 @@
+/* ---- Item Picture Content ---- */
+
+.#{$ow-prefix}ipc {
+    margin-top: 16px;
+    margin-bottom: 0px;
+}
+
+.#{$ow-prefix}ipc:first-child {
+    margin-top: 0px;
+}
+
+.#{$ow-prefix}ipc_picture {
+    float: left;
+    margin-right: -56px;
+    width: 56px;
+}
+
+.#{$ow-prefix}ipc_picture img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+.#{$ow-prefix}ipc_picture img:first-child {
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.#{$ow-prefix}ipc_picture .#{$ow-prefix}avatar img {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.#{$ow-prefix}ipc_info {
+    margin-left: 56px;
+    padding: 14px 16px 16px 16px;
+}
+
+.#{$ow-prefix}ipc_header {
+    padding: 0px 0px 0px;
+    margin: 0px 0px 6px;
+}
+
+.#{$ow-prefix}ipc_header a {}
+
+.#{$ow-prefix}ipc.#{$ow-prefix}smallmargin {
+    margin-bottom: 0px;
+}
+
+.#{$ow-prefix}ipc_content {
+    padding: 0px 0px 12px 0px;
+    line-height: 1.25em;
+}
+
+.#{$ow-prefix}ipc_toolbar {
+    font-size: 12px;
+    line-height: 14px;
+    float: left;
+    padding: 0 0px 0px 0px;
+    width: 100%;
+}
+
+.#{$ow-prefix}ipc_toolbar .#{$ow-prefix}icon_control {
+    padding: 0px;
+}
+
+html body div .#{$ow-prefix}ipc_toolbar span {
+    background: none;
+}
+
+.#{$ow-prefix}ipc_toolbar .#{$ow-prefix}ipc_date,
+.#{$ow-prefix}ipc_date {
+    float: right;
+}
+
+.#{$ow-prefix}table_1 .#{$ow-prefix}ipc_info,
+.#{$ow-prefix}table_2 .#{$ow-prefix}ipc_info {
+    border: none;
+}
+
+.post_content {
+    overflow: hidden;
+    width: 100%;
+}
+
+
+/* ---- End of the Item Picture Content ---- */

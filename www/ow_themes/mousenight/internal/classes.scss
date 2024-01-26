@@ -1,0 +1,89 @@
+.clr {
+    clear: both;
+}
+
+
+/* Text align */
+
+.#{$ow-prefix}txtleft,
+table td.#{$ow-prefix}txtleft {
+    text-align: left;
+}
+
+
+/* Layout */
+
+.info {
+    margin-bottom: 8px;
+}
+
+table.#{$ow-prefix}nomargin,
+div.#{$ow-prefix}nomargin {
+    margin-bottom: 0px;
+}
+
+.#{$ow-prefix}alt1,
+tr.#{$ow-prefix}alt1 td {
+    background-color: #fff;
+}
+
+.#{$ow-prefix}alt2,
+tr.#{$ow-prefix}alt2 td {
+    background-color: #fff;
+}
+
+.outline {
+    color: var(--color--primary);
+}
+
+.#{$ow-prefix}highbox_table .#{$ow-prefix}highbox,
+.#{$ow-prefix}highbox {
+    background: #f8fafc;
+    border: none;
+    box-shadow: 0px 0px 1px #eff2f5;
+}
+
+.#{$ow-prefix}highbox {
+    padding: 4px;
+}
+
+.#{$ow-prefix}highbox_table .#{$ow-prefix}highbox {
+    height: 50px;
+    padding: 10px;
+}
+
+th,
+.#{$ow-prefix}highbox_table .#{$ow-prefix}highbox,
+.#{$ow-prefix}page .#{$ow-prefix}highbox,
+.#{$ow-prefix}sidebar,
+.#{$ow-prefix}table_3 td {
+    border-color: #eff2f5;
+}
+
+.#{$ow-prefix}page td.#{$ow-prefix}highbox {
+    border-color: #eff2f5;
+}
+
+.#{$ow-prefix}autowidth,
+table.#{$ow-prefix}form td.#{$ow-prefix}autowidth {
+    width: auto;
+}
+
+
+/* Text formatter */
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@include make-base-classes('');

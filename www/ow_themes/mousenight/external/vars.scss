@@ -1,0 +1,244 @@
+:root {
+    // Gradient colors
+    --gradient-first-color: #ED7064;/** OW_Control type:color, section:2. Colors, key:gradientFirstColor, label:Gradient First Color **/
+    --gradient-second-color: #F08950;/** OW_Control type:color, section:2. Colors, key:gradientSecondColor, label:Gradient Second Color **/
+    --gradient-third-color: #EA535C;/** OW_Control type:color, section:2. Colors, key:gradientThirdColor, label:Gradient Third Color **/
+    --gradient-fourth-color: #E52DA4;/** OW_Control type:color, section:2. Colors, key:gradientFourthColor, label:Gradient Fourth Color **/
+
+    --alt-bg-color: #f9f9f9;
+    --bg-color: #ffffff;
+    ///** OW_Control type:color, section:3. Colors, key:bodyColor, label:1. Page background color **/
+    // --color--primary: #2979ff;
+    --color--primary: #fff;
+    ///** OW_Control type:color, section:3. Colors, key:primaryColor, label:2. Site color **/
+    --color--primary--shade: #bbdefb;
+    --color--primary--light: #64b5f6;
+    --color--secondary: var(--color--primary--light);
+    ///** OW_Control type:color, section:3. Colors, key:secondaryColor, label:3. Secondary color **/
+    --color--primary--ultralight: #e3f2fd;
+    --color--primary--dark: #2962ff;
+    --color--primary-alpha: rgba(21, 131, 233, 0.15);
+    --color--primary-alpha-hard: rgba(21, 131, 233, 0.5);
+    --color--success: #66bb6a;
+    --color--success--light: #c8e6c9;
+    --color--success--ultralight: #e8f5e9;
+    --color--success--dark: #4caf50;
+    --color--warning: #ffa726;
+    --color--warning--light: #ffe0b2;
+    --color--warning--ultralight: #fff3e0;
+    --color--warning--dark: #f57c00;
+    --color--abort: #e53935;
+    --color--abort--light: #ffcdd2;
+    --color--abort--ultralight: #ffebee;
+    --color--abort--dark: #d32f2f;
+    --color--alt: #f27e3f;
+    --color--online: #45d927;
+    --color--app: #fff;
+    --color--app--lightgray: #fbfbfb;
+    --color--app--gray: #f7f7f7;
+    --color--app--darkgray: #eee;
+    --color--app--dark: #46494f;
+    --color--app--darker: #202124;
+    --color--heading: #333;
+    ///** OW_Control type:color, section:3. Colors, key:headingColor, label:4. Heading color **/
+    --color--text: #494954;
+    ///** OW_Control type:color, section:3. Colors, key:textColor, label:5. Text **/
+    --color--text--light: #91919d;
+    --color--text--lighten: #b0b0b9;
+    --color--text--invert: #fff;
+    --color--link: var(--color--primary);
+    ///** OW_Control type:color, section:3. Colors, key:linkColor, label:6. Links color **/
+    --color--link-hover: var(--color--primary--dark);
+    --color--link-focus: var(--color--primary--dark);
+    --header-bg: var(--color--app);
+    --padd: 10px;
+    --padd--xs: calc(var(--padd) / 4);
+    --padd--sm: calc(var(--padd) / 2);
+    --padd--md: calc(var(--padd) * 2);
+    --padd--xl: calc(var(--padd) * 3);
+    --padd--canvas: var(--padd--xl);
+    --ps-gutter-x: var(--padd);
+    --ps-gutter-y: 0;
+    --divider: rgba(70, 77, 87, 0.15);
+    --divider--light: rgba(70, 77, 87, 0.1);
+    --divider--lighten: rgba(70, 77, 87, 0.05);
+    --divider--dark: rgba(70, 77, 87, 0.25);
+    --divider--r: rgba(255, 255, 255, 0.1);
+    --divider--r--light: rgba(255, 255, 255, 0.05);
+    --border-radius: 4px;
+    --border-radius--sm: calc(var(--border-radius) / 2);
+    --border-radius--md: calc(var(--border-radius) + (var(--border-radius) / 2));
+    --border-radius--xl: calc(var(--border-radius) * 2);
+    --border-radius--avatar: 100%;
+    --border: 1px solid var(--divider);
+    --border-light: 1px solid var(--divider--light);
+    --box-shadow-dis: 1px;
+    --box-shadow-blur: 17px;
+    --box-shadow-thickness: 1px;
+    --box-shadow-color: rgba(210, 210, 210, 0.4);
+    --box-shadow--hard: 0 var(--box-shadow-dis) var(--box-shadow-blur) var(--box-shadow-thickness) var(--box-shadow-color);
+    --box-shadow: 0 1px 2px rgba(70, 77, 87, 0.08);
+    --box-shadow--md: 0 0 20px rgba(70, 77, 87, 0.15);
+    --box-shadow--xl: 0 20px 30px rgba(70, 77, 87, 0.1);
+    --input-shadow: var(--color--primary--ultralight);
+    --input-shadow--in: var(--color--primary--light);
+    --mobile-menu-width: 80vw;
+    --c-gc-layout-width: 1580px;
+    --c-gc-main-column: 3fr;
+    --c-gc-header-height: 82px;
+    --c-gc-header-bg: var(--color--app);
+    --c-gc-header-text-color: var(--color--text--light);
+    --c-gc-header-link-color: var(--color--text--light);
+    --c-gc-header-link-color-hover: var(--color--text);
+    --c-gc-header-link-active-indicator: var(--color--primary--light);
+    --c-gc-header-font-size: 110%;
+    --c-gc-header-sticky: fixed;
+    --c-gc-header-sticky-mobile: fixed;
+    --menu-text-color: var(--c-gc-header-text-color);
+    --menu-link-color: var(--c-gc-header-link-color);
+    ///** OW_Control type:color, section:3. Colors, key:menuColor, label:5. Main menu color **/
+    --menu-link-color--hover: var(--c-gc-header-link-color-hover);
+    --menu-link-color--active: var(--c-gc-header-link-color-hover);
+    --menu-link-color-indicator: var(--c-gc-header-link-active-indicator);
+    --font-size: var(--c-gc-header-font-size);
+    --font-size--menu: var(--c-gc-header-menu-font-size);
+    --c-gc-header-menu-alignment: 0 0 0 auto;
+    --c-gc-header-menu-font-size: 90%;
+    --c-gc-footer-col: 4;
+    --c-gc-footer-widgets-vis: grid;
+    --c-gc-footer-widgets-vis-mobile: block;
+    --c-gc-widgets-top-col: 4;
+    --c-gc-widgets-bottom-col: 4;
+    --c-gc-widgets-top-vis: block;
+    --c-gc-widgets-top-vis-mobile: block;
+    --c-gc-widgets-bottom-vis: block;
+    --c-gc-widgets-bottom-vis-mobile: block;
+    --c-gc-show-page-title: block;
+    --c-ps-avatar-style: 100%;
+    --c-gc-body-bg: #f5f5f5;
+    --font-family: "Segoe UI", sans-serif, Tahoma;
+    ///** OW_Control type:font, key:fontFamily, section:1. General Settings, label: 1. Font **/
+    --logo: url(images/mekirim-logo.png);
+    ///** OW_Control type:image, key:logoImage, section:1. General Settings, label: 2. Logo (Light)) **/
+    --logo-alt: url(images/core-img/logo-alt.png);
+    ///** OW_Control type:image, key:logoAlt, section:1. General Settings, label: 3. Logo (Dark) **/
+    --logo-mini: url(images/core-img/vlogo.png);
+    ///** OW_Control type:image, key:logoMini, section:1. General Settings, label: 4. Mini logo (Light) **/
+    --logo-mini-alt: url(images/core-img/mini-logo-alt.png);
+    ///** OW_Control type:image, key:logoMiniAlt, section:1. General Settings, label: 5. Mini Logo (Dark) **/
+    --header-image: url(images/bg-img/heading-bg1.png);
+    ///** OW_Control type:image, key:headerBg, section:2. Landing Page, label:1. Header background **/
+    --header-image: url(images/bg-img/preview.png);
+    ///** OW_Control type:image, key:headerImage, section:2. Landing Page, label:2. Header content image **/
+    --nuelogin-image: url(images/bg-img/jn_b.png);
+    ///** OW_Control type:image, key:nueloginBg, section:2. Landing Page, label:3. Bottom background **/
+    --nuelogin-bg: url(images/bg-img/jn_m_4.png);
+    ///** OW_Control type:image, key:nueloginImage, section:2. Landing Page, label:4. Page content image **/
+    --bg-gradient-nope: linear-gradient(to right, rgb(235, 8, 140), rgb(255, 101, 1));
+    --bg-gradient-like: linear-gradient(to right, rgb(19, 168, 158), rgb(171, 242, 242));
+    --bg-gradient-superlike: linear-gradient(to right, rgb(0, 155, 216), rgb(75, 197, 230));
+    --bg-gradient-app: linear-gradient(270deg, #f7395f 0%, #fe702e 100%);
+    --bg-gradient-mix: linear-gradient(270deg, var(--color--primary) 0%, var(--color-secondary) 100%);
+    --ps-color--primary: var(--color--primary);
+    --ps-color--primary--shade: var(--color--primary--shade);
+    --ps-color--primary--light: var(--color--primary--light);
+    --ps-color--primary--ultralight: var(--color--primary--ultralight);
+    --ps-color--primary--dark: var(--color--primary--dark);
+    --ps-color--alt: var(--color--warning);
+    --ps-color--success: var(--color--success);
+    --ps-color--success--light: var(--color--success--light);
+    --ps-color--success--ultralight: var(--color--success--ultralight);
+    --ps-color--success--dark: var(--color--success--dark);
+    --ps-color--warning: var(--color--warning);
+    --ps-color--warning--light: var(--color--warning--light);
+    --ps-color--warning--ultralight: var(--color--warning--ultralight);
+    --ps-color--warning--dark: var(--color--warning--dark);
+    --ps-color--abort: var(--color--abort);
+    --ps-color--abort--light: var(--color--abort--light);
+    --ps-color--abort--ultralight: var(--color--abort--ultralight);
+    --ps-color--abort--dark: var(--color--abort--dark);
+    --ps-color--app: var(--color--app);
+    --ps-color--app--lightgray: var(--color--app--lightgray);
+    --ps-color--app--gray: var(--color--app--gray);
+    --ps-color--app--darkgray: var(--color--app--darkgray);
+    --ps-color--app--dark: var(--color--app--dark);
+    --ps-color--app--darker: var(--color--app--darker);
+    --ps-color--heading: var(--color--heading);
+    --ps-color--text: var(--color--text);
+    --ps-color--text--light: var(--color--text--light);
+    --ps-color--text--lighten: var(--color--text--lighten);
+    --ps-color--text--invert: var(--color--text--invert);
+    --ps-font-size: 18px;
+    --ps-font-size: var(--font-size);
+    --ps-line-height: 1.4;
+    --ps-line-height: var(--line-height);
+    --ps-primary-font: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --ps-secondary-font: "source sans pro", helveticaneue, helvetica, arial, sans;
+    --ps-beautifier-font-size: 16px;
+    --ps-beautifier-line-height: 1.4;
+    --ps-dropdown-font-size: 14px;
+    --c-ps-avatar-style: var(--border-radius--avatar);
+    --c-ps-navbar-bg: var(--ps-color--app--dark);
+    --c-ps-navbar-links-color: rgba(255, 255, 255, .65);
+    --c-ps-navbar-links-color-hover: #fff;
+    --c-ps-navbar-font-size: 14px;
+    --c-ps-navbar-icons-size: 16px;
+    --c-ps-post-font-size: 16px;
+    --c-ps-post-bg: var(--ps-color--app);
+    --c-ps-post-text-color: var(--ps-color--text);
+    --c-ps-post-text-color-light: var(--ps-color--text--light);
+    --c-ps-post-photo-width: auto;
+    --c-ps-post-photo-limit-width: 100%;
+    --c-ps-post-photo-height: 500px;
+    --c-ps-post-gallery-width: 100%;
+    --c-ps-postbox-bg: var(--ps-color--app);
+    --c-ps-postbox-text-color: var(--ps-color--text);
+    --c-ps-postbox-text-color-light: var(--ps-color--text--light);
+    --c-ps-postbox-icons-color: var(--text-color--light);
+    --c-ps-postbox-separator-color: var(--divider--light);
+    --c-ps-post-pinned-border-color: var(--divider);
+    --c-ps-post-pinned-border-size: 3px;
+    --c-ps-checkbox-border: rgba(0, 0, 0, .1);
+    --c-ps-profile-cover-height: 40%;
+    --c-ps-profile-avatar-size: 160px;
+    --c-ps-notification-unread-bg: var(--ps-color--primary--ultralight);
+    --c-ps-chat-window-notif-bg: var(--ps-color--warning);
+    --c-ps-chat-message-bg: var(--ps-color--app--darkgray);
+    --c-ps-chat-message-text-color: var(--ps-color--text);
+    --c-ps-chat-message-bg-me: var(--ps-color--primary);
+    --c-ps-chat-message-text-color-me: #fff;
+    --c-ps-chat-message-font-size: calc((var(--font-size) * 14)/ 20);
+    --c-ps-landing-background-color: var(--color--app--gray);
+    --c-ps-landing-image-height-mobile: 60%;
+    --c-ps-landing-image-position-mobile: center;
+    --c-ps-landing-image-size-mobile: cover;
+    --c-ps-landing-image-repeat-mobile: no-repeat;
+    --c-ps-landing-image-height: 40%;
+    --c-ps-landing-image-position: center;
+    --c-ps-landing-image-size: cover;
+    --c-ps-landing-image-repeat: no-repeat;
+    --bubble-bg: var(--color--warning);
+    --bubble-color: var(--color--app);
+    --avatar-radius: var(--c-ps-avatar-style);
+    --avatar-small: 32px;
+    --avatar-medium: 48px;
+    --avatar-normal: 64px;
+    --avatar-large: 100px;
+    --avatar-xlarge: 160px;
+    --avatar-width: var(--avatar-medium);
+    --avatar-box-shadow: 0 0 0 1px var(--divider);
+    --avatar-border: 2px solid transparent;
+    --av-size: var(--avatar-normal);
+    --av-margin: calc( 12px + var(--av-size));
+    --av-n-margin: calc(-1 * var(--av-margin));
+    --header-menu--mobile-bg: #1b1b1b;
+    --header-menu--mobile-links: #fff;
+    --header-menu--mobile-sublinks: #999;
+    --order--top: 100;
+    --order--header: var(--order--top);
+    --order--mobile-menu: 102;
+    --order--floatbox: 102;
+    --order--notification: 1000;
+    --order--prloader: 1001;
+    --order--tip: 10005;
+}

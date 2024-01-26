@@ -1,0 +1,23 @@
+/* ---- Footer Menu styles ---- */
+
+.#{$ow-prefix}footer_menu {
+    padding-left: 24px;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.#{$ow-prefix}footer_menu a {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    line-height: 12px;
+    color: #{$text-lighter};
+}
+
+
+
+.#{$ow-prefix}footer_menu a:hover {
+    text-decoration: none;
+}
+

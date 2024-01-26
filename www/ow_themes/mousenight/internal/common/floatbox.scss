@@ -1,0 +1,219 @@
+/* FloatBox implementation */
+
+.floatbox_canvas {
+    z-index: 99999; //var(--order--floatbox);
+}
+
+#floatbox_overlay {
+    position: fixed;
+    z-index: 9999; //var(--order--top);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.floatbox_overlayMacFFBGHack {
+    background: url(#{$image-path}macFFBgHack.png) repeat;
+}
+
+.floatbox_overlayBG {
+    background-color: #000;
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    opacity: 0.75;
+}
+
+#floatbox_HideSelect {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border: none;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body .floatbox_canvas .floatbox_container {
+    margin-top: 100px;
+}
+
+
+.floatbox_container{
+    #base_cmp_floatbox_ajax_signin{
+        .ow_sign_in{
+            .ow_box{
+                display: flex !important;
+                flex-direction: column;
+                gap: 25px;
+            }
+        }
+    }
+}
+
+.floatbox_container {
+    position: fixed;
+    z-index: var(--order--floatbox);
+    width: 300px;
+    -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    border: none;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    height: auto !important; 
+    direction: ltr !important;
+    
+
+    .ow_bg_color{
+        position: relative;
+
+        .ow_ic_delete{
+            &.close{
+                position: absolute;
+                top: -20px;
+                left: -20px;
+                
+                &::before{
+                    display: none;
+        
+                }
+            }
+        }
+    }
+}
+
+.floatbox_empty{
+    .ow_box_cap_icons{
+        top: unset;
+        right: unset;
+
+        .ow_ic_delete{
+            &.close{
+                position: absolute;
+                top: 0;
+                left: 0;
+                
+            }
+        }
+    }
+}
+
+.floatbox_header {
+    padding: 4px;
+    text-align: left;
+}
+
+.floatbox_header a.close_btn {
+    margin: 2px;
+    background: url(#{$image-path}ow-ic-close.png) no-repeat;
+}
+
+.floatbox_title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.floatbox_header .#{$ow-prefix}box_cap_icons {
+    float: right;
+    margin-top: 1px;
+
+    .ow_ic_delete{
+
+        
+        &::before{
+            display: none;
+
+        }
+    }
+}
+
+.floatbox_body {
+    text-align: left;
+    overflow: hidden !important;
+    .ow_right{
+        text-align: right;
+    }
+    .ow_button{
+        span{
+          input[type='submit']{
+            background-color: #{$primary-color};
+            color: #{$text-white};
+            text-align: center;
+            border-radius: #{$radius-md};
+            font-size: 18px;
+            padding: 0 16px;
+          }
+        }
+    }
+}
+
+.floatbox_bottom {
+    padding: 0px 16px 16px;
+    text-align: center;
+}
+
+
+/* Floatbox preloader style */
+
+.#{$ow-prefix}floatbox_preloader {
+    margin: 0px auto;
+    position: absolute;
+    z-index: var(--order--prloader);
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    -webkit-animation: spin 2.5s infinite linear;
+    animation: spin 2.5s infinite linear;
+    border: 3px solid transparent;
+    border-top-color: #da10b3;
+    border-radius: 50% !important;
+    background: url(#{$image-path}96x96.png) no-repeat scroll center center/40px 40px;
+}
+
+.#{$ow-prefix}floatbox_preloader:before,
+.#{$ow-prefix}floatbox_preloader:after {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+}
+
+.#{$ow-prefix}floatbox_preloader:before {
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    -webkit-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
+    border: 3px solid transparent;
+    border-top-color: var(--color--secondary);
+}
+
+.#{$ow-prefix}floatbox_preloader:after {
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    -webkit-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
+    border: 3px solid transparent;
+    border-top-color: #ddd;
+}
+
+
+/* End Floatbox preloader style */
+
+
+/* End FloatBox implementation */

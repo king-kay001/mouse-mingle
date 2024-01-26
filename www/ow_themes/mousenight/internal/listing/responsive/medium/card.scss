@@ -1,0 +1,110 @@
+.ow_card{
+    .ow_card_cont{
+        .ow_card_body{
+            .ow_card_bl{
+                flex-direction: column;
+                padding: 0 5px;
+                box-sizing: border-box;
+                .ow_red{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+.ow_card.ow_user_card{
+    .ow_card_cover{
+        .ow_card_cover_img{
+            .ow_card_avatar {
+                top: 75px;
+                .ow_avatar {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
+
+
+.ow_ucard{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #F6F8FD;
+    min-width: 48%;
+    // width: 48%; 
+    .ow_ucard_cont{
+      position: relative;
+      overflow: hidden;
+      height: 170px; 
+
+        .ow_ucard_icon{
+            width: 12px;
+            height: 12px;
+        }
+  
+        .ow_ucard_top{
+            top: 10px;
+          
+            .ow_ucard_top_right{
+                width: 30px;
+                .ow_ic_hot{
+                    background-size: 8px 8px;
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+
+        .ow_ucard_bottom{
+            bottom: 10px;
+            font-size: 12px;
+        }
+        
+    }
+
+    .ow_ucard_toolbar{
+        height: 56px;
+        gap: 40px;
+
+        .ow_ucard_icon{
+            width: 24px;
+            height: 24px;
+        }
+
+        .ow_ic_gift{
+          width: 18px;
+          height: 18px;
+        }
+    }
+}
+
+
+
+.user-list-container{
+    
+    .user-container{
+      width: 48%;
+      min-width: 48%;
+      
+      .user-list-avatar{
+        height: 170px;
+        overflow-y: hidden;
+  
+        .avatar-header{
+          top: 10px;
+  
+          .header-left{
+            gap: 10px;
+            font-size: 12px;
+          }
+        }
+      }
+  
+    }
+  
+  }
+  

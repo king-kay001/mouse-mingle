@@ -1,0 +1,32 @@
+.#{$ow-prefix}user_list .#{$ow-prefix}alt1,
+.#{$ow-prefix}user_list .#{$ow-prefix}alt2,
+.#{$ow-prefix}video_list .#{$ow-prefix}alt1,
+.#{$ow-prefix}video_list .#{$ow-prefix}alt2,
+.#{$ow-prefix}photo_list .#{$ow-prefix}alt1,
+.#{$ow-prefix}photo_list .#{$ow-prefix}alt2 {
+    border-style: solid;
+    border-color: #eff2f5;
+}
+
+.#{$ow-prefix}video_list div:first-child,
+.#{$ow-prefix}user_list div:first-child {
+    border-left-width: 1px;
+    border-top-width: 1px;
+}
+
+.#{$ow-prefix}video_list div,
+.#{$ow-prefix}user_list div {
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+.#{$ow-prefix}video_list div:last-child,
+.#{$ow-prefix}user_list div:last-child {
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+.#{$ow-prefix}video_list div:first-child,
+.#{$ow-prefix}user_list div:first-child {}

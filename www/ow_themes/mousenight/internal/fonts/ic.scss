@@ -1,0 +1,133 @@
+html body div *[class^="ow_ic_"] {
+    background-image: none;
+}
+
+html {
+    body {
+        div *[class^="ow_ic_"]:before,
+        span[class*="ow_ic_"]:before {
+            display: inline-block;
+            font-size: inherit;
+            margin-right: 5px;
+        }
+        .#{$ow-prefix}box_cap_body h3[class*="ow_ic_"]:before,
+        .#{$ow-prefix}page>h1.#{$ow-prefix}stdmargin[class*="ow_ic_"]:before {
+            display: none !important;
+        }
+        div {
+            *[class^="ow_ic_"] {
+                background-image: none;
+            }
+            @each $ic,
+            $content in $ic-list {
+                .#{$ow-prefix}ic_#{$ic} {
+                    @include icon-content($ic);
+                }
+            }
+            .#{$ow-prefix}miniic_comment {
+                background: url(#{$image-path}miniic_set.svg) no-repeat -38px 0px;
+            }
+            .#{$ow-prefix}miniic_like {
+                background: url(#{$image-path}miniic_set.svg) no-repeat 0px 0px;
+            }
+            .#{$ow-prefix}miniic_delete {
+                background-image: url(#{$image-path}miniic_x.png);
+            }
+            .#{$ow-prefix}tinyic_delete {
+                background-image: url(#{$image-path}tinyic_delete.png);
+            }
+            .#{$ow-prefix}tinyic_tag {
+                background-image: url(#{$image-path}tinyic_tag.png);
+            }
+            .#{$ow-prefix}tinyic_write {
+                background-image: url(#{$image-path}tinyic_write.png);
+            }
+        }
+    }
+}
+
+
+/*---- Icons on hover for buttons styles ----*/
+
+html {
+    body.ow div input.#{$ow-prefix}inprogress,
+    body div .#{$ow-prefix}button:hover .#{$ow-prefix}inprogress {
+        background-image: url(#{$image-path}ajax_preloader_button.svg);
+        background-position: right -4px center;
+    }
+    body {
+        &.ow {
+            div {
+                .#{$ow-prefix}inprogress {
+                    background-image: url(#{$image-path}ajax_preloader_button.gif);
+                    background-repeat: no-repeat;
+                    background-position: right -4px center;
+                    padding-right: 25px;
+                }
+            }
+        }
+        div {
+            .#{$ow-prefix}button span,
+            .#{$ow-prefix}button span.#{$ow-prefix}negative,
+            .#{$ow-prefix}button:hover span.#{$ow-prefix}negative,
+            .#{$ow-prefix}button:hover span.#{$ow-prefix}negative input,
+            .#{$ow-prefix}button span.#{$ow-prefix}negative .#{$ow-prefix}inprogress {
+                background-image: none;
+                background-repeat: no-repeat;
+            }
+            span.#{$ow-prefix}button:hover span {
+                background-image: none !important;
+            }
+        }
+    }
+    .#{$ow-prefix}no_cap span.#{$ow-prefix}ic_up_arrow {
+        width: 20px;
+        display: inline-block;
+    }
+}
+
+
+/*---- End of the Icons on hover for buttons styles ----*/
+
+.maintenance_cont h1 {
+    background-image: none;
+}
+
+.#{$ow-prefix}icon_control {
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 0px 0 3px 20px;
+    line-height: 15px;
+}
+
+.#{$ow-prefix}miniicon_control {
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 1px 0 2px 14px;
+    line-height: 9px;
+}
+
+.#{$ow-prefix}box_cap_icons {
+    margin-top: -26px;
+    a.close {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        float: right;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(216, 216, 216, 0.31);
+        background-image: url('images/mouse-icons/Cross.svg') !important;
+        padding: 5px;
+        border-radius: 10%;
+        color: rgba(255, 255, 255, 0);
+        opacity: .5;
+    }
+}
+
+span.#{$ow-prefix}icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: top;
+}

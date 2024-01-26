@@ -1,0 +1,41 @@
+/* ---- Box Menu styles ---- */
+
+.#{$ow-prefix}box_menu {
+    font-size: 0px;
+    line-height: 21px;
+    margin-bottom: 16px;
+}
+
+.#{$ow-prefix}box_menu a {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+    height: 16px;
+    padding: 0px 6px 0 7px;
+    border-right: 1px #4c4c4c solid;
+    outline: 0;
+    color: #4c4c4c;
+    text-transform: uppercase;
+    font-family: var(--apptheme-font-family);
+}
+
+.#{$ow-prefix}box_menu a:first-child {
+    padding-left: 0px;
+}
+
+.#{$ow-prefix}box_menu a:last-child {
+    border-right-width: 0px;
+}
+
+.#{$ow-prefix}box_empty .#{$ow-prefix}box_menu {
+    float: left;
+}
+
+.#{$ow-prefix}box_menu a.active,
+.#{$ow-prefix}box_menu a:hover {
+    color: var(--color--primary);
+    text-decoration: none;
+}
+
+
+/* ---- End of Box Menu styles ---- */

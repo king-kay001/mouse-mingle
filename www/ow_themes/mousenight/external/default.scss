@@ -1,0 +1,164 @@
+/********************************************************************************
+  *
+  *     Filename:        base.css
+  *     Description:     CupidOnCG Theme Base CSS File
+  *     Version:         1.0.0
+  *
+  *     -- FILE STRUCTURE: --
+  *
+  *     [ 1] CSS Defaults Reset          __reset
+  *     [ 2] Clearfix                    __clearfix
+  *     [ 3] Base Elements               __base
+  *     [ 4] Typography                  __typography
+  *     [ 5] Masterpage & Page Layout    __layout
+  *     [ 6] Menus                       __menus
+  *     [ 7] Pagination                  __pagination
+  *     [ 8] Content Items               __content items
+  *     [ 9] Common Blocks               __blocks
+  *     [10] Forms                       __forms
+  *     [11] Tables                      __tables
+  *     [12] Standard Listings           __listings
+  *     [13] Thumbnails & Icons          __icons
+  *     [14] Notifications               __notifications
+  *		  [15] Default Classes			 __default classes
+  *     [16] Plugin Styles               __plugins
+  *     [17] Misc                        __misc
+  *     [18] Responsive                  __responsive
+  *
+ ********************************************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+html,
+body {
+    // --font-size: 1.09rem;
+    --font-size: 0.8rem;
+    // --line-height: 1.4rem;
+    // --line-height: 0.85rem;
+    --container: 1560px;
+}
+
+@import 'vars.scss';
+@import '../internal/variables.scss';
+
+/*========================================================
+    [1] CSS Defaults Reset      __reset
+========================================================*/
+
+@import '../internal/defaults.scss';
+
+/*========================================================
+[2] Clearfix        __clearfix
+========================================================*/
+
+@import '../internal/clearfix.scss';
+
+/*========================================================
+[3] Base Elements       __base
+========================================================*/
+
+@import '../internal/elements.scss';
+
+/*========================================================
+[4] Typography        __typography
+========================================================*/
+
+@import '../internal/fonts/icofont.scss';
+@import '../internal/fonts/inter.scss';
+@import '../internal/typography.scss';
+
+/*========================================================
+[5] Masterpage & Page Layout        __layout
+========================================================*/
+
+@import '../internal/layout.scss';
+
+/*========================================================
+[6] Menus        __menus
+========================================================*/
+
+@import '../internal/menus.scss';
+
+/*========================================================
+[7] Pagination        __pagination
+========================================================*/
+
+@import '../internal/pagination.scss';
+
+/*========================================================
+[8] Content Items        __content items
+========================================================*/
+
+@import '../internal/content.scss';
+
+/*========================================================
+[9] Common Blocks        __blocks
+========================================================*/
+
+@import '../internal/common.scss';
+
+/*========================================================
+[10] Forms        __forms
+========================================================*/
+
+@import '../internal/forms.scss';
+
+/*=======================================================
+[11] Tables        __tables
+========================================================*/
+
+@import '../internal/tables.scss';
+
+/*========================================================
+[12] Standard Listings        __listings
+========================================================*/
+
+@import '../internal/listing.scss';
+
+/*========================================================
+[13] Thumbnails & Icons        __icons
+========================================================*/
+
+@import '../internal/thumbnails.scss';
+
+/*===========================================================
+[14] Notifications        __notifications
+===========================================================*/
+
+@import '../internal/notifications.scss';
+
+/*========================================================
+[15] Default Classes      __default classes
+========================================================*/
+
+@import '../internal/classes.scss';
+
+/*========================================================
+[16] Plugin Styles        __plugins
+========================================================*/
+
+@import '../internal/plugins.scss';
+
+/*========================================================
+[17] Misc        __misc
+========================================================*/
+
+@import '../internal/misc.scss';
+
+/* Import All CSS */
+
+@import '../internal/animate.scss';
+
+/*========================================================
+[18] Responsive        __responsive
+========================================================*/
+
+@import '../internal/responsive.scss';

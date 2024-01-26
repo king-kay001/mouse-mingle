@@ -1,0 +1,102 @@
+/* ---- Video styles ---- */
+
+.#{$ow-prefix}video_list .#{$ow-prefix}alt1,
+.#{$ow-prefix}video_list .#{$ow-prefix}alt2 {
+    padding: 24px 0px 24px 0px;
+    -webkit-align-content: stretch;
+    align-content: stretch;
+    justify-content: center;
+}
+
+.#{$ow-prefix}video_list .#{$ow-prefix}alt1.clearfix,
+.#{$ow-prefix}video_list .#{$ow-prefix}alt2.clearfix {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.#{$ow-prefix}video_player {
+    text-align: center;
+}
+
+.#{$ow-prefix}video_description {
+    margin: 8px 0 20px;
+}
+
+.#{$ow-prefix}video_list_item {
+    margin: 0px 3.5%;
+    max-height: 165px;
+    width: 120px;
+}
+
+.#{$ow-prefix}other_video_item_title {
+    margin-left: 88px;
+    padding-left: 4px;
+}
+
+.#{$ow-prefix}video_thumb {
+    background: url(#{$image-path}video-no-video.png) no-repeat center center;
+    display: block;
+}
+
+.#{$ow-prefix}video_thumb,
+.#{$ow-prefix}video_list_item img {
+    height: 90px;
+    width: 120px;
+}
+
+.#{$ow-prefix}other_video_thumb {
+    display: block;
+    margin-right: -80px;
+    padding: 4px 4px 4px 4px;
+}
+
+.#{$ow-prefix}other_video_thumb a {
+    display: inline-block;
+    width: 80px;
+    height: 60px;
+    background: url(#{$image-path}video-no-video.png) no-repeat center center;
+}
+
+.video_thumb_no_title {
+    margin: 0px 4px 4px 0px;
+}
+
+.#{$ow-prefix}other_video_thumb,
+.#{$ow-prefix}other_video_thumb img,
+.#{$ow-prefix}other_video_floated img {
+    height: 60px;
+    width: 80px;
+}
+
+.#{$ow-prefix}other_video_floated {
+    display: inline-block;
+    background: #fff url(#{$image-path}video-no-video.png) no-repeat center center;
+    width: 80px;
+    height: 60px;
+    vertical-align: middle;
+}
+
+.#{$ow-prefix}video_item_title {
+    padding-bottom: 3px;
+}
+
+.#{$ow-prefix}video_item_rate {
+    height: 15px;
+    text-align: center;
+}
+
+.#{$ow-prefix}video_infobar {
+    padding: 10px;
+    text-align: right;
+}
+
+.#{$ow-prefix}video_player object,
+.#{$ow-prefix}video_player embed {
+    max-width: 100%;
+}
+
+
+/* ---- End of Video styles ---- */

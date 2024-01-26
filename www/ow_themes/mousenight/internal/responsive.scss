@@ -1,0 +1,73 @@
+@each $breakpoint,
+$size in $grid-breakpoints {
+    @if $breakpoint=='xxl' {
+        /* hi-res laptops and desktops */
+    }
+    @else if $breakpoint=='xl' {
+        /* big landscape tablets, laptops, and desktops */
+    }
+    @else if $breakpoint=='lg' {
+        /* tablet, landscape iPad, lo-res laptops ands desktops */
+    }
+    @else if $breakpoint=='md' {
+        /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    }
+    @else if $breakpoint=='sm' {
+        /* smartphones, Android phones, landscape iPhone */
+    }
+    @else if $breakpoint=='xs' {
+        /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+    }
+    @media screen and (min-width: #{$size}) {
+        @include make-base-classes('#{$breakpoint}_');
+        @include make-base-grids('#{$breakpoint}_');
+    }
+}
+
+@media screen and (min-width: map-get($map: $grid-breakpoints, $key: 'xl')) {
+    @import 'common/responsive/xl.scss';
+    @import 'content/responsive/xl.scss';
+    @import 'forms/responsive/xl.scss';
+    @import 'layouts/responsive/xl.scss';
+    @import 'listing/responsive/xl.scss';
+    @import 'menus/responsive/xl.scss';
+    @import 'plugins/responsive/xl.scss';
+    @import 'tables/responsive/xl.scss';
+    @import 'thumbnail/responsive/xl.scss';
+}
+
+@media screen and (max-width: map-get($map: $grid-breakpoints, $key: 'lg')) {
+    @import 'common/responsive/lg.scss';
+    @import 'content/responsive/lg.scss';
+    @import 'forms/responsive/lg.scss';
+    @import 'layouts/responsive/lg.scss';
+    @import 'listing/responsive/lg.scss';
+    @import 'menus/responsive/lg.scss';
+    @import 'plugins/responsive/lg.scss';
+    @import 'tables/responsive/lg.scss';
+    @import 'thumbnail/responsive/lg.scss';
+}
+
+@media screen and (max-width: map-get($map: $grid-breakpoints, $key: 'md')) {
+    @import 'common/responsive/md.scss';
+    @import 'content/responsive/md.scss';
+    @import 'forms/responsive/md.scss';
+    @import 'layouts/responsive/md.scss';
+    @import 'listing/responsive/md.scss';
+    @import 'menus/responsive/md.scss';
+    @import 'plugins/responsive/md.scss';
+    @import 'tables/responsive/md.scss';
+    @import 'thumbnail/responsive/md.scss';
+}
+
+@media screen and (max-width: map-get($map: $grid-breakpoints, $key: 'sm')) {
+    @import 'common/responsive/sm.scss';
+    @import 'content/responsive/sm.scss';
+    @import 'forms/responsive/sm.scss';
+    @import 'layouts/responsive/sm.scss';
+    @import 'listing/responsive/sm.scss';
+    @import 'menus/responsive/sm.scss';
+    @import 'plugins/responsive/sm.scss';
+    @import 'tables/responsive/sm.scss';
+    @import 'thumbnail/responsive/sm.scss';
+}

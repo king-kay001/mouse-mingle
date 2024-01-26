@@ -1,0 +1,397 @@
+/* -------Attachments styles----------*/
+
+.#{$ow-prefix}attachments {
+    display: flex !important;
+    align-items: center;
+    input[type="file"] {
+        cursor: pointer;
+        float: right;
+        opacity: 0;
+    }
+    a {
+        height: 20px;
+        width: 20px;
+        flex-grow: 1;
+        display: inline-block;
+        float: unset;
+        color: var(--color--text);
+        &:hover {
+            color: var(--color--primary);
+        }
+        &:not(.#{$ow-prefix}btn_add_giphy) {
+            position: relative;
+        }
+        input[type="file"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.#{$ow-prefix}attachment_btn {
+    float: right;
+    margin: 0 0 0 6px;
+    padding: 0;
+    span {
+        &.#{$ow-prefix}button {
+            background-color: none;
+            background-image: none;
+            background-repeat: repeat-x;
+            background-position: center left;
+            border: none;
+            padding: 0;
+            display: inline-block;
+            text-align: center;
+            span {
+                display: inline-block;
+            }
+            input[type=submit],
+            input[type="button"] {
+                padding: 1px 8px 4px;
+                height: 22px;
+                line-height: 19px;
+                background: none;
+            }
+        }
+    }
+}
+
+.#{$ow-prefix}attachment_icons {
+    float: right;
+}
+
+.#{$ow-prefix}attachments {
+    a {
+        float: left;
+        cursor: pointer;
+        overflow: hidden;
+        text-decoration: none;
+        color: var(--color-text);
+        &:not(.#{$ow-prefix}btn_add_giphy) {
+            &::before {
+                content: "\eece";
+                line-height: 20px;
+                font-size: 20px;
+            }
+        }
+        &.video {
+            @include icon-content('attach_video');
+        }
+        &.attach {
+            // margin-top: -3px;
+            margin-left: 5px;
+            @include icon-content('attach_file');
+            &.uploading {
+                background: url(#{$image-path}ajax_preloader_button.gif) no-repeat center center;
+            }
+        }
+    }
+}
+
+.#{$ow-prefix}attachment_delete {
+    width: 12px;
+    height: 12px;
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+.#{$ow-prefix}ajax_oembed_attachment {
+    width: 100%;
+}
+
+
+/*Video, links embed*/
+
+body {
+    .#{$ow-prefix}oembed_attachment_preview {
+        height: 60px;
+        position: relative;
+        padding: 6px 20px 0 88px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border-width: 1px;
+        background-color: #fff;
+    }
+    .#{$ow-prefix}oembed_attachment_pic {
+        width: 80px;
+        height: 60px;
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        border-width: 0 1px 0 0;
+        background-color: #fff;
+        .attachment_other_images_btn {
+            position: absolute;
+            left: 4px;
+            bottom: 4px;
+            display: none;
+        }
+        &:hover {
+            .attachment_other_images_btn {
+                display: inline-block;
+            }
+        }
+        img {
+            width: 80px;
+            height: 60px;
+        }
+    }
+}
+
+.#{$ow-prefix}oembed_atachment_pic_nopic {
+    background-image: url(#{$image-path}no-picture.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.#{$ow-prefix}oembed_attachment_url {
+    position: relative;
+    a {
+        position: absolute;
+        bottom: 4px;
+        left: 4px;
+    }
+}
+
+.#{$ow-prefix}attachment_title {
+    margin-bottom: 4px;
+    line-height: 13.5px;
+    display: inline-block;
+    a {
+        display: block;
+        height: 13px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: bold;
+    }
+}
+
+.#{$ow-prefix}attachment_description {
+    line-height: 13.5px;
+    height: 27px;
+    overflow: hidden;
+    display: block;
+}
+
+body .newsfeed-attachment-preview {
+    width: 100%;
+}
+
+.#{$ow-prefix}oembed_attachment_preview.loading_content .#{$ow-prefix}oembed_attachment_pic,
+.#{$ow-prefix}oembed_attachment_preview.loading_content .#{$ow-prefix}attachment_title,
+.#{$ow-prefix}oembed_attachment_preview.loading_content .#{$ow-prefix}attachment_description {
+    display: none;
+}
+
+.#{$ow-prefix}oembed_attachment_preview.loading_content {
+    background: url(#{$image-path}ajax_preloader_content.gif) center center no-repeat;
+}
+
+.attachment_image_item {
+    border-width: 1px;
+    cursor: pointer;
+    float: left;
+    height: 85px;
+    margin: 2px;
+    padding: 3px;
+    text-align: center;
+    width: 85px;
+}
+
+.attachment_image_item img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/*Photo attachment*/
+
+.#{$ow-prefix}photo_attachment_preview {
+    height: auto;
+    padding: 8px 0;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    margin-left: 0;
+}
+
+.#{$ow-prefix}comments_mipc .#{$ow-prefix}photo_attachment_preview,
+.#{$ow-prefix}comments_mipc .#{$ow-prefix}oembed_attachment_preview {
+    margin-left: 48px;
+}
+
+.#{$ow-prefix}comments_ipc .#{$ow-prefix}photo_attachment_preview,
+.#{$ow-prefix}comments_ipc .#{$ow-prefix}oembed_attachment_preview {
+    margin-left: 57px;
+}
+
+.#{$ow-prefix}feed_comments_input_sticky .#{$ow-prefix}photo_attachment_preview,
+.#{$ow-prefix}feed_comments_input_sticky .#{$ow-prefix}oembed_attachment_preview,
+.#{$ow-prefix}feed_comments_input_sticky .comments_hidden_btn {
+    margin: 0 12px 8px 22px;
+}
+
+.#{$ow-prefix}photo_attachment_pic {
+    display: inline-block;
+    background-color: #fff;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #eff2f5;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.#{$ow-prefix}photo_attachment_pic.loading {
+    background-size: auto;
+    background-image: url(#{$image-path}ajax_preloader_content.gif);
+    background-position: center center;
+}
+
+.#{$ow-prefix}photo_attachment_stage {
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*File attachments*/
+
+.#{$ow-prefix}file_attachment_preview {
+    width: 100%;
+    height: auto;
+    margin-top: -2px;
+    margin-bottom: 6px;
+}
+
+.#{$ow-prefix}file_attachment_block1,
+.#{$ow-prefix}file_attachment_block2 {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 2px 0;
+}
+
+.#{$ow-prefix}file_attachment_block1 {
+    padding-right: 4px;
+}
+
+.#{$ow-prefix}file_attachment_block2 {
+    padding-left: 4px;
+}
+
+.#{$ow-prefix}dialog_items_wrap .#{$ow-prefix}file_attachment_block1,
+.#{$ow-prefix}dialog_items_wrap .#{$ow-prefix}file_attachment_block2 {
+    width: auto;
+    float: none;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 4px;
+}
+
+.#{$ow-prefix}dialog_items_wrap .#{$ow-prefix}file_attachment_info,
+.#{$ow-prefix}mailbox_log .#{$ow-prefix}file_attachment_info {
+    padding-right: 4px;
+}
+
+.#{$ow-prefix}dialog_item_mailchat .#{$ow-prefix}mailbox_message_content_attach {
+    padding-top: 0px;
+}
+
+.#{$ow-prefix}dialog_items_wrap .#{$ow-prefix}file_attachment_name,
+.#{$ow-prefix}mailbox_log .#{$ow-prefix}file_attachment_name {
+    font-weight: normal;
+    padding-right: 4px;
+}
+
+.#{$ow-prefix}file_attachment_info {
+    border: 1px solid transparent;
+    padding-right: 50px;
+    position: relative;
+    height: 22px;
+    overflow: hidden;
+}
+
+.#{$ow-prefix}file_attachment_info:hover {
+    border-color: #eff2f5;
+}
+
+.#{$ow-prefix}file_attachment_info a {
+    line-height: 22px;
+    padding-left: 8px;
+}
+
+.#{$ow-prefix}dialog_in_item.fileattach {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.#{$ow-prefix}dialog_in_item.fileattach .#{$ow-prefix}file_attachment_info {
+    border: none;
+}
+
+.#{$ow-prefix}file_attachment_name {
+    width: 100%;
+    line-height: 22px;
+    height: 22px;
+    overflow: hidden;
+    padding-left: 8px;
+}
+
+.#{$ow-prefix}file_attachment_size {
+    font-weight: normal;
+    display: none;
+}
+
+.#{$ow-prefix}file_attachment_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    background-image: url(#{$image-path}tag_close_btn.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.#{$ow-prefix}file_attachment_preload {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    width: 20px;
+    height: 22px;
+    background: url(#{$image-path}ajax_preloader_content.gif) center center no-repeat;
+    display: none;
+}
+
+.#{$ow-prefix}dialog_in_item.errormessage p,
+.#{$ow-prefix}mailbox_log_message.errormessage .#{$ow-prefix}mailbox_message_content,
+.#{$ow-prefix}dialog_item_mailchat.errormessage .#{$ow-prefix}dialog_item_mailchat_text {
+    color: #b1b1b1;
+}
+
+.#{$ow-prefix}errormessage_not {
+    display: block;
+    padding-bottom: 4px;
+    padding-left: 4px;
+}
+
+.#{$ow-prefix}dialog_in_item.errormessage .#{$ow-prefix}errormessage_not {
+    padding-left: 0;
+}
+
+
+/* -------End of attachments styles----------*/

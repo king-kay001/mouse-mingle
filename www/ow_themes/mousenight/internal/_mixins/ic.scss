@@ -1,0 +1,38 @@
+// icon list
+$ic-list: ( "add": \efc0, "aloud": \ef91, "app": \efbe, "at": \eea6, "attach": \ec4d, "attach_file": \eea7, "attach_video": \eb2c, "badge": \eeaa, "bag": \eeab, "birthday": \ec45, "bookmark": \eec0, "calendar": \eecd, "camera": \ec47, "cart": \eed2, "chat": \eed5, "clock": \eedc, "close": \eedd, "comment": \eeeb, "cut": \edeb, "dashboard": \eefa, "delete": \ef98, "draft": \ef05, "down_arrow": \ea99, "edit": \ebf5, "female": \ecf0, "file": \ec57, "files": \efb6, "filter": \efe2, "flag": \edbd, "folder": \ec5b, "forum": \ef75, "friends": \ed4f, "gear_wheel": \ef3a, "gift": \ef3c, "groups": \ed0c, "heart": \ef45, "help": \ef67, "house": \ef47, "info": \ef4e, "key": \ef59, "left_arrow": \ea9d, "lens": \ec82, "link": \ef71, "lock": \ec61, "mail": \ef14, "male": \ef89, "menu": \efa2, "mobile": \ef9b, "moderator": \ed04, "monitor": \ea48, "move": \ef0a, "music": \ec6b, "new": \efc2, "newsfeed": \ef72, "newspapper": \efa7, "ok": \eed7, "online": \f027, "picture": \ef4b, "places": \ed42, "plugin": \efbf, "power": \ec76, "question": \efca, "refresh": \efd1, "push_pin": \f003, "reply": \ec7f, "right_arrow": \eaa0, "rss": \efdb, "restrict": \ef0c, "save": \ee00, "script": \f00a, "server": \efe0, "settings": \efe2, "star": \f000, "tag": \f004, "thumb_up": \f00c, "thunb_down": \f00b, "toggle_on": \f012, "toggle_off": \f011, "tools": \f014, "trash": \ec53, "unlock": \ec8c, "up_arrow": \eaa1, "update": \f01d, "user": \ecfd, "usearch": \ed1a, "users": \ed09, "video": \ecb5, "warning": \f026, "write": \ebf6, "facebook": \ed37, "facebook_messenger": \ed36, "twitter": \ed7a, "snapchat": \e936, "whatsapp": \e957, "pinterest": \ed5d, "google": \e8df, "youtube": \e95f, "vimeo": \ed7f, "telegram": \ed75, "instagram": \ed46, "reddit": \ed62, "skype": \ed67, "shopify": \ed65, "eye": \ef24, "eye_open": \e80b,"eye_alt": \ef21,"invisible": \ef53,"wink": \eb06,"angry": \eaf4,"astonished": \eaf5,"confounded": \eaf6,"confused": \eaf7,"crying": \eaf8,"dizzy": \eaf9,"heart_eyes": \eafb,"laughing": \eafc,"nerd": \eafd,"sad": \eb01,"smirk": \eb04,);
+// add icon to element
+@mixin icon-content($name, $font: false, $size: inherit) {
+    &::before {
+        @if $font {
+            @include icofont($size);
+        }
+        @include icon-name($name);
+    }
+}
+
+// Convenience function used to set content property
+@function ic-content($ic-var) {
+    @return unquote("\"#{ $ic-var }\"");
+}
+
+// call icon by name
+@mixin icon-name( $name) {
+    $icon: map-get($map: $ic-list, $key: $name);
+    content: ic-content($icon);
+}
+
+// create icofont elemement
+@mixin icofont( $size: inherit) {
+    display: inline-block;
+    font: normal normal normal 14px/1 IcoFont;
+    font-size: $size;
+    text-rendering: auto;
+    speak: none;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

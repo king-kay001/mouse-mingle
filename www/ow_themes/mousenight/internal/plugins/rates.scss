@@ -1,0 +1,62 @@
+/* ---- Rates Styles ---- */
+
+.#{$ow-prefix}rates {
+    width: 65px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 2px;
+}
+
+.#{$ow-prefix}rates .rates_cont {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.15s;
+    -moz-transition: opacity 0.15s;
+    -webkit-transition: opacity 0.15s;
+}
+
+.#{$ow-prefix}rates:hover .rates_cont {
+    opacity: 1;
+}
+
+.rate_title {
+    color: #8e8d8d;
+}
+
+.inactive_rate_list,
+.active_rate_list {
+    background: url(#{$image-path}stars.png) no-repeat 0 -13px;
+    width: 65px;
+    height: 13px;
+    text-align: left;
+    display: inline-block;
+}
+
+.active_rate_list {
+    background-position: 0 0;
+}
+
+.rates_cont a.rate_item {
+    background: url(#{$image-path}stars.png) no-repeat 0 -13px;
+    cursor: pointer;
+    float: left;
+    height: 13px;
+    text-decoration: none;
+    width: 13px;
+}
+
+.rates_cont a.active {
+    background-position: 0 0;
+}
+
+.rates_cont {
+    margin: 0 auto;
+    width: 65px;
+}
+
+.#{$ow-prefix}rate_score {
+    font-size: 20px;
+}
+
+
+/* ---- End of Rates Styles ---- */

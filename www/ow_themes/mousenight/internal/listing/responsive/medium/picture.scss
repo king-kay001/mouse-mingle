@@ -1,0 +1,53 @@
+.ow_photo_abulms_widget_lp_photos {
+    $photo-list-height: 219px;
+    $photo-list-gutters: 15px;
+    .ow_photo_abulms_widget_single_item {
+        .ow_lp_wrapper {
+            height: #{$photo-list-height};
+        }
+    }
+    .ow_photo_abulms_widget_column_wrap {
+        .ow_photo_abulms_widget_column_item {
+            .ow_lp_wrapper {
+                height: #{$photo-list-height};
+            }
+        }
+    }
+    .ow_photo_abulms_widget_wide_wrap {
+        height: #{$photo-list-height};
+        .ow_display_flex {
+            .ow_photo_abulms_widget_wide_item {
+                .ow_lp_wrapper {
+                    height: calc(#{$photo-list-height} / 2);
+                }
+            }
+        }
+        .ow_photo_abulms_widget_wide_item {
+            .ow_lp_wrapper {
+                height: calc(#{$photo-list-height} / 2);
+            }
+        }
+    }
+    .ow_photo_abulms_widget_multi_wrap {
+        .ow_photo_abulms_widget_promo {
+            .ow_column_6 {
+                .ow_photo_abulms_widget_multi_item {
+                    .ow_lp_wrapper {
+                        height: calc(#{$photo-list-height} / 2);
+                    }
+                }
+            }
+            .ow_photo_abulms_widget_multi_item {
+                .ow_lp_wrapper {
+                    height: calc(#{$photo-list-height} + #{$photo-list-gutters});
+                }
+            }
+        }
+        .ow_photo_abulms_widget_extra_photos {
+            .ow_lp_wrapper {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,836 @@
+/* ---- Console styles ---- */
+.mobile-console-nav,
+.ow_console_navigation{
+    // display: none;
+}
+.#{$ow-prefix}console_wrap {
+    background-color: transparent;
+}
+
+.#{$ow-prefix}console_body {
+    float: right;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    font-family: var(--apptheme-font-family);
+}
+
+.#{$ow-prefix}console_items_wrap {
+    display: flex;
+    align-items: center;
+    // gap: 35px;
+}
+
+.ow_console_button.ow_console_item a.ow_console_item_link{
+    padding: 0;
+}
+
+.ow_signin_label,
+.ow_console_button.ow_console_item a.ow_console_item_link
+{
+    padding: 6px 12px !important;
+    white-space: nowrap;
+}
+.index_master_page{
+
+}
+
+
+.#{$ow-prefix}console_item {
+    display: flex;
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2px;
+}
+
+.#{$ow-prefix}console_item:hover {
+    border-color: #d9e0e6;
+    cursor: pointer;
+}
+
+.#{$ow-prefix}console_item:last-child {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.breakpoint-on .#{$ow-prefix}console_items_wrap {
+    padding-top: 80px;
+    margin-bottom: 80px;
+}
+
+.breakpoint-on .#{$ow-prefix}console_item {
+    display: block;
+    padding: 15px;
+    margin: 0;
+    background-color: #f2f4f8;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+
+.#{$ow-prefix}console_item a:hover {
+    text-decoration: none;
+}
+
+.#{$ow-prefix}console_block {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+.#{$ow-prefix}console_more {
+    display: none;
+}
+
+.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link {
+    display: flex;
+    align-items: center;
+    color: #{$text-white};
+    font-weight: bold;
+    font-size: 0;
+}
+
+.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+    background-size: 100% auto;
+    background-position: center;
+}
+
+
+.#{$ow-prefix}console_wrap .#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link {
+    display: inline-block;
+}
+
+.#{$ow-prefix}console_wrap .#{$ow-prefix}console_item:not(.#{$ow-prefix}console_button) a.#{$ow-prefix}console_item_link {
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    padding-left: 0;
+}
+
+.#{$ow-prefix}user_profile_console a.#{$ow-prefix}console_item_link {
+    background: 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.#{$ow-prefix}console_profile_avatar {
+    align-items: center;
+    display: flex;
+    font-size: 80%;
+}
+
+.#{$ow-prefix}console_profile_avatar * {
+    display: inline-block;
+}
+
+.#{$ow-prefix}console_profile_avatar img {
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    margin-right: 10px;
+}
+
+.#{$ow-prefix}console_wrap .#{$ow-prefix}user_profile_console a.#{$ow-prefix}console_item_link {
+    width: 28px;
+    height: 28px;
+}
+
+.#{$ow-prefix}user_profile_console {
+    background: url(#{$image-path}context_action_arrow.svg) no-repeat right center transparent;
+    padding-right: 15px;
+    margin-right: var(--padd);
+}
+
+.#{$ow-prefix}console_wrap .#{$ow-prefix}user_profile_console a.#{$ow-prefix}console_item_link img {
+    width: 100%;
+    vertical-align: text-bottom;
+}
+
+.#{$ow-prefix}console_button.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link {
+    pointer-events: auto;
+    width: auto;
+    height: auto;
+    color: #fff;
+    background: #{$primary-color};
+    padding: 8px 16px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.#{$ow-prefix}console_button.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+    display: none;
+}
+
+.#{$ow-prefix}console_button.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link:hover {
+    color: #fff;
+    border-color: transparent;
+    text-decoration: none;
+}
+
+.#{$ow-prefix}console_button.#{$ow-prefix}console_item.zupgrade-btn a.#{$ow-prefix}console_item_link {
+    padding: 6px 12px;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+.#{$ow-prefix}sitesearch_console_dropdown,
+.#{$ow-prefix}for_approval_list{
+    display: none;
+}
+.#{$ow-prefix}invitation_list.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+    content: "\ef2f";
+}
+
+.ow_console_membership_btn{
+    margin: 0 24px;
+}
+
+.ow_friend_request_list{
+    display: none;
+}
+.#{$ow-prefix}friend_request_list.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+    content: "\ed4f";
+}
+
+.#{$ow-prefix}mailbox_items_list.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+    // content: "\eff2"; 
+    content: ""; 
+    background-image: url(#{$image-path}mouse-icons/Chat-light.svg);
+    width: #{$console-icon-wh};
+    height: #{$console-icon-wh};
+    margin-right: 10px;
+}
+
+
+.#{$ow-prefix}mailbox_items_list.#{$ow-prefix}console_dropdown_pressed.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+    // content: "\ef13"; 
+    content: ""; 
+    background-image: url(#{$image-path}mouse-icons/Chat-light.svg);
+    width: #{$console-icon-wh};
+    height: #{$console-icon-wh};
+    margin-right: 10px;
+}
+
+.#{$ow-prefix}notification_list.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+    // content: "\eea3";
+    content: ""; 
+    background-image: url(#{$image-path}mouse-icons/Notification-on.svg);
+    width: #{$console-icon-wh};
+    height: #{$console-icon-wh};
+    margin-right: 10px;
+}
+
+
+.#{$ow-prefix}notification_list.#{$ow-prefix}console_dropdown_pressed.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+    // content: "\efac";
+    content: ""; 
+    background-image: url(#{$image-path}mouse-icons/Notification-on.svg);
+    width: #{$console-icon-wh};
+    height: #{$console-icon-wh};
+    margin-right: 10px;
+    
+}
+.#{$ow-prefix}console_dropdown_hover a.#{$ow-prefix}console_item_link::before {
+    display: inline-block;
+    // content: "\ec8e";
+    content: ""; 
+    background-image: url(#{$image-path}mouse-icons/User.svg);
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.#{$ow-prefix}console_dropdown_hover a.#{$ow-prefix}console_item_link::before{
+    background-repeat: no-repeat;
+    width: #{$console-icon-wh};
+    height: #{$console-icon-wh};
+    background-size: contain;
+}
+.#{$ow-prefix}console_items_wrap .#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before{
+    font-size: 20px;
+}
+
+
+.#{$ow-prefix}admin_dashboard_console.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+    content: "\efe2";
+}
+
+.#{$ow-prefix}for_approval_list.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+    content: "\ef3a";
+}
+
+.#{$ow-prefix}jnmod_console_winks.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link::before {
+    content: "\eb06";
+}
+
+.#{$ow-prefix}console_wrap .classy-navbar {
+    height: 100%;
+}
+
+.classy-nav-container .classy-navbar .classynav ul li .megamenu {
+    box-shadow: 0 8px 50px 8px rgba(47, 91, 234, 0.175);
+}
+
+.classy-nav-container .classy-navbar .classynav ul li .megamenu a {
+    padding: 15px;
+}
+
+.breakpoint-on .classynav ul li ul li a {
+    padding: 0 25px;
+}
+
+.breakpoint-on .classynav ul li.has-down.active>.dd-trigger,
+.breakpoint-on .classynav ul li.megamenu-item.active>.dd-trigger {
+    background-color: var(--color-secondary);
+}
+
+
+/* Console Sign in */
+
+.#{$ow-prefix}console_button.#{$ow-prefix}console_item a.#{$ow-prefix}console_item_link,
+.#{$ow-prefix}signin_label {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.#{$ow-prefix}signin_label {
+    display: inline-block;
+    margin: 4px 0;
+    vertical-align: top;
+}
+
+.#{$ow-prefix}signin_label:hover {
+    color: var(--color--primary);
+}
+
+
+.#{$ow-prefix}menu_active .#{$ow-prefix}signin_delimiter {
+    border-color: #5b646a;
+}
+
+.#{$ow-prefix}console_item .#{$ow-prefix}ico_signin {
+    background-color: transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 14px;
+    margin: 6px 0 0 4px;
+    vertical-align: top;
+    width: 14px;
+}
+
+.#{$ow-prefix}ico_signin:last-child {
+    margin-right: -4px;
+}
+
+
+/*Console select language styles*/
+
+.#{$ow-prefix}console_lang {
+    padding: 4px;
+}
+
+.#{$ow-prefix}console_lang_item {
+    margin-bottom: 1px;
+    margin-top: -2px;
+    text-transform: uppercase;
+    padding-top: 5px;
+    color: #5b646a;
+    font-size: 14px;
+}
+
+li.#{$ow-prefix}console_lang_item {
+    padding: 3px 8px;
+}
+
+li.#{$ow-prefix}console_lang_item:hover {
+    color: #000;
+}
+
+.#{$ow-prefix}console_lang_item span {
+    display: inline-block;
+    padding-left: 22px;
+    background-position: 0 2px;
+}
+
+div.#{$ow-prefix}console_lang_item:hover>span {
+    color: var(--color--primary);
+}
+
+
+/* Console tooltip */
+
+.#{$ow-prefix}console .#{$ow-prefix}tooltip_top_right.#{$ow-prefix}tooltip {
+    top: 42px;
+    padding-top: 2px;
+    right: 0px;
+}
+
+.breakpoint-on .#{$ow-prefix}console .#{$ow-prefix}tooltip_top_right.#{$ow-prefix}tooltip {
+    top: 42px;
+    padding-top: 2px;
+    left: 0;
+}
+
+.#{$ow-prefix}tooltip .#{$ow-prefix}tooltip_body {
+    background: #fff;
+    padding: 4px 0;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.04);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.04);
+}
+
+.#{$ow-prefix}console .#{$ow-prefix}tooltip_top_right .#{$ow-prefix}tooltip_tail span {
+    background-position: 1px -6px;
+}
+
+.#{$ow-prefix}console .#{$ow-prefix}tooltip .#{$ow-prefix}tooltip_body {
+    max-width: 340px;
+    padding: 0px;
+    min-width: 200px;
+}
+
+.console_tooltip {
+    z-index: var(--order--header);
+}
+
+
+/* Console counter */
+
+.#{$ow-prefix}console span.#{$ow-prefix}count_wrap {
+    position: absolute;
+    top: -2px;
+    right: 0px;
+}
+
+.#{$ow-prefix}console span.#{$ow-prefix}count_bg {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.#{$ow-prefix}console span.#{$ow-prefix}count {
+    position: relative;
+    top: 0px;
+}
+
+.#{$ow-prefix}console .#{$ow-prefix}tooltip_body span.#{$ow-prefix}count_wrap {
+    position: static;
+    margin-top: 2px;
+}
+
+
+/* Console list*/
+
+.#{$ow-prefix}console_list_wrapper {
+    width: 330px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    min-height: 60px;
+    padding: 18px 0;
+    box-sizing: border-box;
+}
+
+.#{$ow-prefix}console_list {
+    cursor: default;
+}
+
+.#{$ow-prefix}console_list li {
+    padding: 8px 18px;
+    height: auto;
+    overflow: hidden;
+}
+
+.#{$ow-prefix}console_list li.#{$ow-prefix}console_new_message {
+    background: #fff;
+    border-color: var(--color--primary);
+}
+
+.#{$ow-prefix}console_list li:hover,
+.#{$ow-prefix}console_list li.#{$ow-prefix}console_new_message:hover {
+    background-color: var(--color--app--lightgray);
+}
+
+.#{$ow-prefix}mailbox_items_list li.#{$ow-prefix}mailbox_request_item,
+.#{$ow-prefix}mailbox_items_list li.#{$ow-prefix}chat_request_item {
+    padding: 8px 18px;
+}
+
+.#{$ow-prefix}console_list li:last-child {
+    margin-bottom: 0px;
+}
+
+
+/* Console avatar */
+
+.#{$ow-prefix}console .#{$ow-prefix}avatar {
+    float: left;
+    margin-right: -40px;
+    height: #{$console-avatar};
+    width: #{$console-avatar};
+    background-image: none;
+}
+
+.#{$ow-prefix}console .#{$ow-prefix}avatar img {
+    height: #{$console-avatar};
+    width: #{$console-avatar};
+}
+
+
+/* Console View all btn */
+
+.#{$ow-prefix}console_view_all_btn {
+    text-decoration: none;
+    display: block;
+    line-height: 38px;
+    text-align: center;
+    background: #fff;
+    text-transform: uppercase;
+    height: 40px;
+}
+
+.#{$ow-prefix}console_view_all_btn_wrap .#{$ow-prefix}console_view_all_btn {
+    color: #a2acb3;
+}
+
+.#{$ow-prefix}console_view_all_btn:hover {
+    color: #fff;
+    background: var(--color--primary);
+}
+
+
+/* Console dropdown menu */
+
+ul.#{$ow-prefix}console_dropdown {
+    min-width: 110px;
+    text-align: left;
+    overflow-x: auto;
+    cursor: default;
+    padding: 4px;
+    font-size: 14px;
+}
+
+ul.#{$ow-prefix}console_dropdown .#{$ow-prefix}console_dropdown_cont {
+    white-space: nowrap;
+    margin-bottom: 1px;
+}
+
+ul.#{$ow-prefix}console_dropdown .#{$ow-prefix}console_dropdown_cont a {
+    padding: 6px 10px;
+    border: none;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    color: #4d4d4d;
+}
+
+ul.#{$ow-prefix}console_dropdown li:last-child .#{$ow-prefix}console_dropdown_cont {
+    margin-bottom: 0px;
+}
+
+ul.#{$ow-prefix}console_dropdown li.#{$ow-prefix}dropdown_menu_item {
+    border-bottom: 1px solid #ddd;
+}
+
+ul.#{$ow-prefix}console_dropdown li.#{$ow-prefix}dropdown_menu_item:last-child {
+    border-bottom: none;
+}
+
+ul.#{$ow-prefix}console_dropdown li .#{$ow-prefix}console_divider {
+    height: 0px;
+    background: transparent;
+}
+
+ul.#{$ow-prefix}console_dropdown img.#{$ow-prefix}profile_avatar {
+    width: 24px;
+}
+
+
+/* Console content */
+
+.#{$ow-prefix}console_ntf_cont,
+.#{$ow-prefix}console_invt_cont {
+    display: block;
+    margin: 14px 57px 0px 80px;
+}
+.ow_notification_item{
+    .ow_console_invt_cont.ow_console_invt_no_img{
+        margin-top: 5px;
+    }
+}
+
+.#{$ow-prefix}console_invt_cont .#{$ow-prefix}lbutton:hover {
+    text-decoration: none;
+}
+
+.#{$ow-prefix}console_ntf_txt,
+.#{$ow-prefix}console_invt_txt {
+    min-height: 19px;
+    padding: 0px 0px 3px 0px;
+    display: block;
+}
+
+.#{$ow-prefix}console_invt_txt {
+    width: 211px;
+    word-wrap: break-word;
+    font-size: 80%;
+}
+
+.#{$ow-prefix}console_invt_txt a,
+.#{$ow-prefix}console_invt_cont a {}
+
+.#{$ow-prefix}console_invt_img {
+    float: right;
+    margin-left: -54px;
+    width: 54px;
+    height: 54px;
+    text-align: right;
+}
+
+.#{$ow-prefix}console_invt_img img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.#{$ow-prefix}console_invt_no_img .#{$ow-prefix}console_invt_txt {
+    width: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000;
+    a{
+        font-weight: #{$weight-500};
+        color: #000;
+    }
+}
+
+.#{$ow-prefix}console_invt_no_img {
+    margin-right: 0px;
+}
+
+
+/* Console divider */
+
+.#{$ow-prefix}console_divider {
+    line-height: 1px;
+    height: 1px;
+    background: #d9e0e6;
+    margin: 3px 0px 2px;
+}
+
+
+/* Console messages notifications */
+
+.#{$ow-prefix}console_mailbox_txt {
+    font-size: 60%;
+}
+
+.#{$ow-prefix}console_mailbox_title {
+    padding-right: 52px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    text-transform: capitalize;
+    line-height: 20px;
+}
+
+.#{$ow-prefix}console_mailbox_title .#{$ow-prefix}mailbox_convers_info_date {
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: -60px;
+    text-transform: capitalize;
+    color: #{$text-light};
+}
+
+.#{$ow-prefix}chat_request_item .console_list_ipc_item {
+    padding-left: 20px;
+    background: url(#{$image-path}miniic_buble.svg) 2px 12px no-repeat;
+}
+
+.#{$ow-prefix}chat_request_item.#{$ow-prefix}console_new_message .console_list_ipc_item {
+    background-image: url(#{$image-path}miniic_buble_active.svg);
+}
+
+.#{$ow-prefix}mailbox_request_item .console_list_ipc_item {
+    padding-left: 20px;
+    background: url(#{$image-path}miniic_envelope.svg) 2px 12px no-repeat;
+}
+
+.#{$ow-prefix}mailbox_request_item.#{$ow-prefix}console_new_message .console_list_ipc_item {
+    background-image: url(#{$image-path}miniic_envelope_active.svg);
+}
+
+.#{$ow-prefix}chat_request_item .#{$ow-prefix}console_mailbox_txt {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 2px;
+}
+
+.#{$ow-prefix}console_messages_viewall,
+.#{$ow-prefix}console_messages_send {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.#{$ow-prefix}console_messages_btn .#{$ow-prefix}console_messages_send {
+    display: none;
+}
+
+.#{$ow-prefix}console_messages_btn .#{$ow-prefix}console_messages_viewall {
+    width: 100%;
+    padding-right: 0;
+}
+
+.#{$ow-prefix}console_messages_btns .#{$ow-prefix}console_messages_viewall a,
+.#{$ow-prefix}console_messages_btns .#{$ow-prefix}console_messages_send a,
+.#{$ow-prefix}console_messages_btn .#{$ow-prefix}console_messages_viewall a {
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #{$site-color-gradient};
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 14px;
+    padding: 15px 0;
+}
+
+.#{$ow-prefix}console_messages_btns .#{$ow-prefix}console_messages_viewall a,
+.#{$ow-prefix}console_messages_btn .#{$ow-prefix}console_messages_viewall a {
+    border-right: none;
+    border-top: 1px solid #{$bg-alt-color};
+}
+
+.#{$ow-prefix}console_messages_btns .#{$ow-prefix}console_messages_viewall a:hover,
+.#{$ow-prefix}console_messages_btns .#{$ow-prefix}console_messages_send a:hover,
+.#{$ow-prefix}console_messages_btn .#{$ow-prefix}console_messages_viewall a:hover {
+    // color: #fff;
+    // background: var(--color--primary);
+}
+
+.#{$ow-prefix}console_controller {
+    float: right;
+    font-size: 20px;
+    margin: 0 10px;
+    .#{$ow-prefix}console_btn {
+        color: var(--c-gc-header-link-color);
+        display: inline-block;
+        margin: 0 10px;
+        cursor: pointer;
+        &.#{$ow-prefix}nav_btn {
+            &::before {
+                content: "\efa2";
+            }
+        }
+        &.#{$ow-prefix}console_console_btn {
+            &::before {
+                content: "\ecfd";
+            }
+        }
+        &::before {
+            padding: 10px 5px;
+            display: block;
+        }
+    }
+}
+
+.#{$ow-prefix}console_menu_active {
+    .#{$ow-prefix}console_console_close_btn {
+        cursor: pointer;
+        &::before {
+            padding: 10px 5px;
+            display: block;
+            content: "\eedd";
+        }
+    }
+}
+
+.#{$ow-prefix}console_menu_active {
+    .#{$ow-prefix}header_nav {
+        position: relative;
+        .#{$ow-prefix}console_main_wrap {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            display: flex;
+            height: 100%;
+            background: #fff;
+            align-items: center;
+            justify-content: center;
+            z-index: var(--order--header);
+            .#{$ow-prefix}console_body {
+                float: unset;
+            }
+        }
+    }
+    .#{$ow-prefix}console_btn {
+        &.#{$ow-prefix}nav_btn {
+            &::before {
+                content: "\eedd";
+            }
+        }
+    }
+}
+
+
+.ow_console_dropdown{
+    span{
+        &.ow_inline_block{
+            display: none;
+        }
+    }
+    
+}
+.ow_user_profile_console{
+    background: none;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.ow_console_mobile_links{display:none;}
+
+.ow_new_post_btn{
+    background: #{$action-button-bg-color};
+    border-radius: 25px;
+    a.ow_console_item_link{
+        display: block;
+        width: 100%;
+        height: 20px;
+        padding: 10px 20px 10px 40px;
+        background-image: url(./images/siteicons/plus.svg);
+        background-position: 10px center;
+        background-repeat: no-repeat;
+        font-size: 14px !important; 
+        color: #fff !important;
+        &::before{
+            display: none !important;
+        }
+        &:hover{
+            color: #fff;
+        }
+        &:active,
+        &:focus{
+            text-decoration: none;
+            background-color: unset;
+        }
+    }
+}
+     
+/* ---- End of Console styles ---- */

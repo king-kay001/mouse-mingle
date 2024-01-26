@@ -1,0 +1,430 @@
+/* ---- Mailbox styles ---- */
+
+body {
+    &.mailbox_ctrl_messages_index{
+        .ow_canvas{
+            padding: 0 20px;
+        }
+    }
+    .#{$ow-prefix}mailbox_table {
+        border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        
+        .jspPane {
+            z-index: 1;
+        }
+        &.#{$ow-prefix}alt1,
+        .#{$ow-prefix}alt1:not(.#{$ow-prefix}mailbox_date_cap.sticky),
+        .#{$ow-prefix}alt2:not(.#{$ow-prefix}mailbox_date_cap.sticky) {
+            background-color: transparent !important;
+            display: flex;
+        }
+        .#{$ow-prefix}mailbox_left {
+            float: none;
+            border-right: 1px solid #{$border-color};
+            padding-bottom: 20px;
+            margin-bottom: unset;
+            height: calc(100vh - 77px);
+            overflow: hidden;
+
+            .ow_mailbox_left_body{
+                top: 120px;
+                height: 60vh;
+                padding-bottom: 50px !important;
+            }
+
+            .ow_mailbox_search{
+                input[type="text"]{
+                    background-color: #{$site-bg-color};
+                    border: 1px solid #ccc;
+                    height: 40px;
+                    border-radius: #{$radius-md};
+                    margin-bottom: 30px;
+                }
+                .ow_btn_close_search{
+                    top: 26px;
+                }
+            }
+        }
+        .#{$ow-prefix}mailbox_right {
+            background-color: #{$bg-color};
+            width: 63%;
+            flex: 1;
+            float: none;
+            padding: 0 20px;
+
+            .ow_mailbox_log_wrap{
+                // Control mailbox height
+                height: 55vh;
+                .ow_mailbox_log{
+                    position: absolute;
+                    bottom: 0;
+                    height: 97% !important;
+                    .jspContainer{
+                        height: 100% !important;
+                    }
+                }
+                .ow_mailbox_date_cap.ow_alt2,
+                .ow_mailbox_date_cap.sticky.ow_alt2,
+                .ow_mailbox_date_cap.sticky
+                {
+                    display: none !important;
+                    .ow_mailbox_converstion_date{
+                        display: none;
+                    }
+                }
+            }
+
+            .ow_mailbox_cap_chat{
+                padding: 10px;
+                box-sizing: border-box;
+                height: 80px;
+                background-color: #fff;
+                border-bottom: 1px solid #ccc !important;
+
+                .ow_mailbox_avatar{
+                    margin: 0;
+                }
+                .ow_mailbox_username{
+                    padding: 8px 0 8px 10px;
+                }
+                .ow_mailbox_convers_actions{
+                    margin: 0;
+                }
+            }
+            
+            .ow_mailbox_form.ow_alt2{
+                display: none;
+            }
+          
+        }
+        .ow_mailbox_conv_options{
+            padding-left: 15px;
+            .ow_context_action{
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .ow_mailbox_right{
+        .ow_chat_message_block{
+            background-color: #EAEAEA;
+            padding: 15px 15px 15px 50px;
+            border-top: unset;
+            border-radius: #{$radius-md};
+            position: relative;
+
+            .ow_chat_message{
+                textarea{
+                    border-radius: #{$radius-md};
+                }
+            }
+            
+        }
+    }
+}
+
+.#{$ow-prefix}mailbox_left_loading .#{$ow-prefix}mailbox_left_body {
+    background: url(#{$image-path}ajax_preloader_content.gif) center 220px no-repeat;
+}
+
+body .#{$ow-prefix}mailbox_right.#{$ow-prefix}mailbox_right_loading div.#{$ow-prefix}mailbox_right_preloading {
+    background: url(#{$image-path}ajax_preloader_content.gif) no-repeat center center;
+}
+
+.#{$ow-prefix}mailbox_message_content .#{$ow-prefix}file_attachment_info,
+.#{$ow-prefix}dialog_items_wrap .#{$ow-prefix}file_attachment_info,
+.#{$ow-prefix}mailbox_log .#{$ow-prefix}file_attachment_info {
+    background-image: url(#{$image-path}miniic_doc.png);
+}
+
+.#{$ow-prefix}mailbox_convers_info_attach {
+    background: url(#{$image-path}miniic_attach.svg) center center no-repeat;
+}
+
+.#{$ow-prefix}mailbox_conv_options_label {
+    background-image: url(#{$image-path}chat_tiny_arrow_down.svg);
+    line-height: 40px;
+}
+
+#conversationItemListSub {
+    padding: 0 1px;
+}
+
+.#{$ow-prefix}mailbox_convers_info {
+    padding: 10px 15px;
+    background-color: #{$bg-color};
+    cursor: pointer;
+    .mails {
+        background-image: url(#{$image-path}miniic_envelope.svg);
+    }
+    .chats {
+        background-image: url(#{$image-path}miniic_buble.svg);
+    }
+    span.ic_reply{
+        display: none !important;
+    }
+    .ow_mailbox_convers_info_string a{
+        color: #{$text-black};
+    }
+}
+
+.#{$ow-prefix}mailbox_convers_info_new {
+    background-color: #{$bg-alt-color}; //var(--ps-color--app);
+}
+
+// .#{$ow-prefix}mailbox_convers_info_selected {
+//     background-color: var(--ps-color--app);
+// }
+
+// .#{$ow-prefix}mailbox_convers_info_selected,
+.#{$ow-prefix}mailbox_convers_info:hover,
+.#{$ow-prefix}mailbox_convers_info_selected:hover {
+    // -webkit-box-shadow: inset 2px 0px 0px 0px var(--color--primary);
+    // -moz-box-shadow: inset 2px 0px 0px 0px var(--color--primary);
+    // box-shadow: inset 2px 0px 0px 0px var(--color--primary);
+    background-color: #{$bg-alt-color};
+}
+
+body .#{$ow-prefix}mailbox_convers_info .#{$ow-prefix}mailbox_convers_info_string a {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+body .#{$ow-prefix}mailbox_convers_info .#{$ow-prefix}mailbox_convers_info_string a:hover {
+    color: #5b646a;
+}
+
+body .#{$ow-prefix}mailbox_convers_info_new.mails .#{$ow-prefix}mailbox_convers_info_string a,
+body .#{$ow-prefix}mailbox_convers_info_new.mails .#{$ow-prefix}mailbox_convers_info_content .#{$ow-prefix}mailbox_convers_preview,
+body .#{$ow-prefix}mailbox_convers_info_new.chats .#{$ow-prefix}mailbox_convers_info_content .#{$ow-prefix}mailbox_convers_preview,
+body .#{$ow-prefix}mailbox_convers_info_new.chats .#{$ow-prefix}mailbox_convers_info_string a {
+    font-weight: normal;
+}
+
+.#{$ow-prefix}mailbox_convers_info span.ic_reply {
+    background-image: url(#{$image-path}ic_img/ic_reply_g.svg);
+    width: 18px;
+}
+
+.#{$ow-prefix}mailbox_table,
+.#{$ow-prefix}mailbox_table .#{$ow-prefix}mailbox_convers_info,
+.#{$ow-prefix}mailbox_table .#{$ow-prefix}mailbox_cap,
+.#{$ow-prefix}mailbox_table .#{$ow-prefix}mailbox_conv_options,
+.#{$ow-prefix}mailbox_table .#{$ow-prefix}mailbox_subject_block,
+.#{$ow-prefix}mailbox_table .#{$ow-prefix}mailbox_left .#{$ow-prefix}mailbox_cap,
+.#{$ow-prefix}mailbox_table .#{$ow-prefix}mailbox_left .#{$ow-prefix}mailbox_search,
+.#{$ow-prefix}mailbox_table .#{$ow-prefix}mailbox_left .#{$ow-prefix}mailbox_left_body {
+    border: none !important;
+}
+
+.#{$ow-prefix}mailbox_table .#{$ow-prefix}mailbox_date_cap,
+.#{$ow-prefix}mailbox_table .#{$ow-prefix}mailbox_log_date .#{$ow-prefix}mailbox_table .#{$ow-prefix}mailbox_log,
+.#{$ow-prefix}mailbox_right .#{$ow-prefix}chat_message_block {
+    border-color: var(--divider);
+}
+
+body {
+    .#{$ow-prefix}mailbox_log {
+        border-bottom: unset;
+
+        .ow_dialog_picture_item{
+            .ow_dialog_item{
+                .ow_dialog_in_item{
+                    padding: 0;
+                    background: transparent !important;
+                }
+            }
+        }
+
+        .#{$ow-prefix}dialog_item {
+            *{
+                font-size: 16px;
+                line-height: normal;
+                text-align: left;
+                color: #000;
+                padding: 5px;
+                border: none;
+                border-top-left-radius: 12px; 
+                border-top-right-radius: 12px; 
+            }
+            a {
+                color: #000;
+                text-decoration: underline;
+            }
+
+            
+
+            &.odd{
+                .#{$ow-prefix}dialog_in_item{
+                    background: #EAEAEA;
+                    border-bottom-right-radius: 12px;
+                    
+                }
+            }
+            &.even {
+                .#{$ow-prefix}dialog_in_item {
+                    border-bottom-left-radius: 12px;
+                    background-color: #F8D4CC;
+                   
+                }
+                i {
+                    display: none;
+                }
+            }
+        }
+        .ow_dialog_picture_item{
+            .ow_dialog_item{
+               &.odd,
+               &.even{
+                .ow_dialog_in_item{
+                    border-radius: 8px;
+                }
+               }
+            }
+        }
+        .#{$ow-prefix}oembed_attachment_preview {
+            border: none;
+            padding: 0 0 0 88px;
+            background-color: transparent;
+            margin-top: 12px;
+            .#{$ow-prefix}attachment_delete {
+                display: none;
+            }
+        }
+    }
+}
+
+.#{$ow-prefix}mailbox_log_message .#{$ow-prefix}mailbox_convers_info_body {
+    padding-top: 8px;
+}
+
+.#{$ow-prefix}mailbox_convers_actions .#{$ow-prefix}miniic_control {
+    margin-right: 0px;
+    border: 1px solid transparent;
+}
+
+.#{$ow-prefix}mailbox_convers_actions .#{$ow-prefix}miniic_control:hover {
+    border: 1px solid #eff2f5;
+}
+
+.#{$ow-prefix}mailbox_convers_actions .#{$ow-prefix}miniic_control span {
+    width: 20px;
+    height: 20px;
+    background: url(#{$image-path}miniic_gearwheel.svg) 0px 0px no-repeat;
+}
+
+.#{$ow-prefix}mailbox_convers_actions .#{$ow-prefix}miniic_control.active span {
+    background: url(#{$image-path}miniic_gearwheel.svg) 0px -21px no-repeat;
+}
+
+.#{$ow-prefix}mailbox_convers_count_new,
+.#{$ow-prefix}mailbox_convers_info_date {
+    text-transform: uppercase;
+}
+
+.#{$ow-prefix}mailbox_convers_count_new {
+    color: var(--color--primary);
+}
+
+body {
+    .#{$ow-prefix}mailbox_username .#{$ow-prefix}mailbox_username_text {
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+    }
+    .#{$ow-prefix}mailbox_message_header a {
+        font-size: 14px;
+        font-weight: normal;
+    }
+    .#{$ow-prefix}mailbox_message_content {
+        font-size: 14px;
+    }
+    .#{$ow-prefix}mailbox_avatar {
+        width: 56px;
+        .#{$ow-prefix}avatar {
+            &,
+            img {
+                min-width: 100%;
+                min-height: 100%;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+.#{$ow-prefix}mailbox_convers_info_body {
+    margin-left: 70px;
+}
+
+body .#{$ow-prefix}dialog_in_item p {
+    line-height: 20px;
+}
+
+
+body .#{$ow-prefix}mailbox_right .#{$ow-prefix}mailbox_username .#{$ow-prefix}chat_status {
+    vertical-align: initial;
+    margin-left: -18px;
+}
+
+body .#{$ow-prefix}mailbox_username,
+body .userisonline .#{$ow-prefix}mailbox_username {
+    padding: 4px 0 0 4px;
+}
+
+body .#{$ow-prefix}mailbox_right .#{$ow-prefix}mailbox_username {
+    min-width: 200px;
+}
+
+body .#{$ow-prefix}mailbox_cap .#{$ow-prefix}mailbox_avatar {
+    margin-top: 3px;
+    margin-left: -56px;
+}
+
+.#{$ow-prefix}mailbox_table .#{$ow-prefix}mailbox_search input {
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+
+body{
+    .ow_mailbox_single_mode{
+        .ow_mailbox_convers_info.chats{
+            padding: 8px 10px 8px 15px;
+            .ow_mailbox_convers_info_body{
+                margin-left: 67px;
+                .ow_mailbox_convers_info_string{
+                    a{
+                        b{
+                            font-size: 14px;
+                            font-weight: 500;
+                            text-transform: capitalize;
+                        }
+                    }
+                    .ow_mailbox_convers_info_date{
+                        font-size: 12px;
+                        color: #{$text-lighter};
+                        text-transform: capitalize;
+                    }
+                }
+                .ow_mailbox_convers_info_content{
+                    color: #{$text-lighter};
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+body .ow_mailbox_chat_opened div#conversationContainer {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    left: 0;
+}
+

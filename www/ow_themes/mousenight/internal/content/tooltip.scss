@@ -1,0 +1,133 @@
+/* ---- Tooltip ---- */
+
+.#{$ow-prefix}tooltip {
+    margin-top: 0;
+    padding-top: 3px;
+}
+
+.#{$ow-prefix}tooltip_tail {
+    display: inline-block;
+    padding: 0px 0px;
+    width: 100%;
+    visibility: hidden;
+}
+
+.#{$ow-prefix}tooltip_tail span {
+    display: inline-block;
+    background: url(#{$image-path}tooltip_tail.png) no-repeat 8px -6px;
+    width: 19px;
+    height: 6px;
+    margin-bottom: -1px;
+}
+
+.#{$ow-prefix}tooltip .#{$ow-prefix}tooltip_body {
+    background: #fff;
+    padding: 4px 0;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, .04);
+    -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, .04);
+    box-shadow: 0 0 20px rgba(70, 77, 87,0.15);
+    border-radius: 6px;
+}
+
+.#{$ow-prefix}forum_search_context_menu .#{$ow-prefix}tooltip .#{$ow-prefix}tooltip_body {
+    padding: 4px 0;
+}
+
+.#{$ow-prefix}forum_search_context_menu .#{$ow-prefix}context_action_list a {
+    padding: 4px 12px;
+}
+
+body .forum_search_wrap {
+    background-image: none;
+}
+
+body .forum_search_wrap input {
+    box-shadow: none;
+    line-height: 19px;
+}
+
+
+/* ---- Top Right Tooltip  ---- */
+
+.#{$ow-prefix}tooltip_top_right.#{$ow-prefix}tooltip {
+    margin-top: 0;
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+
+.#{$ow-prefix}tooltip_top_right .#{$ow-prefix}tooltip_tail span {
+    background-position: 3px -6px;
+}
+
+.#{$ow-prefix}tooltip_top_right .#{$ow-prefix}tooltip_tail {
+    text-align: right;
+}
+
+
+/* ---- Bottom Left Tooltip  ---- */
+
+.#{$ow-prefix}tooltip_bottom_left .#{$ow-prefix}tooltip_tail span {
+    background-position: 9px 0px;
+    margin-top: -1px;
+}
+
+
+/* ---- Bottom Right Tooltip  ---- */
+
+.#{$ow-prefix}tooltip_bottom_right .#{$ow-prefix}tooltip_tail span {
+    background-position: 1px 0px;
+    margin-top: -1px;
+}
+
+.#{$ow-prefix}tooltip_bottom_right .#{$ow-prefix}tooltip_tail {
+    text-align: right;
+}
+
+
+/* ---- Left Side Tooltip  ---- */
+
+.#{$ow-prefix}tooltip_left .#{$ow-prefix}tooltip_tail {
+    float: left;
+    margin-right: -4px;
+    width: 4px;
+    padding-top: 8px;
+}
+
+.#{$ow-prefix}tooltip_left .#{$ow-prefix}tooltip_tail span {
+    margin: 0px;
+    width: 5px;
+    height: 11px;
+    background-position: 0px -28px;
+}
+
+.#{$ow-prefix}tooltip_left .#{$ow-prefix}tooltip_body {
+    display: block;
+    margin-left: 4px;
+}
+
+
+/* ---- Right Side Tooltip  ---- */
+
+.#{$ow-prefix}tooltip_right .#{$ow-prefix}tooltip_tail {
+    float: right;
+    margin-left: -4px;
+    width: 5px;
+    padding-top: 8px;
+}
+
+.#{$ow-prefix}tooltip_right .#{$ow-prefix}tooltip_tail span {
+    margin: 0px;
+    width: 5px;
+    height: 11px;
+    background-position: 0px -15px;
+}
+
+.#{$ow-prefix}tooltip_right .#{$ow-prefix}tooltip_body {
+    display: block;
+    margin-right: 4px;
+}
+
+
+/* ---- End of Tooltip  ---- */

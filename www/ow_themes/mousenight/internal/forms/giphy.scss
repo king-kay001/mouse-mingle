@@ -1,0 +1,122 @@
+.#{$ow-prefix}jnmod_giphy {
+    background-color: var(--ps-color--app);
+    padding: var(--padd);
+    border-radius: 6px;
+    margin: var(--padd);
+    position: relative;
+    .#{$ow-prefix}jnmod_giphy_nav {
+        position: relative;
+        border-top: 1px solid var(--divider--light);
+        padding: var(--padd-xs);
+        box-shadow: 0 0 20px var(--divider);
+        border-radius: 6px;
+        margin: var(--padd);
+    }
+    .#{$ow-prefix}jnmod_giphy_nav_items {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        overflow: hidden;
+        a {
+            display: inline-block;
+            background-color: #eee;
+            color: #555;
+            padding: 4px var(--padd--sm);
+            box-sizing: border-box;
+            margin: 2px 1px;
+            border-radius: 3px;
+            font-size: 80%;
+        }
+    }
+    .input-query-gifs {
+        border: 0;
+        background: transparent;
+        height: 40px;
+    }
+    .#{$ow-prefix}jnmod_giphy_item {
+        display: block;
+        cursor: pointer;
+        padding: 2px;
+        img {
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+        }
+    }
+    .owl-carousel{
+        .owl-stag {
+            display: flex;
+            .owl-item {
+                flex-grow: 1;
+                float: unset;
+            }
+        }
+    }
+}
+
+.floatbox_body{
+    .#{$ow-prefix}jnmod_giphy {
+        $floatbox-gifs-height: 65px;
+        .#{$ow-prefix}jnmod_giphy_nav_items {
+            a {
+                font-size: 70%;
+            }
+        }
+        .ow_jnmod_giphy_gifs {
+            min-height: #{$floatbox-gifs-height};
+            .#{$ow-prefix}jnmod_giphy_item {
+                img {
+                    height: #{$floatbox-gifs-height};
+                }
+            }
+        }
+    }
+}
+
+.#{$ow-prefix}jnmod_giphy_gifs {
+    position: relative;
+    min-height: 100px;
+    .owl-nav [class*=owl-] {
+        position: absolute;
+        top: 30%;
+        z-index: 3;
+    }
+    .owl-nav .owl-prev {
+        left: 0;
+    }
+    .owl-nav .owl-next {
+        right: 0;
+    }
+}
+
+.#{$ow-prefix}jnmod_giphy_selected {
+    position: absolute;
+    z-index: 10;
+    right: 10%;
+    bottom: 0;
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 6px;
+        padding: 2px;
+        box-sizing: border-box;
+        background: #fff;
+    }
+    a{
+        &.delete {
+            position: absolute;
+            display: block;
+            top: 1%;
+            right: 2%;
+            background: rgba(255, 255, 255, .7);
+            text-align: center;
+            padding: 5px;
+            box-sizing: border-box;
+            line-height: .3;
+            border-radius: 2px;
+            color: #333;
+            text-transform: uppercase;
+        }
+    }
+}

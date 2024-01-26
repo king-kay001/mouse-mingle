@@ -1,0 +1,270 @@
+// SIGN IN START
+.static_master_page {
+    .ow_sign_in_cont {
+        box-sizing: border-box;
+        width: 98%;
+        margin: 20px auto;
+        padding-left: 0;
+        box-sizing: border-box;
+        background-image: none;
+        .ow_sign_in_wrap {
+            margin: 0;
+            padding: 50px 20px;
+            box-sizing: border-box;
+            .ow_sign_in_text_invite{
+                .ow_sign_in_logo{
+                    margin: 0 auto 20px;
+                }
+            }
+            
+        }
+    }
+}
+// END SIGN IN
+
+
+.ow_landing_wrapper {
+    $banner-height: 500px;
+    $banner-radius: 40px;
+    $font-20: 20px;
+    $font-40: 40px;
+    $line-height-30: 30px;
+    $line-height-48: 48px;
+    .ow_banner {
+        height: #{$banner-height};
+        &::before {
+            content: "";
+            width: 201px;
+            height: 424px;
+            top: 224px;
+            right: 122px;
+        }
+        &::after {
+            content: "";
+            width: 260px;
+            height: 426px;
+            top: 190px;
+            right: 70px;
+        }
+        .ow_banner_body {
+            height: #{$banner-height};
+            border-radius: inherit;
+            .ow_banner_content {
+                width: 360px;
+                padding-top: 90px;
+                margin-left: 30px;
+                h2 {
+                    font-size: 40px;
+                    line-height: 60px;
+                }
+                p {
+                    font-size: #{$font-20};
+                    line-height: #{$line-height-30};
+                }
+                .ow_button {
+                    width: 100%;
+                    max-width: 150px;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+    .ow_home_wrapper {
+        padding: 0 30px;
+        h2 {
+            font-size: #{$font-40};
+            line-height: #{$line-height-48};
+        }
+        h3{
+            font-size: 32px;
+            line-height: 30px;
+            margin-top: 30px;
+        }
+        p {
+            font-size: #{$font-20};
+            line-height: #{$line-height-30};
+        }
+        .ow_intro {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px 0;
+            
+        }
+        .ow_card_info_wrap {
+            flex-wrap: wrap;
+            row-gap: 20px;
+            .ow_info_card {
+                width: 42.5%;
+            }
+        }
+        .ow_join_wrapper {
+            padding: 30px 0;
+            text-align: center;
+            .ow_laptop_wrapper {
+                width: 100%;
+                height: 360px;
+                margin: 40px auto;
+                .ow_laptop {
+                    background-size: cover;
+                    width: 90%;
+                    margin-top: 45px;
+                }
+            }
+            .ow_privacy_hint {
+                width: 100%;
+                margin: 0 auto 40px
+            }
+        }
+        .ow_middle_content {
+            padding-top: 100px;
+            flex-wrap: wrap;
+            .ow_bubble_box_right{
+                order:1;
+                margin-bottom: 40px;
+            }
+            .ow_signles_like_you{order:2}
+            .ow_bubble_box_left{order:3}
+            .ow_safer_community{order:4}
+
+            .ow_bubble {
+                width: 420px;
+                height: 420px;
+                margin: auto !important;
+            }
+            .ow_signles_like_you,
+            .ow_safer_community {
+                width: 100%;
+                a {
+                    margin-top: 40px;
+                }
+            }
+            .ow_bubble_box_right{
+                width: 100%;
+                &::before {
+                    top: -60px;
+                    left: 180px;
+                    height: 370px;
+                    width: 260px;
+                }
+            }
+            .ow_bubble_box_left{
+                width: 100%;
+                &::after {
+                    top: -60px;
+                    left: 180px;
+                    height: 370px;
+                    width: 260px;
+                }
+            }
+        }
+        .ow_explore_on_cg {
+            $exp_avatar-xs: 40px;
+            $exp_avatar-sm: 50px;
+            $exp_avatar-md: 60px;
+            $exp_avatar-lg: 70px;
+
+            width: 100%;
+            height: 345px;
+            margin: 50px auto;
+            padding: 40px;
+            box-sizing: border-box;
+            h2{font-size: 30px;}
+
+            // Avatars
+            .ow_exp_avatar{
+                position: absolute;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 50%;
+            }
+            .ow_avatar_xs{
+                width: #{$exp_avatar-xs};
+                height: #{$exp_avatar-xs};
+            }
+            .ow_avatar_sm{
+                width: #{$exp_avatar-sm};
+                height: #{$exp_avatar-sm};
+            }
+            .ow_avatar_md{
+                width: #{$exp_avatar-md};
+                height: #{$exp_avatar-md};
+            }
+            .ow_avatar_lg{
+                width: #{$exp_avatar-lg};
+                height: #{$exp_avatar-lg};
+            }
+            .ow_avatar_lfirst{
+                top: 80px;
+                left: 20px;
+            }
+
+            .ow_avatar_rfirst{
+                top: 80px;
+                right: 20px;
+            }
+            .ow_avatar_lsecond{
+                top: 170px;
+                left: 80px;
+            }
+            .ow_avatar_rsecond{
+                top: 170px;
+                right: 80px;
+            }
+            .ow_avatar_lthird{
+                top: 235px;
+                left: 20px;
+            }
+            .ow_avatar_rthird{
+                top: 235px;
+                right: 20px;
+            }
+
+            .ow_avatar_lfourth{
+                bottom: 50px;
+                left: 135px;
+            }
+            .ow_avatar_rfourth{
+                bottom: 50px;
+                right: 135px;
+            }
+                
+                
+                
+
+               
+        }
+        .ow_about_cg {
+            width: 100%;
+        }
+    }
+    
+}
+
+// STATIC MASTER PAGE FOOTER
+.static_master_page{
+    .ow_static_footer {
+        padding: 15px 0 0;
+        .ow_footer_static_links{
+            font-size: 10px;
+            padding: 10px;
+            text-transform: capitalize;
+            margin-top: 40px;
+            .ow_footer_logo{
+                display: none;
+            }
+        }
+        .ow_static_copyright{
+            font-size: 10px;
+        }
+    }
+    .ow_logo_wrap{
+        a{
+            width: 70px;
+            height: 44px;
+            margin-left: -15px;
+        }
+    }
+
+
+}

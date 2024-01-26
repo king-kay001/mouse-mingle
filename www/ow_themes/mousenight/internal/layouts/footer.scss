@@ -1,0 +1,94 @@
+/* Footer */
+
+@mixin brand-image( $name, $image, $color) {
+    &.#{$name} {
+        background-image: url(#{$image});
+        background-color: #{$color};
+    }
+}
+
+.#{$ow-prefix}footer {
+    $footer-font-size: 10px;
+    color: var(--jnmod-footer-color);
+    font-size: #{$footer-font-size};
+    line-height: 100%;
+    .#{$ow-prefix}footer_menu {
+        font-size: 0px;
+        a {
+            font-size: #{$footer-font-size};
+            display: block;
+            text-transform: capitalize;
+        }
+    }
+    .#{$ow-prefix}copyright {
+        text-align: center;
+    }
+}
+
+
+/* Footer content style */
+
+.#{$ow-prefix}jnmod_footer_column_title {
+    color: var(--jnmod-footer-heading-color);
+    border-bottom: 2px solid var(--jnmod-footer-heading-border);
+    margin-bottom: 15px;
+    padding: 0px 0px 10px;
+}
+
+.#{$ow-prefix}jnmod_footer_logo {
+    width: 100px;
+    padding-bottom: 1em;
+}
+
+.#{$ow-prefix}jnmod_footer_intro_text {
+    margin-bottom: .5em;
+}
+
+.#{$ow-prefix}jnmod_footer_intro_text,
+.#{$ow-prefix}jnmod_footer_copyright {
+    font-weight: bold;
+    text-align: left;
+}
+
+.#{$ow-prefix}jnmod_footer_copyright {
+    padding: 30px 0px 0px;
+    border-top: solid 1px var(--divider);
+    margin-top: 30px;
+    font-size: 100%;
+}
+
+ul {
+    &.#{$ow-prefix}jnmod_footer_social {
+        display: block;
+        text-align: center;
+        li {
+            display: inline-block;
+            margin: 4px;
+            a {
+                display: block;
+                padding: 5px;
+                color: #333;
+                font-size: 0px;
+                height: 32px;
+                width: 32px;
+                background: no-repeat center center var(--jnmod-footer-bg-color);
+                background-size: 16px 16px;
+                border-radius: 100%;
+                text-decoration: none;
+                @include brand-image('facebook', '#{$image-path}facebook-f.svg', #3C5A98);
+                @include brand-image('twitter', '#{$image-path}twitter.svg', #38A8DF);
+                @include brand-image('youtube', '#{$image-path}youtube.svg', #FF0000);
+                @include brand-image('pinterest', '#{$image-path}pinterest.svg', #E60023);
+                @include brand-image('reddit', '#{$image-path}reddit.svg', #FF5700);
+                @include brand-image('skype', '#{$image-path}skype.svg', #00aff0);
+                @include brand-image('snapchat', '#{$image-path}snapchat.svg', #FFFC00);
+                @include brand-image('telegram', '#{$image-path}telegram.svg', #0088cc);
+                @include brand-image('whatsapp', '#{$image-path}whatsapp.svg', #075e54);
+                @include brand-image('vimeo', '#{$image-path}vimeo.svg', #86c9ef);
+                @include brand-image('trello', '#{$image-path}trello.svg', #1675B9);
+                @include brand-image('tumblr', '#{$image-path}tumblr.svg', #34526f);
+                @include brand-image('instagram', '#{$image-path}instagram.svg', #3f729b);
+            }
+        }
+    }
+}

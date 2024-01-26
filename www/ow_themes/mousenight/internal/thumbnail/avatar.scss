@@ -1,0 +1,188 @@
+/* ---- Avatar styles ---- */
+
+.#{$ow-prefix}change_avatar .avatar_current {
+    border-right: 1px solid #eff2f5;
+    padding-right: 3px;
+}
+
+.#{$ow-prefix}change_avatar .#{$ow-prefix}avatar_preview {
+    border-left: 1px solid #eff2f5;
+}
+
+.#{$ow-prefix}change_avatar .avatar_crop {
+    border-bottom: 1px solid #eff2f5;
+}
+
+.#{$ow-prefix}avatar_crop .jcrop-holder {
+    margin: 0px auto;
+}
+
+.#{$ow-prefix}avatar_preview div {
+    margin: 0px auto;
+}
+
+.#{$ow-prefix}avatar {
+    background-image: none;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    width: var(--avatar-width);
+    height: var(--avatar-width);
+    // padding: 8px;
+
+    img {
+        vertical-align: bottom;
+        // border: var(--avatar-border);
+        box-shadow: var(--avatar-box-shadow);
+        border-radius: var(--avatar-radius);
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.#{$ow-prefix}avatar_label {
+    font-size: 25%;
+    display: inline-block;
+    position: absolute;
+    line-height: 10px;
+    text-transform: uppercase;
+    bottom: 8px;
+    background-color: #999;
+    right: 8px;
+    color: #fff;
+    font-weight: bold;
+    padding: 0px 2px;
+    border-radius: 1px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+}
+
+html body .#{$ow-prefix}sidebar .#{$ow-prefix}avatar_label,
+html body .#{$ow-prefix}console .#{$ow-prefix}avatar_label {
+    font-size: 50%;
+}
+
+.#{$ow-prefix}console .#{$ow-prefix}avatar_label {
+    bottom: 4px;
+    right: 4px;
+}
+
+/* ---- End of the Avatar styles ---- */
+
+/* Uheader profile avatar styles */
+.#{$ow-prefix}avatar_console,
+.uh-avatar-console div.hg-avatar-image {
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+}
+/* End Uheader profile avatar styles */
+
+/* ---- Profile gallery avatar */
+
+body{
+    .#{$ow-prefix}profile_gallery_avatar {
+        .#{$ow-prefix}profile_gallery_avatar_image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            background-size: cover;
+        }
+    
+        .#{$ow-prefix}avatar_console {
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            padding: 4px;
+        }
+    
+        .#{$ow-prefix}profile_gallery_avatar_change {
+            position: absolute;
+            right: 0;
+            top: 0;
+            left: 0;
+            height: 192px;
+            background: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+    
+            .#{$ow-prefix}lbutton {
+                margin-top: 82px;
+                padding: 10px;
+                border-radius: 20px;
+                -moz-border-radius: 20px;
+                -webkit-border-radius: 20px;
+            }
+        }
+        .user_online_wrap {
+            bottom: 17px;
+            right: 20px;
+            position: absolute;
+        }
+        .#{$ow-prefix}miniic_live {
+            display: inline-block;
+            background: #fff;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            .#{$ow-prefix}live_on {
+                height: 15px;
+                width: 15px;
+                margin: 0px;
+            }
+        }
+        box-shadow: none;
+    }
+    .ow_loveoncg_users_cmp{
+        // padding: 0 30px;
+        .ow_loveoncg_users_cmp_list{
+            justify-content: space-between;
+            .ow_avatar{
+                width: 86px; //var(--avatar-large);
+                height: 86px; //var(--avatar-large);
+                padding: 5px;
+                margin-bottom: 8px;
+                border-top-left-radius: 50px;
+                border-bottom-left-radius: 50px;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+                border-top: 3px solid #{$primary-color};
+                border-left: 3px solid #{$primary-color};
+                border-right: 3px solid #{$primary-color};
+                // border-bottom: 2px solid var(--alt-bg-color) ;
+                background-color: #fff;
+            }
+            .ow_avatar_name{
+                font-size: 0.75rem;
+            }
+        }
+    }
+   .place_section{
+       #feed1{
+           padding:0;
+       }
+        .ow_newsfeed{
+            .ow_newsfeed_avatar{
+                .ow_avatar{
+                    width: var(--avatar-medium);
+                    height: var(--avatar-medium);
+
+                    img{
+                        width: var(--avatar-medium);
+                        height: var(--avatar-medium);
+                    }
+                }
+            }
+        }
+    }
+   
+}
+
+/* ---- End of the Profile gallery avatar */
