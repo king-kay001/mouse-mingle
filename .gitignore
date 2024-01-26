@@ -1,0 +1,29 @@
+# ignore all core files
+
+www/.htaccess
+www/captcha.php
+www/CHANGELOG.txt
+www/e500.php
+www/error_log
+www/index.php
+www/INSTALL.txt
+www/mario.php
+www/ow_version.xml
+www/robots.txt
+www/UPDATE.txt
+.DS_Store
+
+
+# ignore all folders 
+www/*/
+
+# Ignore other plugins
+www/ow_plugins/*/
+
+# Ignore other themes
+www/ow_themes/*/
+
+# Exclude the plugin am working from being ignored
+!www/ow_plugins/mousemingle/
+# Exclude the theme am working on from being ignored
+!www/ow_themes/mousenight/
