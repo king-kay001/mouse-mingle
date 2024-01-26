@@ -17,13 +17,14 @@ www/UPDATE.txt
 # ignore all folders 
 www/*/
 
-# Ignore other plugins
-www/ow_plugins/*/
+# Ignore everything within www/ow_plugins (including root files and folders)
+www/ow_plugins/
 
-# Ignore other themes
-www/ow_themes/*/
+# Ignore everything within www/ow_themes (including root files and folders)
+www/ow_themes/
 
-# Exclude the plugin am working from being ignored
+# Unignore the plugin "mousemingle" within www/ow_plugins
 !www/ow_plugins/mousemingle/
-# Exclude the theme am working on from being ignored
+
+# Unignore the theme "mousenight" within www/ow_themes
 !www/ow_themes/mousenight/
