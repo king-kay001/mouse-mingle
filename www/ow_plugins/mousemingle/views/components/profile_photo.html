@@ -1,0 +1,9 @@
+<div id="{$cmpId}" data-items="1">
+    <div class="ow_profile_carousel owl-carousel">
+        {foreach from=$userPhotos item=photo}
+            <div class="user_photo">
+                <img src="{$photo.url}" alt="photo">
+            </div>
+        {/foreach}
+    </div>
+</div>

@@ -1,0 +1,179 @@
+{style}
+    .anno_padding_left {
+        padding-left:45px;
+    }
+{/style}
+{literal}
+<script language="javascript" type="text/javascript">
+    $(function(){
+        $(".unregister_profile_button").click(
+            function() { window.location = {/literal}"{$unregisterProfileUrl}"{literal} }
+        );
+   });
+</script>
+{/literal}
+
+<div class="profile_edit_wrap">
+    
+{block_decorator name="box" type="empty" addClass="ow_superwide ow_automargin"}
+<div class="mobile_back_arrow">
+    <a href="{url_for_route for='base_member_profile'}" class="mobile_back">{text key="mekirim+back"}</a>
+</div>
+<div class="desktop_back_btn">
+    <a href="{url_for_route for='base_member_profile'}">{text key="mekirim+back"}</a>
+</div>
+{if isset($editSynchronizeHook)}
+    {block_decorator name="box" addClass="ow_center" iconClass='ow_ic_update' langLabel='base+edit_remote_field_synchronize_title' style="overflow:hidden;"}
+       {foreach from=$editSynchronizeHook item='item'}
+          {$item}
+       {/foreach}
+    {/block_decorator}
+    {block_decorator name="box" type="empty" addClass="ow_center" style="padding:15px;"}
+        {text key="base+join_or"}
+    {/block_decorator}
+{/if}
+
+{form name=editForm}
+    <div class="profile_edit_section_wrap">
+        
+        <div class="left_pane">
+            <div class="ow_smallmargin">
+                {$profilePhotos}
+                <div class="ow_avatar_input_wrap ow_hidden">
+                    {input name='avatar'}
+                </div>
+            </div>
+        
+            {if $displayAccountType}
+                <div class="account_type">
+                        {label name='accountType'}
+                    <div class="input">
+                        {input name='accountType'}
+                        <div style="height:1px;"></div>
+                        {error name='accountType'}
+                    </div>
+                </div>
+            {/if}
+
+            {if !empty($changePassword) }
+                {block_decorator name="box" type="empty" }
+                    {$changePassword}
+                {/block_decorator}
+            {/if}
+        </div>
+        <div class="right_pane">
+            {foreach from=$questionArray key='section' item='questions' name='question'}
+            <div class="profile_edit_section">
+                {if !empty($section) }
+                    <h2>{text key="base+questions_section_`$section`_label"}</h2>
+                {/if}
+                
+                <div class="ow_user_edit_questions">
+                    {foreach from=$questions item='question' name='question'}
+                    {cycle assign='alt' name=$section values='ow_alt1,ow_alt2'}
+                        <div class="ow_user_edit_question {if !empty($changeList[$question.name]) && $adminMode } ow_premoderation_high {/if}" id="user-edit-box-{$question.name}" data-type="{$question.type}" data-presentation="{$question.presentation}">
+                            <div class="ow_user_edit_question_item">
+                                <div class="ow_user_edit_question_ic">
+                                    {mekirim_question_icon name=$question.name}
+                                </div>
+                                <div class="ow_user_edit_question_info">
+                                    <h4 class="ow_user_question_name ow_label">
+                                        {label name=$question.name}
+                                    </h4>
+                                    <div class="ow_user_question_value ow_value">
+                                        {if $question.name == 'googlemap_location'}
+                                            {input name=$question.name}
+                                            <div style="height:1px;"></div> 
+                                            {error name=$question.name}
+                                            <div class="question_description">
+                                                {question_description_lang name=$question.name}
+                                            </div>
+                                        {else}
+                                            {mekirim_question_value name=$question.name type=$question.presentation}
+                                        {/if}
+                                    </div>
+                                </div>
+                                {if $question.name != 'googlemap_location'}
+                                <div class="ow_user_edit_question_edit">
+                                    <a href="javascript://" 
+                                        onclick="OW.trigger('mouse.edit_user_question', ['{$question.name}'], this)" 
+                                        class="edit_user_ic_edit"></a>
+                                    <div class="ow_hidden edit_user_floatbox_content">
+                                        <div class="ow_user_question_input" id="user-edit-box-{$question.name}-content">
+                                            {input name=$question.name class='ow_user_question_input_field'}
+                                            <div style="height:1px;"></div> 
+                                            {error name=$question.name}
+                                            <div class="question_description">
+                                                {question_description_lang name=$question.name}
+                                            </div>
+                                            <div class="ow_center">
+                                                <a class="ow_button ow_user_question_input_save" 
+                                                    id="user-edit-box-{$question.name}-submit">Save</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/if}
+                            </div>
+                        </div>
+                    {/foreach}
+                </div>
+                
+            </div>
+        {/foreach}
+
+        {if !$adminMode && !$isAdmin && $approveEnabled}
+            <div class="ow_anno ow_std_margin anno_padding_left">{text key="base+edit_profile_warning"}</div>
+        {/if}
+
+        <div class="clearfix ow_stdmargin{if !$isAdmin} ow_btn_delimiter{/if}">
+            {if $adminMode}
+                    {if !$isUserApproved && !$isEditedUserModerator}
+                        {decorator name="button" class="delete_user_by_moderator ow_ic_delete ow_red ow_negative" langLabel='base+delete_profile'}
+                    {/if}
+
+                    <div class="">
+                        {if !$isUserApproved}
+                            {decorator name="button" class="write_message_button ow_green ow_positive" langLabel='base+write_message'}
+                            {submit name='saveAndApprove'}
+                        {else}
+                            {submit name='editSubmit'}
+                        {/if}
+                    </div>
+            {else}
+                   <div class="profile_edit_cta">
+                        {if !$isAdmin}
+                            {decorator name="button" class="unregister_profile_button ow_ic_delete ow_red ow_negative" langLabel='base+delete_profile'}
+                        {/if}
+                        <div class="">
+                            {submit name='editSubmit'}
+                        </div>
+                   </div>
+            {/if}
+
+        </div>
+        </div>
+        
+    </div>
+
+    
+{/form}
+{/block_decorator}
+
+</div>
+
+
+<script type="text/javascript">
+    // Submit form to save avatar
+    // window.addEventListener("DOMContentLoaded", function(){
+    //     let editForm = document.getElementById("editForm");
+    //     let editProfileAvatarSaveBtn = document.getElementById("editProfileAvatarSaveBtn");
+
+    //     if(editProfileAvatarSaveBtn)
+    //     {
+    //         editProfileAvatarSaveBtn.addEventListener("click", function(){
+    //             editForm.submit();
+    //         });
+    //     }
+    // });
+</script>

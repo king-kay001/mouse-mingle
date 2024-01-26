@@ -1,0 +1,23 @@
+<div class="questions_wrap">
+    {foreach from=$sectionQuestions item="section"}
+    <div class="question_section">
+        <h2 class="title">{text key="base+questions_section_`$section`_label"}</h2>
+        <ul class="question_data">
+            {foreach from=$questions['questions'][$section] item=question}
+                <li class="question_wrap">
+                    <div class="ow_user_edit_question_ic">
+                        {mekirim_question_icon name=$question.name}
+                    </div>
+                    <div class="question_info">
+                        <h4 class="question">{$labels[$question.name]}</h4>
+                        <p class="answer">{$questionsData[$question.name]}</p>
+                    </div>
+                </li>
+                
+            {/foreach}
+        </ul>
+    </div>
+{/foreach}
+</div>
+
+    

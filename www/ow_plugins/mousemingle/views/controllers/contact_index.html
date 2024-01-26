@@ -1,0 +1,32 @@
+<div class="contact_wrapper">
+
+    {form name='contact_form'}
+    <div class="contact_form_inputs">
+        <div class="input_wrap">
+            {label name='to'}
+            <div class="input">{input name='to'}{error name='to'}</div>
+        </div>
+        <div class="input_wrap">
+            {label name='from'}
+            <div class="input">{input name='from'}{error name='from'}</div>
+        </div>
+        <div class="input_wrap">
+            {label name='subject'}
+            <div class="input">{input name='subject'}{error name='subject'}</div>
+        </div>
+        <div class="input_wrap">
+            {label name='message'}
+            <div class="input">{input name='message'}{error name='message'}</div>
+        </div>
+        {if isset($captcha_present)}
+            <div class="input_wrap">
+                {label name='captcha'}
+                <div class="input">{input name='captcha'}{error name='captcha'}</div>
+            </div>
+        {/if}
+        <div class="">
+            {submit name='send' class='ow_button ow_ic_mail'}
+        </div>
+    </div>
+    {/form}
+</div>

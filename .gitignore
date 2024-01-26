@@ -14,14 +14,26 @@ www/UPDATE.txt
 .DS_Store
 
 
-# ignore all folders 
-www/*/
+# Ignore core folders
+www/ow_core
+www/ow_cron
+www/ow_includes
+www/ow_libraries
+www/ow_log
+www/ow_pluginfiles
+www/ow_smarty
+www/ow_static
+www/ow_system_plugins
+www/ow_unittest
+www/ow_updates
+www/ow_userfiles
+www/ow_utilities
 
 # Ignore everything within www/ow_plugins (including root files and folders)
-www/ow_plugins/
+www/ow_plugins/*
 
 # Ignore everything within www/ow_themes (including root files and folders)
-www/ow_themes/
+www/ow_themes/*
 
 # Unignore the plugin "mousemingle" within www/ow_plugins
 !www/ow_plugins/mousemingle/

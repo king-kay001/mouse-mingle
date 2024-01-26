@@ -1,0 +1,87 @@
+{assign var='user' value=$data.avatar}
+
+
+<div class="ow_ucard">
+    <div class="ow_ucard_cont">
+        
+        <a class="ow_ucard_image " href="{$user.url}">
+            <img src="{$user.avatar.big}" />
+            
+        </a>
+        <div class="ow_ucard_top">
+            <div class="ow_ucard_top_left">
+                {if isset($user.photoInfo) && $user.photoInfo}
+                    <div class="ow_ucard_photo_count">
+                        <a href="{$user.photoInfo.url}">
+                            <span class="ow_ucard_icon ow_ic_picture"></span>
+                            {if isset($user.hasPicture) && $user.hasPicture}
+                                {if $user.photoInfo.count > 0}
+                                    {$user.photoInfo.count}
+                                {else}
+                                    {* show photo count as one if user has profile picture*}
+                                    1
+                                {/if}
+                            {else}
+                                {$user.photoInfo.count}
+                            {/if}
+                        </a>
+                    </div>
+                {/if}
+
+                {if isset($user.videoInfo) && $user.videoInfo}
+                    <div class="ow_ucard_photo_count">
+                        <a href="{$user.videoInfo.url}">
+                            <span class="ow_ucard_icon ow_ic_video"></span>
+                            {$user.videoInfo.count}
+                        </a>
+                    </div>
+                {/if}
+            </div>
+            <div class="ow_ucard_top_right">
+                <div class="ow_ucard_online_status">
+                    {if $user.isOnline}
+                        <span class="ow_ucard_online"></span>
+                    {else}
+                        <span class="ow_ucard_offline"></span>
+                    {/if}
+                </div>
+                {if isset($user.isHot) && $user.isHot}
+                    <span class="ow_ucard_icon ow_ic_hot"></span>
+                {/if}
+            </div>
+            
+        </div>
+        <div class="ow_ucard_bottom">
+            <a class="ow_ucard_username" href="{$user.url}">
+                <span>{$user.title}</span>{if isset($user.age)}<span>, {$user.age}</span>{/if}
+            </a>
+            {if isset($user.location)}
+                <p class="ow_ucard_location">{$user.location}</p>
+            {/if}
+            <div class=" ow_ucard_info ">
+                {if isset($user.fields)} 
+                    {foreach from=$user.fields item='item' name='toolbar'} 
+                        {if !$smarty.foreach.toolbar.first && ( empty($item.class) || $item.class != 'ow_ipc_date' )} 
+                            <span class="ow_delimiter ">&middot;</span> 
+                        {/if}
+                        <span class="ow_nowrap{if !empty($item.class)} {$item.class}{/if} ">
+                            {if !empty($item.href)}
+                                <a {if !empty($item.id)} id="{$item.id} "{/if} href="{$item.href} ">{/if}{$item.label}{if !empty($item.href)}</a>
+                            {/if}
+                        </span> 
+                    {/foreach}{/if}
+            </div>
+        </div>
+    </div>
+    <div class="ow_ucard_toolbar">
+        <!-- <span class="ow_ucard_icon ow_ic_mailbox">
+            <a href="javascript://" class="ow_mailbox_desktop" onclick="OW.trigger('base.online_now_click', ['{$user.id}'])"></a>
+            <a href='{url_for_route for="mailbox_chat_conversation:[userId=>{$user.id}]"}' class="ow_mailbox_mobile"></a>
+        </span> -->
+        <a href="javascript://" class="ow_ucard_icon ow_ic_mailbox" onclick="OW.trigger('base.online_now_click', ['{$user.id}'])"></a>
+        <a href="javascript://" class="ow_ucard_icon ow_ic_gift" onclick="sendGiftFloatBox = OW.Mouse.gift('{$user.id}', '{$user.title}')"></a>
+        {if $user.showBookmark}
+            <a href="javascript://" class="ow_ucard_icon {if isset($user.isMarked) && $user.isMarked}active {/if}ow_ic_bookmark" onclick="OW.trigger('mouse.bookmark_click', ['{$user.id}', this], this)"></a>
+        {/if}
+    </div>
+</div>

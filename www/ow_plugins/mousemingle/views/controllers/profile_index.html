@@ -1,0 +1,40 @@
+<div class="profile_wrap">
+    <div class="profile_section profile_top_section">
+        <div class="left avatar">
+            {if $userHasPhoto }
+                {$profilePhotos}
+            {else}
+                <img src="{$avatar}" alt="{$userInfo['displayName']}">
+            {/if}
+        </div>
+        <div class="right">
+            <div class="info segment">
+                <h3 class="title">{$userInfo['displayName']}, {$userInfo['age']}</h3>
+                {if isset($userInfo['location'])}
+                    <p class="location">{$userInfo['location']}</p>
+                {/if}
+                <p class="sex">{$userInfo['sex']}</p>
+
+                <a href="{url_for_route for='users-search'}" class="back_to_home">{text key="mekirim+back_to_home"}</a>
+            </div>
+            <div class="cta segment">
+                {$profileActionToolbar}
+            </div>
+            {if isset($userInfo['aboutme'])}
+                <div class="about_detail segment">
+                    <h3 class="title">{text key="mekirim+about_me"}</h3>
+                    <p>{$userInfo['aboutme']}</p>
+                </div>
+            {/if}
+            <div class="ow_profile_bottom">
+                <div class="ow_profile_album_wrap">
+                    {$albumCmp}
+                </div>
+                {$userViewCmp}
+            </div>
+        </div>
+        <a href="{url_for_route for='users-search'}" class="mobile_back_home">{text key="mekirim+back_to_home"}</a>
+    </div>
+    
+</div>
+

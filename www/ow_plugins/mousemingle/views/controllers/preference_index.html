@@ -1,0 +1,50 @@
+<div class="my_preference_wrap">
+    <div class="mobile_back_arrow">
+        <a href="{url_for_route for='profile_settings'}" class="mobile_back">{text key="mekirim+back"}</a>
+    </div>
+    <div class="header">
+        <h2>{text key="mekirim+my_preferences"}</h2>
+        <a href="{url_for_route for='profile_settings'}" class="back_button">{text key="mekirim+back"}</a>
+    </div>
+    {block_decorator name="box" type="empty" addClass="ow_superwide ow_automargin"}
+    {if empty($preferenceList)}
+        {block_decorator name="box" type="empty" addClass="ow_center" style="padding:15px;"}
+             {text key="base+preference_no_items"}
+        {/block_decorator}
+    {else}
+        {form name='preferenceForm'}
+            {foreach from=$preferenceList key='section' item='preferences'}
+            <div class="preference_section">
+                {if !empty($section) }
+                    {if !empty($sectionLabels.$section.label)}
+                        <h3 class="title ow_section_icon {if !empty($sectionLabels.$section.iconClass)} {$sectionLabels.$section.iconClass} {/if}">
+                            {$sectionLabels.$section.label}
+                        </h3>
+                    {else}
+                    {$section}
+                    {/if}
+                {/if}
+                {foreach from=$preferences item='preference' name='preference'}
+                <div class="">
+                    <span class="ow_label">
+                        {label name=$preference}
+                    </span>
+                    <span class="ow_value">
+                        {input name=$preference}
+                        <div style="height:1px;"></div>
+                        {error name=$preference}
+                    </span>
+                    <p class="ow_desc">
+                        {desc name=$preference}
+                    </p>
+                </div>
+                {/foreach}
+                </div>
+            {/foreach}
+            <div class="clearfix ow_stdmargin"><div class="ow_right">
+            {submit name='preferenceSubmit'}
+			</div></div>
+        {/form}
+    {/if}
+{/block_decorator}
+</div>

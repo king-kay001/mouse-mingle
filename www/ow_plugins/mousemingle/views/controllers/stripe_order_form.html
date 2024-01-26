@@ -1,0 +1,59 @@
+<div class="stripe_form_wrap">
+    <form method="post" id="{$formId}" action="{$formAction}">
+        {block_decorator name='box' capEnabled=false addClass='ow_break_word'}
+        <div class="ow_smallmargin credit-card-info">
+            <span class="ow_outline">{$productString}</span>
+        </div>
+
+        <div class="card_section">
+            <h2 class="title">{text key='billingstripe+card_details'}</h2>
+            <div class="input_wrap">
+                {text key='billingstripe+card_number'}
+                <div class="input">
+                    <div id="card-element"></div>
+                </div>
+            </div>
+            <div class="input_wrap">
+                {text key='billingstripe+name_on_card'}
+                <div class="input">
+                    <input id="cardholder-name" type="text" autocomplete="off" class="c-name" />
+                </div>
+            </div>
+        </div>
+        {if $requireData}
+        <div class="card_section ow_billing_info">
+            <h2 class="title">{text key='billingstripe+billing_info'}</h2>
+            
+            <div class="input_wrap">
+                {text key='billingstripe+country'}
+                <div class="input">
+                    <select class="billing-country">
+                        <option value="">{text key='billingstripe+choose_country'}</option>
+                        {foreach from=$countries item='label' key='code'}
+                        <option value="{$code}">{$label}</option>
+                        {/foreach}
+                    </select>
+                </div>
+            </div>
+            <div class="input_wrap">
+                {text key='billingstripe+state'}
+                <div class="input"><input type="text" class="billing-state"></div>
+            </div>
+            <div class="input_wrap">
+                {text key='billingstripe+address'}
+                <div class="input"><input type="text" class="billing-address1"></div>
+            </div>
+            <div class="input_wrap">
+                {text key='billingstripe+zip_code'}
+                <div class="input"><input type="text" class="billing-zip" /></div>
+            </div>
+        </div>
+        {/if}
+        {/block_decorator}
+        <div class="stripe_cta">
+            <div class="ow_right">
+                {decorator name='button' id='card-button' langLabel='billingstripe+complete_order'}
+            </div>
+        </div>
+    </form>
+</div>

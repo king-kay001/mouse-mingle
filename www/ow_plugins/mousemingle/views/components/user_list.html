@@ -1,0 +1,26 @@
+{if $list }
+<div class="ow_user_list ow_full ow_stdmargin">
+    {foreach from=$list item='item' name='user_list'}
+        {assign var='dto' value=$item.dto}
+        {assign var='id' value=$dto.id}
+
+        {decorator name="ucard"
+            avatar=$avatars[$id]
+            contextMenu=$contextMenuList[$id]
+            set_class='ow_item_set3'
+        }
+    
+    {/foreach}
+</div>
+{/if}
+
+{if ! $list}
+<div class="ow_anno ow_std_margin ow_nocontent">
+    {if $listType == 'search'}
+        {capture assign='searchUrl'}{url_for for="MOUSE_CTRL_Usearch:clearSearch"}{/capture}
+        {text key='usearch+no_users_found' searchUrl=$searchUrl}
+    {else}
+        {text key='base+widgets_no_content'}
+    {/if}
+</div>
+{/if}

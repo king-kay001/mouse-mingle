@@ -1,0 +1,50 @@
+{* component Hotlist *}
+{script}
+{if $authorized || $userIsHot}
+    {literal}
+
+    $("#add_to_list").click(function(){
+        hotListFloatBox = OW.ajaxFloatBox("HOTLIST_CMP_Floatbox", {} , {width:380, iconClass: "ow_ic_heart", title: "{/literal}{if $userIsHot}{text key="hotlist+floatbox_header_remove_from_list"}{else}{text key="hotlist+floatbox_header"}{/if}{literal}"});
+    });
+
+    {/literal}
+
+{else}
+    {literal}
+
+    $("#add_to_list").click(function(){
+    OW.authorizationLimitedFloatbox({/literal}{$authMsg}{literal});
+    });
+
+    {/literal}
+{/if}
+{/script}
+
+<div class="ow_hotlist_wrap">
+    <div class="ow_hotlist_member">
+        <div class="ow_avatar">
+            <img src="{$userInfo.src}" style="max-width: 100%" />
+            <a href="javascript://" id="add_to_list">
+                {if $userIsHot}
+                    {text key="hotlist+remove_from_hot_list"}
+                {else}
+                    {text key="hotlist+are_you_hot_too"}
+                {/if}
+            </a>
+        </div>
+    </div>
+    <div class="ow_hotlist_carousel owl-carousel">
+        {foreach from=$userList item='user' name='userList'}
+            <div class="ow_hotlist_item">
+                <div class="ow_avatar">
+                    <a href="{$user.url}">
+                        <img title="{$user.title|escape}" src="{$user.src}" alt="{$user.title|escape}" style="max-width: 100%" />
+                    </a>
+                    <div class="hotlist_bottom_right">
+                        <span class="hotlist_icon ow_ic_hot"></span>
+                    </div>
+                </div>
+        </div>
+        {/foreach}
+    </div>
+</div>

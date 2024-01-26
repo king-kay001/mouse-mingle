@@ -1,0 +1,64 @@
+<div class="matches_wrap">
+    <div class="mobile_back_arrow">
+        <a href="{url_for_route for='profile_settings'}" class="mobile_back">{text key="mekirim+back"}</a>
+    </div>
+    {style}
+form .ow_matchmaking_distance_field input {
+    width: 50px;
+    padding-right:10px;
+}
+
+form .ow_matchmaking_distance_field {
+    padding-right:10px;
+}
+
+{/style}
+
+<div class="ow_box_empty ow_superwide ow_automargin ow_no_cap ow_break_word">
+    <div class="match_header">
+        <h2>{text key="base+questions_section_about_my_match_label"}</h2>
+        <a href="{url_for_route for='profile_settings'}" class="back_button">{text key="mekirim+back"}</a>
+    </div>
+    {if $noQuestions}
+    <div class="ow_stdmargin">
+        {text key='matchmaking+no_questions'}
+    </div>
+    {else}
+    <div class="ow_stdmargin">
+        {text key='matchmaking+preferences_invitation'}
+    </div>
+
+    {form name='MATCHMAKING_PreferencesForm'}
+       
+            {foreach from=$questionArray key='section' item='questions' name="q"}
+                {foreach from=$questions item='question' name='question'}
+                {if $question.name == 'googlemap_location'}
+                    {assign var="questionName" value='distance_from_my_location'}
+                {else}
+                    {assign var="questionName" value=$question.name}
+                {/if}
+                
+                <div class="preference_section">
+                    <h3 class="title ow_label">{label name=$questionName}</h3>
+                    <div class="ow_value">
+                        <p>{input name=$questionName}</p>
+                        <span>{error name=$questionName}</span>
+                    </div>
+                    <span class="ow_desc ow_small ow_txtcenter">{$question.acc_type_label}</span>
+                </div>
+                {/foreach}
+            {/foreach}
+
+
+        <div class="clearfix ow_stdmargin">
+            <div class="ow_right">
+                {submit name='save' class='ow_ic_save'}
+            </div>
+        </div>
+    {/form}
+    {/if}
+</div>
+</div>
+
+
+

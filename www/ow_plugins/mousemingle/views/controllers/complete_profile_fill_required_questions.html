@@ -1,0 +1,46 @@
+<div class="profile_edit_wrap">
+    {block_decorator name="box" type="empty" addClass="ow_superwide ow_automargin"}
+
+    {block_decorator name="box_cap" type="empty" addClass=" " style="text-align:left;font-size:28px;" langLabel="base+required_profile_questions"}
+    {/block_decorator}
+
+    {form name=requiredQuestionsForm}
+        <div class="profile_edit_section_wrap">
+            <div class="right_pane">
+                {foreach from=$questionArray key='section' item='questions' name='question'}
+
+                <div class="profile_edit_section">
+                    {if !empty($section) }
+                        <h2>{text key="base+questions_section_`$section`_label"}</h2>
+                    {/if}
+                    
+                    <div class="questions_wrap">
+                        {foreach from=$questions item='question' name='question'}
+                            {cycle assign='alt' name=$section values='ow_alt1,ow_alt2'}
+                            <div class="input_wrap {if !empty($changeList[$question.name]) && $adminMode } ow_premoderation_high {/if}">
+                                <h4 class="questions">{label name=$question.name}</h4>
+                                <div class="input">
+                                    {input name=$question.name}
+                                    <div style="height:1px;"></div> 
+                                    {error name=$question.name}
+                                </div>
+                                <div class="question_description">
+                                    {question_description_lang name=$question.name}
+                                </div>
+                            </div>
+                        {/foreach}
+                    </div>
+                </div>
+
+
+            {/foreach}
+            </div>
+        </div>
+        <div class="clearfix ow_stdmargin">
+           <div class="ow_right">
+               {submit name='submit'}
+           </div>
+        </div>
+    {/form}
+{/block_decorator}
+</div>

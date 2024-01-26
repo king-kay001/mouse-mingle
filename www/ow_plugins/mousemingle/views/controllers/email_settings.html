@@ -1,0 +1,39 @@
+<div class="mail_notification_wrap">
+    <div class="mobile_back_arrow">
+        <a href="{url_for_route for='profile_settings'}" class="mobile_back">{text key="mekirim+back"}</a>
+    </div>
+    <div class="header">
+        <h2>{text key="mekirim+mail_notifications"}</h2>
+        <a class="back_button" href="{url_for_route for='profile_settings'}">{text key="mekirim+back"}</a>
+    </div>
+
+    {form name="notificationSettingForm"}
+    
+    
+        {foreach from=$actions item=plugin name="plugins"}
+           <div class="preference_section">
+               <h3 class="title ow_section_icon {$plugin.icon}">{$plugin.label}</h3>
+                {foreach from=$plugin.actions item=action name="actions"}
+                    <div class="email_item">
+                        <span class="ow_label">{input name=$action.action}</span>
+                        <pclass="ow_value">{$action.description}</pclass=>
+                    </div>
+                {/foreach}
+                {if !$smarty.foreach.plugins.last}
+                    <div></div>
+                {/if}
+           </div>
+        {/foreach}
+    
+    
+    <div class="preference_section">
+        <h3 class="title ow_section_icon ow_ic_script">{text key="notifications+config_schedule_title"}</h3>
+            <div class="">
+                <span class="ow_value">{input name="schedule"}</span>
+            </div>
+    </div>
+    
+    <div class="clearfix ow_stdmargin"><div class="ow_right">{submit name='save' class='ow_ic_save'}</div><div class="ow_right"></div></div>
+    
+    {/form}
+</div>

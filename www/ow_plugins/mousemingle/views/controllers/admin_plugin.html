@@ -1,0 +1,93 @@
+{style}
+{literal}
+.theme_icon{
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	height:180px;
+	width:180px;
+}
+
+.theme_title{
+	font-weight:bold;
+}
+
+.theme_desc{
+	padding:10px 0;
+}
+
+.theme_controls input[type="text"]{
+	width:232px;
+	padding:4px;
+}
+
+.theme_control_image{
+	background-repeat:no-repeat;
+	background-position:0% 0%;
+	border:1px solid #ccc;
+	height:40px;
+	width:170px;
+    float:left;
+    cursor:pointer;
+}
+
+.theme_controls select{
+	width:240px;
+}
+
+body table.theme_controls td.ow_label{
+	width:35%;
+}
+
+body table.theme_controls td.ow_input{
+	width:30%;
+}
+
+body table.theme_controls td.ow_desc{
+	text-align:left;
+	width:35%;
+}
+
+.color_input input[type="text"]{
+	width:170px;
+}
+
+.theme_controls .color_button{
+	width:30px;
+	height:27px;
+	padding:0;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+}
+
+.theme_controls .ow_desc span {
+    height: 16px;
+    width: 16px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+{/literal}
+{/style}
+{$contentMenu}
+<div class="ow_superwide ow_automargin">
+    {form name='admin-theme-plugin-settings'}
+        <table class="ow_form ow_table_1 theme_controls">
+            <tr class="ow_tr_first">
+                <th colspan="10" style="text-align: left;">
+                    {text key="mekirim+admin_plugin_profile_icons"}
+                </th>
+            </tr>
+            {foreach from=$profileQuestionList item='question' key='questionName' name='i'}
+                <tr class="{cycle values='ow_alt1,ow_alt2' name=$question} {if $smarty.foreach.i.last}ow_tr_last{/if}" id="{$question}-cont">
+                <td class="ow_label">{label name=$question}</td>
+                <td class="ow_value">{input name=$question}</td>
+                <td class="ow_desc">{mekirim_question_icon name=$questionName}</td>
+            </tr>
+            {/foreach}
+            <tr class="ow_tr_delimiter"><td></td></tr>
+        </table>
+        <div class="ow_right">
+            {submit name='save'}
+        </div>
+    {/form}
+</div>

@@ -1,0 +1,69 @@
+{style}{literal}
+    .left_pane {
+        width: 35%
+    }
+    .ow_profile_photos_wrap {
+        display: flex;
+        gap: 2px;
+    }
+
+    .ow_profile_photos {
+        width: calc(80% - 4px); 
+        display: flex;
+        gap: 2px;
+    }
+
+    .ow_profile_photos>* {
+        width: calc(25% - 2px);
+        height: 60px;
+        overflow: hidden;
+    }
+
+    .ow_profile_photos_placeholder {
+        width: calc(20% - 2px);
+    }
+
+    .ow_btn_add_more_photo {
+        display: block;
+        padding: 20px;
+        border: dotted 1px #ddd;
+        border-radius: 6px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+{/literal}{/style}
+<div class="ow_profile_edit_photos_cmp" id="{$cmpId}" data-items="3">
+    <div class="user_photo">
+        <div class="ow_avatar_field_preview">
+            <img src="{$avatar}" id="avatar_console_image" />
+        </div>
+        <a class="ow_ic_edit" id="btn-avatar-change" href="javascript://" title='{text key="base+avatar_change"}'>&nbsp;</a>
+    </div>
+    <div class="ow_profile_photos_wrap">
+        <div class="ow_profile_photos">
+            {capture assign='btnAddPhotos'}
+                <a class="ow_btn_add_more_photo" href="javascript://" onclick="{$photoJs}" title='{text key="photo+upload_photos"}'>
+                    <span class="ow_ic_add"></span>
+                </a>
+            {/capture}
+
+            {foreach from=$userPhotos item=photo}
+                <div class="user_photo">
+                    <img src="{$photo.url}" alt="photo">
+                </div>
+            {/foreach}
+
+            {for $foo=1 to ($photoCount - count($userPhotos))}
+                {$btnAddPhotos}
+            {/for}
+        </div>
+        <div class="ow_profile_photos_placeholder">
+            {$btnAddPhotos}
+        </div>
+    </div>
+    {if count($userPhotos) >= ($photoCount-1) }
+        <a class="ow_btn_add_more_photo" href="{url_for_route for="photo.user_photos:[user=>`$user->username`]"}" title='{text key="photo+upload_photos"}'>
+            <span class="ow_ic_picture">{text key="base+view_all"}</span>
+        </a>
+    {/if}
+</div>

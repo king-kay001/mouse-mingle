@@ -1,0 +1,53 @@
+<div class="signup-wrap">
+    <div class="header">
+        <h3>{text key="mekirim+create_account"}</h3>
+        <p>{text key="mekirim+create_account_description"}</p>
+    </div>
+    <div class="signup-form form-wrap">
+        {form name="signupForm"}
+            <div class="ow_nuesignup_questions ow_hidden">
+                <div class="input-wrap input-field-email">
+                    <div class="ow_value">{input name="email"}</div>
+                    <div class="ow_error">{error name="email"}</div>
+                </div>
+    
+                <div class="input-wrap input-field-password">
+                    <div class="ow_value">{input name="password"}</div>
+                    <div class="ow_error">{error name="password"}</div>
+                </div>
+    
+                <div class="input-wrap input-field-sex">
+                    <p style="text-align:center;">{text key="mekirim+choose_gender"}</p>
+                    <div class="ow_value">{input name="sex"}</div>
+                    <div class="ow_error">{error name="sex"}</div>
+                </div>
+    
+                <div class="input-wrap input-field-birthdate">
+                    <div class="ow_value">{input name="birthdate"}</div>
+                    <div class="ow_error">{error name="birthdate"}</div>
+                </div>
+    
+                <div class="input-wrap input-field-username">
+                    <div class="ow_value">{input name="username"}</div>
+                    <div class="ow_error">{error name="username"}</div>
+                </div>
+    
+                <div class="input-wrap input-field-location">
+                    <div class="ow_value">{input name="location"}</div>
+                    <div class="ow_error">{error name="location"}</div>
+                </div>
+            </div>
+
+            <!-- form controls -->
+            <div class="input-wrap ow_nuesignup_control">
+                <!-- continue button -->
+                <a class="ow_button step-btn btn-nuesignup-next" href="javascript://">{text key="mekirim+continue"}</a>
+                <!-- sign in button -->
+                <a class="ow_button btn-nuesignup-login" href="{url_for_route for='static_sign_in'}">{text key="mekirim+i_already_have_accout"}</a>
+                <!-- submit buttom -->
+                {submit name="register" class='btn-nuesignup-submit ow_hidden'}
+            </div>
+        {/form}
+    </div>
+</div>
+

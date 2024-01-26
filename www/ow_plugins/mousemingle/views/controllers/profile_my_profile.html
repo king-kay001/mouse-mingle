@@ -1,0 +1,39 @@
+<div class="my_profile_wrap">
+    <div class="profile_section ">
+        <div class="left">
+            <div class="avatar">
+                <img src="{$avatar}" alt="{$userInfo['displayName']}">
+            </div>
+            <p>{$userInfo['displayName']}</p>
+        </div>
+        <div class="right">
+            {if isset($coinCount)}
+                <a class="link" href="{url_for_route for='usercredits.buy_credits'}">
+                    <span class="link_icon coin"></span>
+                    <span>{text key="mekirim+credits"} &nbsp; <span>{$coinCount}</span></span>
+                </a>
+            {/if}
+            <a class="link" href="{url_for_route for='base_edit'}">
+                <span class="link_icon edit"></span>
+                <span>{text key="mekirim+edit_profile"}</span>
+            </a>
+            <a class="link" href="{url_for_route for='profile_settings'}">
+                <span class="link_icon settings"></span>
+                <span>{text key="mekirim+settings_link"}</span>
+            </a>
+            <a class="link" href="{url_for_route for='base_sign_out'}">
+                <span class="link_icon logout"></span>
+                <span>{text key="mekirim+setting_logout"}</span>
+            </a>
+            
+            {if $membershipPlan}
+                <div class="upgrade">
+                    <h3>{text key="mekirim+upgrade_text"}</h3>
+                    <p class="enjoy">{text key="mekirim+upgrade_desc"}</p>
+                    <p class="cost">{$membershipPlan.plan_format}</p>
+                    <a href="{url_for_route for='membership_subscribe'}">{text key="mekirim+upgrade_continue"}</a>
+                </div>
+            {/if}
+        </div>
+    </div>
+</div>

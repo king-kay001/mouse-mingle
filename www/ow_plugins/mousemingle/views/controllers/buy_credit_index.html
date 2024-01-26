@@ -1,0 +1,45 @@
+<div class="coin_package_wrap">
+    <div class="header">
+        <h2 class="title" id="title">{text key="mekirim+buy_credits"}</h2>
+        {if !empty($menu)}
+            <div class="content_menu_navs">
+                {$menu}
+            </div>
+        {/if}
+    </div>
+
+    <div class="sub_header">
+        <h4 class="sub_title" >{text key="mekirim+available_coins"}</h4>
+        <div class="count_count">
+            <span class="coin_icon"></span>
+            <span class="count">{$coinCount}</span>
+            <span class="count_text">{text key="mekirim+coin_count_text"}</span>
+            
+        </div>
+    </div>
+
+    <div class="coin_packages">
+        {block_decorator name='box' langLabel='usercredits+choose_pack' iconClass='ow_ic_ok'}
+            {if $packs}
+                {form name='buy-credits-form'}
+                    {input name='pack'}
+            
+                    <div class="ow_center gateway">
+                        {input name='gateway'}
+                    </div>
+            
+                    <div id="billing_gateway_extra_information">
+            
+                    </div>
+            
+                    <div class="submit">
+                        <div class="ow_right">{submit name='buy' class='ow_positive'}</div>
+                    </div>
+                {/form}
+            {else}
+                <div class="ow_nocontent">{text key='usercredits+no_packs'}</div>
+            {/if}
+        {/block_decorator}
+    </div>
+
+</div>

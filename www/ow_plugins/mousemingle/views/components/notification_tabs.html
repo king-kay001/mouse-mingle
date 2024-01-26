@@ -1,0 +1,12 @@
+<div class="ow_mekirim_notification_tabs ow_content_menu_wrap" id="$cmpId">
+    <ul class="ow_content_menu">
+        {foreach from=$data item='item' name='contentMenu'}
+            <li class="{$item.class} {if $item.active} active{/if}">
+                <a href="{$item.url}">
+                    <span{if $item.iconClass} class="{$item.iconClass}"{/if}>{$item.label}</span>
+                    <span class="item_{$item.key}_count">{if $item.itemCount}{$item.itemCount}{/if}</span>
+                </a>
+            </li>
+        {/foreach}
+    </ul>
+</div>

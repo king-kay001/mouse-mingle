@@ -1,0 +1,55 @@
+<div class="ow_profile_gallery_action_toolbar ow_profile_action_toolbar_wrap clearfix ow_stdmargin">
+    <ul class="ow_bl ow_profile_action_toolbar clearfix ow_small ow_left">
+        {foreach from=$toolbar item='action' name="toolbar"}
+
+            {* Add mobile mailbox click *}
+            {if $smarty.foreach.toolbar.iteration == 1}
+                <li class="mobile_send_message">
+                    <a href='{url_for_route for="mailbox_chat_conversation:[userId=>{$profileUserId}]"}'>
+                        {$action.label}
+                    </a>
+                </li>
+                <li class="desktop_send_message">
+                    <a {$action.attrs} >
+                        {$action.label}
+                    </a>
+                </li>
+
+            {else}
+
+                {if isset($action.html)}
+                    {$action.html}
+                {elseif isset($action.extraLabel)}
+                    <li>
+                        {$action.extraLabel}
+                    </li>
+                {else}
+                    <li>
+                        <a {$action.attrs} >
+                            {$action.label}
+                        </a>
+                    </li>
+                {/if}
+
+            {/if}
+            
+
+            {* Add like button on the second position *}
+            {if $smarty.foreach.toolbar.iteration == 1}
+            <li>
+                <a href="javascript://" 
+                    class="ow_profile_like {if isset($isMarked) && $isMarked}active {/if}" 
+                    onclick="OW.trigger('mouse.bookmark_click', ['{$profileUserId}', this], this)">
+                    {text key="mekirim+like"}
+                </a>
+            </li>
+            {/if}
+        {/foreach}
+    </ul>
+
+    {foreach from=$groups item="group"}
+        {$group}
+    {/foreach}
+
+    {$cmpsMarkup}
+</div>

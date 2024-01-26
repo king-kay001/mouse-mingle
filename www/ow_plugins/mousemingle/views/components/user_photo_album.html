@@ -1,0 +1,23 @@
+<div class="user_photo_album_wrap">
+    <h3 class="title">{text key="mekirim+photo_album"}</h3>
+    <div class="user_photo_album">
+        {foreach item="photo" from=$albums}
+            <div class="photo">
+                
+                <a href="javascript://" 
+                    onclick="OW.trigger('mouse.user_album_photos', ['{$photo.dto->id}', '{$showFooter}'], this)" 
+                    class="">
+                    <img src="{$photo.cover}" alt="{$photo.dto->name}">
+                </a>
+                <div class="ow_hidden photo_album_floatbox_content">
+                    <a class="ow_ic_close_album_floatbox" 
+                        id="ow-floatbox-close-{$photo.dto->id}">close</a>
+                    <div class="ow_album_photos" id="ow-album-photos-{$photo.dto->id}">
+                    
+                    </div>
+                </div>
+            </div>
+            
+        {/foreach}
+    </div>
+</div>

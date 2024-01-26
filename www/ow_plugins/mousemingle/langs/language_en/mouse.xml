@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prefix name="mouse" label="Mouse mingle System Plugin" language_tag="en" language_label="English">
+	<key name="membership_title"><value>Destroy all limits with &lt;span&gt;{$name} Membership&lt;/span&gt;</value></key>
+	<key name="plan_struct"><value>{$price} {$currency}</value></key>
+	<key name="discount"><value>Save {$discount}%</value></key>
+	<key name="checkout_heading"><value>Reocurring billing, cancel anytime</value></key>
+	<key name="checkout_text"><value>Some information about reoccuring payment. Should be generic enough to be used on both Apple and Google Play stores. By tapping continue, you agree with our &lt;a href="{$siteUrl}terms-of-use"&gt;Terms of Service&lt;/a&gt; and &lt;a href="{$siteUrl}privacy"&gt;Privacy Policy&lt;/a&gt;</value></key>
+	<key name="marked_notify_message"><value>Saved to Bookmarks</value></key>
+	<key name="unmarked_notify_message"><value>Removed from Bookmarks</value></key>
+	<key name="upgrade_feature_message_invite"><value>Send them unlimited messages</value></key>
+	<key name="upgrade_feature_bookmark_invite"><value>Discover who visited your profile and liked you</value></key>
+	<key name="upgrade_feature_photo_invite"><value>See their naughty snaps and discover what they are hiding</value></key>
+	<key name="continue"><value>Continue</value></key>
+	<key name="landing"><value>Home</value></key>
+	<key name="message"><value>Messages</value></key>
+	<key name="notification"><value>Notifications</value></key>
+	<key name="notifications_default"><value>Notifications</value></key>
+	<key name="notifications_views"><value>Views</value></key>
+	<key name="notifications_likes"><value>Likes</value></key>
+	<key name="notifications_bookmarks"><value>Bookmarks</value></key>
+	<key name="notifications_matches"><value>Matches</value></key>
+	<key name="console_upgrade_premium_label"><value>Upgrade to premium</value></key>
+	<key name="edit_profile"><value>Edit profile</value></key>
+	<key name="settings_link"><value>Settings</value></key>
+	<key name="upgrade_text"><value>Upgrade to Premium</value></key>
+	<key name="upgrade_desc"><value>Break all limits with our premium plan</value></key>
+	<key name="upgrade_cost"><value>USD 10</value></key>
+	<key name="upgrade_continue"><value>Continue</value></key>
+	<key name="admin_theme_plugin_menu_item"><value>Plugin Settings</value></key>
+	<key name="profile_settings"><value>Profile settings</value></key>
+	<key name="account_preference"><value>Account preference</value></key>
+	<key name="account_preference_desc"><value>Account preference settings</value></key>
+	<key name="match_making_preference"><value>Match making</value></key>
+	<key name="match_making_preference_desc"><value>Choose how you want to be matched</value></key>
+	<key name="mail_notification_preference"><value>Mail notification preference</value></key>
+	<key name="mail_notification_preference_desc"><value>Set how you get notified on the platform</value></key>
+	<key name="setting_language"><value>Language setting</value></key>
+	<key name="setting_language_desc"><value>Feel free to change your language</value></key>
+	<key name="setting_contact_us"><value>Contact us</value></key>
+	<key name="setting_contact_us_desc"><value>Click to contact us</value></key>
+	<key name="setting_logout"><value>Logout</value></key>
+	<key name="setting_logout_desc"><value>Sign out by clicking here</value></key>
+	<key name="my_preferences"><value>My preferences</value></key>
+	<key name="mail_notifications"><value>Mail notifications</value></key>
+	<key name="profile_language"><value>Language</value></key>
+	<key name="about_me"><value>About me</value></key>
+	<key name="photo_album"><value>Photo Album</value></key>
+	<key name="back_to_home"><value>Back to home</value></key>
+	<key name="landing_header"><value>You deserve to be happy with a partner</value></key>
+	<key name="landing_page_introduction_text"><value>No time to explain. Register and FIND Love.</value></key>
+	<key name="register_now"><value>Register Now</value></key>
+	<key name="platform_policy_text"><value>By submitting this form, I certify that I am 18 years of age or older and that I agree to the Terms &amp; Conditions and have read the Privacy Policy</value></key>
+	<key name="why_mouse.com"><value>Why Mekirim.com</value></key>
+	<key name="smart_search"><value>Smart search</value></key>
+	<key name="smart_search_description"><value>Smart search algorithm to find the right one</value></key>
+	<key name="instant_use"><value>Instant use</value></key>
+	<key name="instant_use_description"><value>No long precess, register and start exploring</value></key>
+	<key name="no_spam"><value>No spam</value></key>
+	<key name="no_spam_description"><value>You are in full control, no spamming</value></key>
+	<key name="what_people_say_about_us"><value>What people say about us</value></key>
+	<key name="testimony_name"><value>Kelvin James</value></key>
+	<key name="testimony_address"><value>London, UK</value></key>
+	<key name="testimony_text_paragraph"><value>I thought it will take months but I found her in less than expected. We are now married and expecting our first child.</value></key>
+	<key name="what_is_mekirim"><value>What is Mekirim</value></key>
+	<key name="what_is_mekirim_paragrap_one"><value>Mekirim is a platform for everyone who wants to find love without hassle. No limits, no long process.</value></key>
+	<key name="what_is_mekirim_paragrap_two"><value>We are delighted in helping people find love, and we do it happily with our smart platform</value></key>
+	<key name="what_is_mekirim_paragrap_two"><value>We are delighted in helping people find love, and we do it happily with our smart platform</value></key>
+	<key name="landing_page_footer_text"><value>You must be atleast 18 years to use our platform. </value></key>
+	<key name="all_right_reserved"><value> Copyright All rights reserved</value></key>
+	<key name="admin_plugin_profile_icons"><value>Profile Questions Icon</value></key>
+	<key name="filter"><value>Filter</value></key>
+	<key name="clear_filter"><value>Clear Filter</value></key>
+	<key name="search_header"><value>Filter</value></key>
+	<key name="search_location"><value>Location</value></key>
+	<key name="search_match_sex"><value>Sex</value></key>
+	<key name="search_birthdate"><value>Birth date</value></key>
+	<key name="cancel"><value>Cancel</value></key>
+	<key name="search"><value>Search</value></key>
+	<key name="enter_location"><value>Enter Location</value></key>
+	<key name="buy_credits"><value>Buy credits</value></key>
+	<key name="available_coins"><value>Available coins</value></key>
+	<key name="coin_count_text"><value>Coin count</value></key>
+	<key name="back"><value>Back</value></key>
+	<key name="sign_up"><value>Sign up</value></key>
+	<key name="forgot_password"><value>Forgot password</value></key>
+	<key name="i_already_have_accout"><value>I already have account</value></key>
+	<key name="create_account"><value>Create Account</value></key>
+	<key name="create_account_description"><value>Signup to find love</value></key>
+	<key name="credits"><value>Credits</value></key>
+	<key name="location"><value>Location</value></key>
+	<key name="language_changed"><value>Language Changed</value></key>
+	<key name="male"><value>Male</value></key>
+	<key name="female"><value>Female</value></key>
+	<key name="complete"><value>Complete</value></key>
+	<key name="search_age_range"><value>Age range</value></key>
+	<key name="upload_more_pictures"><value>Upload more pictures</value></key>
+	<key name="like"><value>Like</value></key>
+	<key name="dislike"><value>Dislike</value></key>
+	<key name="chat_now"><value>Chat now</value></key>
+	<key name="choose_gender"><value>What's your gender?</value></key>
+	<key name="notifications_notification_counter"><value>You have {$counter} new &lt;a href="{$url}"&gt;notification(s)&lt;/a&gt;.</value></key>
+	<key name="notification_notification_counter"><value>You have {$counter} new &lt;a href="{$url}"&gt;notification(s)&lt;/a&gt;.</value></key>
+	<key name="likes_notification_counter"><value>{$counter} new people has &lt;a href="{$url}"&gt;liked your profile&lt;/a&gt;.</value></key>
+	<key name="views_notification_counter"><value>You have &lt;a href="{$url}"&gt;{$counter} people&lt;/a&gt; viewing your profile.</value></key>
+	<key name="mailbox_notification_counter"><value>You have {$counter} new &lt;a href="{$url}"&gt;message(s)&lt;/a&gt;.</value></key>
+</prefix>

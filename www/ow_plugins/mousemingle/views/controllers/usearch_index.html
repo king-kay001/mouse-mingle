@@ -1,0 +1,60 @@
+<div class="ow_page_hotlist">
+    {component class='MOUSE_CMP_Hotlist'}
+</div>
+
+<div class="filter-button-wrap">
+    <button type="button" class="show-filter">{text key='mekirim+filter'}</button>
+    {if $isFiltered }
+        <a href="{url_for_route for='mekirim-usearch-clear'}">
+            <button type="button" class="show-filter" style="margin-left:10px;">{text key='mekirim+clear_filter'}</button>
+        </a>
+    {/if}
+</div>
+
+<div class="filter-form-wrap">
+    <h3>{text key="mekirim+search_header"}</h3>
+    {form name="search_form"} 
+    <div class="filter-form">
+        <div class="input-wrap location">
+            {input name="googlemap_location"}
+        </div>
+        <div class="input-wrap match_sex">
+            {label name="match_sex"}
+            {input name="match_sex"}
+        </div>
+        <div class="input-wrap birthdate">
+            {*label name="birthdate"}
+            {input name="birthdate"*}
+        </div>
+        <div class="filter-form-cta">
+            <button type="button" class="close-filter">{text key='mekirim+cancel'}</button>
+            {submit name="filter"}
+        </div>
+    </div>
+    {/form}
+</div>
+
+<div id="search-user-list-loader"></div>
+
+{literal}
+<script type="text/javascript">
+    let filterwrap = document.querySelector(".filter-form-wrap");
+    let filterBtn = document.querySelector(".filter-button-wrap");
+    let showFilter = document.querySelector(".show-filter");
+    let closeFilter = document.querySelector(".close-filter");
+
+    if(showFilter){
+        showFilter.addEventListener("click", function(){
+            filterwrap.style.display = 'block';
+            filterBtn.style.display = 'none';
+        });
+    }
+
+    if(closeFilter){
+        closeFilter.addEventListener("click", function(){
+            filterwrap.style.display = 'none';
+            filterBtn.style.display = 'flex';
+        });
+    }
+</script>
+{/literal}

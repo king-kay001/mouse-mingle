@@ -1,0 +1,17 @@
+<span class="ow_console_lang">
+    {capture assign='langs'}
+        {foreach from=$languages item="language"}
+            <option value="{$language.url}" {if $language.is_current}selected{/if}>
+                {$language.label}
+            </option>
+            {if $language.is_current}
+                {assign var='langLabel' value=$language.label}
+                {assign var='langClass' value=$language.class}
+            {/if}
+        {/foreach}
+    {/capture}
+    <span class="ow_console_lang_item {$langClass}">{$langLabel}</span>
+    <select onchange="(function (selectElement) {
+        location.href = $(selectElement).val();
+    })(this)">{$langs}</select>
+</span>

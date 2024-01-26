@@ -1,0 +1,106 @@
+<div class="landing-page">
+    <div class="intro-section">
+        <div class="intro-reg-form">
+            <h2>{text key="mouse+landing_header"}</h2>
+            <p>{text key="mouse+landing_page_introduction_text"}</p>
+            <div class="reg-form">
+                {form name="landingRegistrationForm"}
+                    <div class="input-wrap input-field-email">
+                        <div class="ow_value">{input name="email"}</div>
+                        <div class="ow_error">{error name="email"}</div>
+                    </div>
+        
+                    <div class="input-wrap input-field-password">
+                        <div class="ow_value">{input name="password"}</div>
+                        <div class="ow_error">{error name="password"}</div>
+                    </div>
+        
+                    <div class="input-wrap input-field-sex">
+                        <div class="ow_value">{input name="sex"}</div>
+                        <div class="ow_error">{error name="sex"}</div>
+                    </div>
+        
+                    <div class="input-wrap input-field-birthdate">
+                        <div class="ow_value">{input name="birthdate"}</div>
+                        <div class="ow_error">{error name="birthdate"}</div>
+                    </div>
+        
+                    <div class="input-wrap input-field-username">
+                        <div class="ow_value">{input name="username"}</div>
+                        <div class="ow_error">{error name="username"}</div>
+                    </div>
+                    {*<div class="input-wrap input-field-location">
+                        <div class="ow_value">{input name="location"}</div>
+                        <div class="ow_error">{error name="location"}</div>
+                    </div>*}
+
+                    <div class="input-wrap">
+                        {submit name="register"}
+                    </div>
+
+                {/form}
+                
+                <p class="text-policy">
+                    {text key="mouse+platform_policy_text"}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-section">
+        <div class="feature-title title">{text key="mouse+why_mouse.com"}</div>
+        <div class="features">
+            <div class="feature">
+                <div class="icon smart-search"></div>
+                <h3>{text key="mouse+smart_search"}</h3>
+                <p>{text key="mouse+smart_search_description"}</p>
+            </div>
+            <div class="feature">
+                <div class="icon instant-use"></div>
+                <h3>{text key="mouse+instant_use"}</h3>
+                <p>{text key="mouse+instant_use_description"}</p>
+            </div>
+            <div class="feature">
+                <div class="icon nospam"></div>
+                <h3>{text key="mouse+no_spam"}</h3>
+                <p>{text key="mouse+no_spam_description"}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimony-section ">
+        <div class="testmony-title title">{text key="mouse+what_people_say_about_us"}</div>
+        <div class="testimony">
+            <div class="testimony-pic">
+                <div class="pic-container">
+                    <div class="pic"></div>
+                </div>
+            </div>
+            <div class="testimony-text">
+                <h3 class="testimony-name">{text key="mouse+testimony_name"}</h3>
+                <span class="testimony-location">{text key="mouse+testimony_address"}</span>
+                <p>{text key="mouse+testimony_text_paragraph"}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="about-text">
+            <div class="about-title title">{text key="mouse+what_is_mekirim"}</div>
+            <div class="about-content">
+                <p>
+                    {text key="mouse+what_is_mekirim_paragrap_one"}
+                </p>
+                <p>
+                    {text key="mouse+what_is_mekirim_paragrap_two"}
+                </p>
+                <a href="{url_for_route for='base_join'}" class="reg-button">{text key="mouse+register_now"}</a>
+            </div>
+        </div>
+        <div class="about-right">
+            <div class="about-graphics">
+                <div class="about-phone"></div>
+            </div>
+        </div>
+    </div>
+</div>

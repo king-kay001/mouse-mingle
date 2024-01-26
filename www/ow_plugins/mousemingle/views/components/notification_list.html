@@ -1,0 +1,11 @@
+{if $notificationList}
+    <ul class="ow_mekirim_notification_list">
+    {foreach from=$notificationList item='notification'}
+        {$notification}
+    {/foreach}
+    </ul>
+
+    <div class="pagination_wrap">
+        {$pagerCmp}
+    </div>
+{/if}

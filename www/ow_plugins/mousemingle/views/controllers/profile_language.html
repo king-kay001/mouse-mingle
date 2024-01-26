@@ -1,0 +1,16 @@
+<div class="profile_language_wrap">
+    <div class="mobile_back_arrow">
+        <a href="{url_for_route for='profile_settings'}" class="mobile_back">{text key="mekirim+back"}</a>
+    </div>
+    <div class="header">
+        <h2>{text key="mekirim+profile_language"}</h2>
+        <a href="{url_for_route for='profile_settings'}" class="back_button">{text key="mekirim+back"}</a>
+    </div>
+
+    {form name='language_form'}
+        {input name='language'}
+
+        {submit name='save'}
+    {/form}
+    
+</div>

@@ -1,0 +1,98 @@
+<div class="ow_mekirim_upgrade_wrap">
+    {if !empty($menu)}
+        <div class="ow_content_menu_wrap ow_padding">
+            {$menu}
+        </div>
+    {/if}
+    {form name='subscribe-form'}
+        <div class="ow_mekirim_upgrade_header">
+            <h2 class="ow_mekirim_upgrade_title">{$membership->title} Upgrade to premium</h2>
+            <ul class="ow_mekirim_upgrade_features_list ow_stdmargin">
+                <li class="ow_mekirim_upgrade_feature">
+                    <span class="ow_mekirim_upgrade_ic_message">
+                        {text key='mekirim+upgrade_feature_message_invite'}
+                    </span>
+                </li>
+                <li class="ow_mekirim_upgrade_feature">
+                    <span class="ow_mekirim_upgrade_ic_bookmark">
+                        {text key='mekirim+upgrade_feature_bookmark_invite'}
+                    </span>
+                </li>
+                <li class="ow_mekirim_upgrade_feature">
+                    <span class="ow_mekirim_upgrade_ic_photo">
+                        {text key='mekirim+upgrade_feature_photo_invite'}
+                    </span>
+                </li>
+            </ul>
+            <div class="ow_mekirim_upgrade_info">
+                {if isset($current)}
+                    {block_decorator name='box' type='empty' addClass="ow_stdmargin"}
+                        {text key='membership+membership'}: <span class="ow_remark ow_small">{if isset($currentTitle)}{$currentTitle}{if $current->recurring} ({text key='membership+recurring'}){/if}{/if}</span><br />
+                        {text key='membership+expires'}: <span class="ow_remark ow_small">{membership_format_date timestamp=$current->expirationStamp}</span>
+                    {/block_decorator}
+                {/if}
+            </div>
+        </div>
+        <div class="ow_mekirim_upgrade_pricing_list ow_stdmargin">
+            {assign var='firstSet' value='0'}
+            {foreach from=$membership->plans item='plan'}
+            <div class="ow_mekirim_upgrade_pricing_wrap" style="width: {$plansRows}%">
+                <div class="ow_mekirim_upgrade_pricing{if $plan.dto->id == $selectedItem} active{/if}">
+                    <div class="ow_mekirim_upgrade_pricing_title">
+                        <span>{$plan.dto->period}</span> {$plan.dto->periodUnits}
+                    </div>
+                    <div class="ow_mekirim_upgrade_pricing_desc">
+                        <p class="ow_mekirim_upgrade_pricing_text small-price">
+                            {if $plan.dto->id == $selectedItem}
+                                {input name='plan' value=$plan.dto->id label=$plan.plan_format checked='checked'} 
+                            {else} 
+                                {input name='plan' value=$plan.dto->id label=$plan.plan_format} 
+                            {/if}
+                        </p>
+                        {if $firstSet}
+                            <p class="ow_mekirim_upgrade_discount_ribbon">
+                                <span>&minus;</span>{$discounts[$plan.dto->id]}<span>&percnt;</span>
+                            </p>
+                        {/if}
+                        <p class="ow_mekirim_upgrade_pricing_text big-price">
+                            {mekirim_format_price price=$plan.dto->price}
+                        </p>
+                    </div>
+                </div>
+                {assign var='firstSet' value='1'}
+            </div>
+            
+           
+            {/foreach}
+        </div>
+        <div class="ow_stdmargin ow_center">
+            {input name='gateway'}
+        </div>
+        <div class="ow_mekirim_upgrade_credit">
+            <h2>{text key="mekirim+checkout_heading"}</h2>
+            <p>{text key="mekirim+checkout_text" siteUrl=$siteUrl}</p>
+        </div>
+        <div class="ow_mekirim_upgrade_action">
+            <button class="embutton mekirimbtn-full mekirimmb" type="submit" >{text key="mekirim+continue"}</button>
+        </div>
+    {/form}
+</div>
+
+<script type="text/javascript">
+    let packageWrapper = document.querySelector('.ow_mekirim_upgrade_pricing_list');
+
+    if(packageWrapper) {
+        packageWrapper.addEventListener('click', function(e){
+            
+                // Remove all active classes
+                let activeClassHolder = packageWrapper.querySelectorAll('.active');
+                Array.from(activeClassHolder).forEach(function(element){
+                    element.classList.remove('active');
+                });
+
+                // Add active class to the clicked element
+                e.target.closest('.ow_mekirim_upgrade_pricing').classList.add('active');
+            
+        });
+    }
+</script>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin>
+	<name>Mouse mingle System Plugin</name>
+	<key>mouse</key>
+	<description>Bespoke Skadate plugin for Mouse mingle Night theme adaptation.</description>
+    <author>Peatech LLC</author>
+    <authorEmail>hello@peatechllc.com</authorEmail>
+	<authorUrl>https://peatechllc.com/</authorUrl>
+	<developerKey>c460d0c81c425294b1face09b03b15e3</developerKey>
+        <build>11000</build>
+    <copyright>(C) 2024 Peatech LLC. All rights reserved.</copyright>
+	<license>The BSD License</license>
+    <licenseUrl>http://www.opensource.org/licenses/bsd-license.php</licenseUrl>
+</plugin>

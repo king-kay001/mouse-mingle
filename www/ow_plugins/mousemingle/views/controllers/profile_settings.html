@@ -1,0 +1,50 @@
+<div class="profile_settings_wrap">
+    <div class="settings_header">
+        <h3>{text key="mekirim+profile_settings"}</h3>
+        <a class="back_button" href="{url_for_route for='base_member_profile'}">{text key="mekirim+back"}</a>
+    </div>
+    <div class="links">
+        <a class="link" href="{url_for_route for='base_preference_index'}">
+            <span class="icon account"></span>
+            <div class="detail">
+                <p class="title">{text key="mekirim+account_preference"}</p>
+                <span>{text key="mekirim+account_preference_desc"}</span>
+            </div>
+        </a>
+        <a class="link" href="{url_for_route for='matchmaking_preferences'}">
+            <span class="icon match"></span>
+            <div class="detail">
+                <p class="title">{text key="mekirim+match_making_preference"}</p>
+                <span>{text key="mekirim+match_making_preference_desc"}</span>
+            </div>
+        </a>
+        <a class="link" href="{url_for_route for='notifications-settings'}">
+            <span class="icon mail"></span>
+            <div class="detail">
+                <p class="title">{text key="mekirim+mail_notification_preference"}</p>
+                <span>{text key="mekirim+mail_notification_preference_desc"}</span>
+            </div>
+        </a>
+        <a class="link" href="{url_for_route for='profile-language'}">
+            <span class="icon language"></span>
+            <div class="detail">
+                <p class="title">{text key="mekirim+setting_language"}</p>
+                <span>{text key="mekirim+setting_language_desc"}</span>
+            </div>
+        </a>
+        <a class="link" href="{url_for_route for='contactus.index'}">
+            <span class="icon contact"></span>
+            <div class="detail">
+                <p class="title">{text key="mekirim+setting_contact_us"}</p>
+                <span>{text key="mekirim+setting_contact_us_desc"}</span>
+            </div>
+        </a>
+        <a class="link" href="{url_for_route for='base_sign_out'}">
+            <span class="icon logout"></span>
+            <div class="detail">
+                <p class="title">{text key="mekirim+setting_logout"}</p>
+                <span>{text key="mekirim+setting_logout_desc"}</span>
+            </div>
+        </a>
+    </div>
+</div>

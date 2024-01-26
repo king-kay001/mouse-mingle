@@ -1,0 +1,62 @@
+<div class="ow_mekirim_wrap">
+    {if isset($current)} {block_decorator name='box' type='empty' addClass="ow_stdmargin"} {text key='membership+membership'}: <span class="ow_remark ow_small">{if isset($currentTitle)}{$currentTitle}{if $current->recurring} ({text key='membership+recurring'}){/if}{/if}</span><br
+    /> {text key='membership+expires'}: <span class="ow_remark ow_small">{membership_format_date timestamp=$current->expirationStamp}</span> {/block_decorator} {/if} {form name='subscribe-form'}
+    <div class="mekirim-header">
+        {if $topContent}
+        <div class="ow_stdmargin ow_center">{$topContent}</div>
+        {/if}
+        <div class="mekirim-features-slider ow_stdmargin">
+            <div class="mekirim-features-slider-items ow_stdmargin">
+                {assign var='slideSet' value='0'} {foreach from=$membership->permissions key="name" item='perm'}
+                <div class="mekirim-features-slider-item{if !$slideSet} active{/if}" name='{$name}'>
+                    <div class="mekirim-features-slider-item-image ow_smallmargin">
+                        {mekirim_ic name=$name}
+                    </div>
+                    <div class="mekirim-features-slider-item-cont">
+                        <h2 class="ow_smallmargin">{$perm.name}</h2>
+                        <p>{mekirim_features data=$perm.data}</p>
+                    </div>
+                </div>
+                {assign var='slideSet' value='1'} {/foreach}
+            </div>
+            <div class="mekirim-features-slider-nav">
+                {assign var='navSet' value='0'} {foreach from=$membership->permissions key="name" item='perm'}
+                <span class="mekirim-features-slider-nav-item{if !$navSet} active{/if}" data-target='{$name}'></span> {assign var='navSet' value='1'} {/foreach}
+            </div>
+        </div>
+    </div>
+    <div class="mekirim-pricing ow_stdmargin">
+        {assign var='firstSet' value='0'}
+        <div class="mekirim-pricing-list">
+            {foreach from=$planList item='plan'}
+            <div class="mekirim-pricing-item-wrap" style="width: {$plansRows}%">
+                <div class="mekirim-pricing-item{if $plan.dto->id == $selectedItem} active{/if}">
+                    <div class="mekirim-pricing-item-heading">{$plan.dto->title}</div>
+                    <div class="mekirim-pricing-item-title"><span>{$plan.dto->period}</span> {$plan.dto->periodUnits}</div>
+                    <div class="mekirim-pricing-item-desc">
+                        <p class="mekirim-pricing-item-text small-price">
+                            {if $plan.dto->id == $selectedItem} {input name='plan' value=$plan.dto->id label=$plan.plan_format checked='checked'} {else} {input name='plan' value=$plan.dto->id label=$plan.plan_format} {/if}
+                        </p>
+                        {if $firstSet}
+                        <p class="mekirim-pricing-item-text discount">{text key="mekirim+discount" discount=$discounts[$plan.dto->id]}</p>
+                        {/if}
+                        <p class="mekirim-pricing-item-text big-price">{mekirim_format_price price=$plan.dto->price}</p>
+                    </div>
+                </div>
+                {assign var='firstSet' value='1'}
+            </div>
+            {/foreach}
+        </div>
+    </div>
+    <div class="ow_stdmargin ow_center">
+        {input name='gateway'}
+    </div>
+    <div class="mekirim-credit">
+        <h2>{text key="mekirim+checkout_heading"}</h2>
+        <p>{text key="mekirim+checkout_text" siteUrl=$siteUrl}</p>
+    </div>
+    <div class="mekirim-action">
+        <button class="embutton mekirimbtn-full mekirimmb" type="submit">{text key="mekirim+continue"}</button>
+    </div>
+    {/form}
+</div>

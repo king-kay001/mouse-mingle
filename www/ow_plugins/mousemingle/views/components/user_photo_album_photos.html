@@ -1,0 +1,16 @@
+<div class="ow_photo_album_wrap">
+    <div class="ow_album_carousel owl-carousel">
+        {foreach from=$albumPhotos item=photo}
+            <div class="ow_album_photo">
+                <img src="{$photo.url}" alt="Album photo">
+            </div>
+        {/foreach}
+    </div>
+    {if $showFooter && !$isOwner}
+        <div class="ow_album_cta">
+            <a href="javascript://" class="ow_ic_like {if $isMarked}active{/if}" onclick="OW.trigger('mouse.bookmark_click', ['{$ownerId}', this], this)">{text key="mekirim+like"}</a>
+            <a href='{url_for_route for="mailbox_chat_conversation:[userId=>{$ownerId}]"}' class="ow_ic_chat mobile_chatnow">{text key="mekirim+chat_now"}</a>
+            <a href="javascript://" class="ow_ic_chat desktop_chatnow" onclick="OW.getActiveFloatBox().close(); OW.trigger('base.online_now_click', ['{$ownerId}'])">{text key="mekirim+chat_now"}</a>
+        </div>
+    {/if}
+</div>
