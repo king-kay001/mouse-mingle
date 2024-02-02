@@ -12,22 +12,23 @@
     .panel_canvas{
         height: var(--c-gc-header-height);
         width: 100%;
-        max-width: 1820px;
-        padding: 21px 20px;
+        max-width: 1920px;
         box-sizing: border-box;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: var(--font-size);
+        background-color: #1E1E1E;
 
         .#{$ow-prefix}logo {
             background-repeat: no-repeat;
             background-image: var(--logo);
-            background-size: 100% auto;
-            background-position: center;
-            width: 150px;
-            height: 36px;
+            background-size: 150px 36px;
+            background-position: center center;
+            width: 447px;
+            height: var(--c-gc-header-height);;
+            background-color: #{$primary-color};
         
         }
     }
@@ -41,6 +42,23 @@
     justify-content: end;
     align-items: center;
     flex-grow: 1;
+}
+
+.ow_navs{
+    display: flex;
+    margin-right: 200px;
+    gap: 20px;
+
+    .register{
+        padding: 10px 20px;
+        background-color: #{$primary-color};
+        color: #{$text-white};
+        border-radius: 10px;
+        font-weight: 600;
+    }
+    a.ow_console_item_link{
+        padding: 10px 20px !important;
+    }
 }
 
 .ow_console_navigation{

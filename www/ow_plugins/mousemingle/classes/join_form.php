@@ -169,27 +169,19 @@
             array_push($this->questions, $sex);
         }
         
-        if ( !empty($questionDtoList['birthdate']) )
+        if ( !empty($questionDtoList['match_sex']) )
         {
-            $birthdate = get_object_vars($questionDtoList['birthdate']);
-            array_push($this->questions, $birthdate);
+            $matchsex = get_object_vars($questionDtoList['match_sex']);
+            array_push($this->questions, $matchsex);
         }
 
-        // if ( !empty($questionDtoList[$this->getLocationFieldName()]) )
-        // {
-        //     $location = get_object_vars($questionDtoList[$this->getLocationFieldName()]);
-        //     $location['realName'] = $location['name'];
-        //     $location['name'] = 'location';
+        // pv($this->questions, 1);
 
-        //     array_push($this->questions, $location);
-        //     // pv($location, 1);
-        // }
-        // pv($questionDtoList, 1);
     }
 
     public function getDtoQuestionList( $additionalQuestions = [] )
     {
-        $questionNameList = array_merge(array('sex', 'birthdate'), $additionalQuestions);
+        $questionNameList = array_merge(array('sex', 'match_sex'), $additionalQuestions);
 
         return $this->questionService->findQuestionByNameList($questionNameList);
     }

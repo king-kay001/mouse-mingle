@@ -50,7 +50,7 @@ body {
     padding-top: var(--c-gc-header-height) !important;
   }
   .ow_footer{
-    background-color: #{$text-black};
+    background-color: #{$bg-black};
     padding: 40px 0;
     line-height: normal;
     font-weight: 400px;
@@ -76,16 +76,47 @@ body {
           width: 80%;
           height: 70px;
         }
+        .social_icons{
+          display: flex;
+          gap: 50px;
+          margin-top: 40px;
+
+          .social{
+            width: 24px;
+            height: 24px;
+            background-position: center center;
+            background-size: 100% auto;
+
+          }
+          .facebook{
+            background-image: url('images/mouse-icons/facebook.svg');
+          }
+          .x{
+            background-image: url('images/mouse-icons/x-icon.svg');
+            
+          }
+          .linkedin{
+            background-image: url('images/mouse-icons/linkedin.svg');
+
+          }
+          .instagram{
+            background-image: url('images/mouse-icons/instagram.svg');
+
+          }
+        }
       }
 
       .ow_footer_menu{
         display: flex;
-        gap: 24px;
+        // gap: 24px;
+        flex-wrap: wrap;
         a{
           font-size: 24px;
           line-height: normal;
           font-weight: 400;
           color: #fff;
+          width: 50%;
+          margin-bottom: 30px;
         }
       }
     }
@@ -114,7 +145,7 @@ body {
 
   .intro-section{
     padding-left: 100px;
-    background-image: url(images/kissing-couple.png);
+    background-image: url('images/disney-couple.png');
     background-position: right;
     background-repeat: no-repeat;
     background-size: 50% 100%;
@@ -127,7 +158,8 @@ body {
       
       h2{
         margin-bottom: 5px;
-        font-size: 64px;
+        font-size: 55px;
+        font-weight: 700;
       }
       p{
         font-size: 24px;
@@ -144,24 +176,63 @@ body {
             width: 100%;
             padding: 14px 15px;
             line-height: unset;
-            border: 1px solid #ccc;
+            border: 1px solid #777;
             border-radius: #{$radius-md};
             box-sizing: border-box;
-            color: #666;
+            color: #777;
+            padding-left: 50px;
+            background-position: 15px center;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            background-size: 24px;
           }
 
-          .birthdate{
-            display: flex;
-            gap: 10px;
-    
-            .ow_inline{
-              width: 100%;
-              select{
-                width: 100%;
-                color: #666;
-              }
+          .looking_for{
+            color: #777;
+            padding-left: 40px;
+            background-position: 0 center;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            background-size: 24px;
+            background-image: url('images/mouse-icons/user-love-m.svg');
+
+          }
+          
+          &.input-field-email{
+            input{
+              background-image: url('images/mouse-icons/Envelope-m.svg');
+
             }
           }
+
+          &.input-field-username{
+            input{
+              background-image: url('images/mouse-icons/User-m.svg');
+
+            }
+          }
+
+          &.input-field-password{
+            input{
+              background-image: url('images/mouse-icons/Lock-m.svg');
+
+            }
+          }
+
+          &.input-field-sex{
+            select{
+              background-image: url('images/mouse-icons/User-m.svg');
+
+            }
+          }
+
+          &.input-field-looking-for{
+            label{
+              color: #777;
+            }
+          }
+
+ 
 
           .ow_button input{
             width: 100%;
@@ -202,9 +273,15 @@ body {
 
   .feature-section{
     padding: 100px;
+    background-color: #D61A29;
 
     .feature-title{
       margin-bottom: 80px;
+      text-align: center;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 130%;
+      color: #fff;
     }
 
     .features{
@@ -215,32 +292,11 @@ body {
         width: 28%;
         font-size: 24px;
         padding: 50px 50px 101px 50px;
-        background-color: #F6F8FD;
-        border-radius: #{$radius-md};
+        background-color: #fff;
+        border-radius: 10px;
         box-sizing: border-box;
+        border-top: 5px solid #ECF960;
 
-        .icon{
-          width: 101px;
-          height: 96px;
-          margin-bottom: 31px;
-          background-size: 100% auto;
-          background-position: center;
-
-          &.smart-search{
-            background-image: url('images/mouse-icons/Profile.svg');
-            
-          }
-
-          &.instant-use{
-            background-image: url('images/mouse-icons/Tick.svg');
-           
-          }
-
-          &.nospam{
-            background-image: url('images/mouse-icons/Shield.svg');
-            
-          }
-        }
 
         h3{
           font-size: 32px;
@@ -253,132 +309,199 @@ body {
 
   .testimony-section{
     padding: 100px;
-    background-color: #{$primary-color};
+    min-height: 600px;
+    background-color: #ECEFF1;
+    background-image: url('images/rose-flower.png');
+    background-repeat: no-repeat;
+    background-position: 70px bottom;
 
-    .testmony-title{
-      margin-bottom: 80px;
-      color: #fff;
-
-      &::before{
-        background-color: #fff;
-      }
-    }
-    .testimony{
+    .testimony-wrap{
       display: flex;
-      
 
-      .testimony-pic{
-        width: 460px;
-        position: relative;
-        padding-left: 100px;
-        padding-bottom: 100px;
-        padding-right: 50px;
+      .testimony-left{
+        width: 50%;
+        padding-right: 200px;
+        padding-top: 100px;
 
-        .pic-container{
-          width: 409px;
-          height: 499px;
-
-          position: relative;
-
-          &::before{
-            content: "";
-            width: 342px;
-            height: 357px;
-            background-color: #fff;
-            border-radius: #{$radius-md};
-            position: absolute;
-            left: -42px;
-            bottom: -42px;
-            z-index: 1;
-          }
-          .pic{
-            width: 409px;
-            height: 499px;
-            border-radius: #{$radius-md};
-            z-index: 100;
-            position: relative;
-            background-image: url('images/person.png');
-            background-size: 100% auto;
-            background-repeat: no-repeat;
-          }
-        }
-
-      }
-
-      .testimony-text{
-        padding: 50px 0 50px 0;
-        color: #fff;
-        width: 759px;
-        .testimony-name{
-          color: #fff;
-          font-size: 30px;
-          font-weight: 500;
-        }
-        span{
-          font-size: 14px;
+        .mouse-about{
+          font-size: 40px;
+          font-weight: 700;
+          color: #{$primary-color};
         }
 
         p{
-          margin-top: 22px;
           font-size: 20px;
           text-align: justify;
-          line-height: normal;
+          color: #232B2D;
         }
+
       }
+      .testimony-right{
+        width: 50%;
+        position: relative;
+
+        &::before{
+          content: '';
+          display: inline-block;
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          background-color: #D61A29;
+          position: absolute;
+          left: 0;
+          top: 50px;
+
+          background-image: url('images/mouse-icons/Heart-ashe.svg');
+          background-repeat: no-repeat;
+          background-size: 50px 50px;
+          background-position: center;
+        }
+
+        .pic-container{
+          width: 505px;
+          height: 505px;
+          margin-left: 70px;
+          border-radius: 50%;
+          position: relative;
+          background-image: url('images/love-couple.png');
+          background-size: 100% auto;
+          background-repeat: no-repeat;
+
+          
+  
+        }
+
+        .testimony{
+          width: 400px;
+          height: 99px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+          position: absolute;
+          display: flex;
+          gap: 20px;
+          padding: 10px 20px;
+          align-items: center;
+
+          &.first{
+            bottom: 40px;
+            left: -100px;
+          }
+          &.second{
+            bottom: -88px;
+            left: 56px;
+            transform: rotate(5.272deg);
+
+            &::after{
+              content: '';
+              width: 20px;
+              height: 20px;
+              background-color: #D61A29;
+              border-radius: 50%;
+              display: inline-block;
+              position: absolute;
+              right: -20px;
+              top: -20px;
+            }
+          }
+
+          .testi-pic{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            object-fit: cover;
+            
+            &.one{
+              
+              background-image: url('images/testify-1.png');
+            }
+            &.two{
+              background-image: url('images/testify-2.png');
+
+            }
+          }
+          .testimony-text{
+            flex: 1;
+            h3{
+              font-weight: 700;
+              font-size: 14px;
+            }
+            p{
+              font-size: 12px;
+            }
+          }
+        }
+
+      }
+
+     
     }
   }
 
-  .about-section{
+  .how-section{
+    background-color: #ECEFF1;
     display: flex;
-    justify-content: space-between;
-    padding: 150px 100px 164px 100px;
-    .about-text{
-      margin-top: 50px;
+    padding: 100px;
+
+    .how-left{
       width: 50%;
-      .about-title{
-        margin-bottom: 50px;
-      }
-
-      .about-content{
-        padding: 0 100px;
-        color: #000;
-
-        .reg-button{
-          display: inline-block;
-          padding: 12px;
-          background-color: #{$primary-color};
-          color: #fff;
-          border-radius: #{$radius-md};
-          margin-top: 40px;
-        }
-      }
-
+      height: 512px;
+      background-image: url('images/iphone-mousemingle.png');
+      background-repeat:  no-repeat;
+      object-fit: cover;
+      background-size: 100%;
+      background-position: center center;
     }
-    .about-right{
-      width: 50%;
+    .how-right{
+      h2{
+        color: #D61A29;
+        font-weight: 700;
+        margin-bottom: 30px;
+        font-size: 40px;
+      }
 
-      .about-graphics{
-        width: 450px;
-        height: 450px;
-        margin: 50px auto;
-        background-color: #{$primary-color};
-        border-radius: 50%;
+      .how-content-wrap{
         position: relative;
+        border-left: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin-left: 25px;
+        margin-bottom: 50px;
+        
+        .how{
+          display: flex;
+          align-items: center;
+          gap: 50px;
+          margin-left: -25px;
 
-        .about-phone{
-          position: absolute;
-          width: 600px;
-          // margin: 0 auto;
-          height: 850px;
-          background-image: url('images/Phone.png');
-          background-size: 100% auto;
-          background-repeat: no-repeat;
-          background-position: center;
-          object-fit: cover;
-          top: -170px;
-          left: -50px;
+          .how-count{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+            background-color: #777;
+            color: #fff;
 
+            &.one{
+              background-color: #D61A29;
+            }
+          }
         }
+      }
+
+      .reg-button{
+        background-color: #D61A29;
+        color: #fff;
+        border-radius: 10px;
+        padding: 20px 30px;
+        font-weight: 700;
+        display: inline-block;
       }
     }
   }

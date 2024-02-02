@@ -33,6 +33,6 @@ class MOUSE_CTRL_CompleteProfile extends BASE_CTRL_CompleteProfile
     {
         parent::fillRequiredQuestions($params);
         
-        $this->setTemplate(OW::getPluginManager()->getPlugin('MEKIRIM')->getCtrlViewDir() . 'complete_profile_fill_required_questions.html');
+        $this->setTemplate(OW::getPluginManager()->getPlugin('MOUSE')->getCtrlViewDir() . 'complete_profile_fill_required_questions.html');
     }
 }

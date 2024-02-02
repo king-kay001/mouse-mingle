@@ -2,12 +2,16 @@
     <div class="intro-section">
         <div class="intro-reg-form">
             <h2>{text key="mouse+landing_header"}</h2>
-            <p>{text key="mouse+landing_page_introduction_text"}</p>
             <div class="reg-form">
                 {form name="landingRegistrationForm"}
                     <div class="input-wrap input-field-email">
                         <div class="ow_value">{input name="email"}</div>
                         <div class="ow_error">{error name="email"}</div>
+                    </div>
+
+                    <div class="input-wrap input-field-username">
+                        <div class="ow_value">{input name="username"}</div>
+                        <div class="ow_error">{error name="username"}</div>
                     </div>
         
                     <div class="input-wrap input-field-password">
@@ -19,20 +23,12 @@
                         <div class="ow_value">{input name="sex"}</div>
                         <div class="ow_error">{error name="sex"}</div>
                     </div>
-        
-                    <div class="input-wrap input-field-birthdate">
-                        <div class="ow_value">{input name="birthdate"}</div>
-                        <div class="ow_error">{error name="birthdate"}</div>
+
+                    <div class="input-wrap input-field-looking-for">
+                        <p class="looking_for">{text key="mouse+looking_for"}</p>
+                        <div class="ow_value">{input name="match_sex"}</div>
+                        <div class="ow_error">{error name="match_sex"}</div>
                     </div>
-        
-                    <div class="input-wrap input-field-username">
-                        <div class="ow_value">{input name="username"}</div>
-                        <div class="ow_error">{error name="username"}</div>
-                    </div>
-                    {*<div class="input-wrap input-field-location">
-                        <div class="ow_value">{input name="location"}</div>
-                        <div class="ow_error">{error name="location"}</div>
-                    </div>*}
 
                     <div class="input-wrap">
                         {submit name="register"}
@@ -40,67 +36,80 @@
 
                 {/form}
                 
-                <p class="text-policy">
-                    {text key="mouse+platform_policy_text"}
-                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimony-section">
+        <div class="testimony-wrap">
+            <div class="testimony-left">
+                <h3 class="mouse-about">{text key="mouse+about_title"}</h3>
+                <p>{text key="mouse+about_text_paragraph"}</p>
+            </div>
+            <div class="testimony-right">
+                <div class="pic-container">
+                    
+                </div>
+
+                <div class="testimony first">
+                    <div class="testi-pic one"></div>
+                    <div class="testimony-text">
+                        <h3>Rose Anthony</h3>
+                        <p>This is a testimony on mouse minglke about how people enjoy themself and catch fun</p>
+                    </div>
+                </div>
+                <div class="testimony second">
+                    <div class="testi-pic two"></div>
+                    <div class="testimony-text">
+                        <h3>Joyce Mayer</h3>
+                        <p>This is a testimony on mouse minglke about how people enjoy themself and catch fun</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="feature-section">
-        <div class="feature-title title">{text key="mouse+why_mouse.com"}</div>
+        <div class="feature-title">{text key="mouse+why_mouse_mingle"}</div>
         <div class="features">
             <div class="feature">
-                <div class="icon smart-search"></div>
                 <h3>{text key="mouse+smart_search"}</h3>
                 <p>{text key="mouse+smart_search_description"}</p>
             </div>
             <div class="feature">
-                <div class="icon instant-use"></div>
                 <h3>{text key="mouse+instant_use"}</h3>
                 <p>{text key="mouse+instant_use_description"}</p>
             </div>
             <div class="feature">
-                <div class="icon nospam"></div>
                 <h3>{text key="mouse+no_spam"}</h3>
                 <p>{text key="mouse+no_spam_description"}</p>
             </div>
         </div>
     </div>
 
-    <div class="testimony-section ">
-        <div class="testmony-title title">{text key="mouse+what_people_say_about_us"}</div>
-        <div class="testimony">
-            <div class="testimony-pic">
-                <div class="pic-container">
-                    <div class="pic"></div>
+   
+
+    <div class="how-section">
+        <div class="how-left">
+            
+        </div>
+        <div class="how-right">
+            <h2>How MouseMingle Works?</h2>
+            <div class="how-content-wrap">
+                <div class="how">
+                    <div class="how-count one">1</div>
+                    <div class="how-text">Fill in your details to Register on our platform</div>
+                </div>
+                <div class="how">
+                    <div class="how-count two">2</div>
+                    <div class="how-text">Answer a few questions about yourself and expections of fellow Disney fans</div>
+                </div>
+                <div class="how">
+                    <div class="how-count three">3</div>
+                    <div class="how-text">That's it, Our smart algorithm will connect you to dozens of like minded Disney fans</div>
                 </div>
             </div>
-            <div class="testimony-text">
-                <h3 class="testimony-name">{text key="mouse+testimony_name"}</h3>
-                <span class="testimony-location">{text key="mouse+testimony_address"}</span>
-                <p>{text key="mouse+testimony_text_paragraph"}</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="about-section">
-        <div class="about-text">
-            <div class="about-title title">{text key="mouse+what_is_mekirim"}</div>
-            <div class="about-content">
-                <p>
-                    {text key="mouse+what_is_mekirim_paragrap_one"}
-                </p>
-                <p>
-                    {text key="mouse+what_is_mekirim_paragrap_two"}
-                </p>
-                <a href="{url_for_route for='base_join'}" class="reg-button">{text key="mouse+register_now"}</a>
-            </div>
-        </div>
-        <div class="about-right">
-            <div class="about-graphics">
-                <div class="about-phone"></div>
-            </div>
+            <a href="{url_for_route for='base_join'}" class="reg-button">{text key="mouse+register_now"}</a>
         </div>
     </div>
 </div>

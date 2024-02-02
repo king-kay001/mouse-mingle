@@ -14,14 +14,15 @@ $letter-spacing: 1.68%;
 $md-letter-spacing: 3%;
 $lg-letter-spacing: 5%;
 
-$primary-color: #DE2600;
+$primary-color: #D61A29;
 $secondary-color:#FFF2F3;
-$text-light: #666666;
+$text-light: #777;
 $text-lighter: #949494;
 $text-black: #000;
 $text-white: #FFF;
 $text-dark: #413A38;
 $bg-light: #E7E7ED;
+$bg-black: #1E1E1E;
 
 
 $radius: 25px;
@@ -30,9 +31,9 @@ $radius-md: 8px;
 $radius-lg: 50px;
 $radius-xl: 100px;
 
-$bg-color: #fff;
-$bg-alt-color: #FAFAFA;
-$border-color: #ECECEC;
+$bg-color: #ECEFF1;
+$bg-alt-color: #fff;
+$border-color: #777;
 
 $padd-canvas: 140px;
 $console-icon-wh: 24px;
@@ -74,7 +75,7 @@ $sectionColor: "2. Colors";
 //set gradient color
 $site-color-gradient: linear-gradient(94.33deg,var(--gradient-first-color) -3.3%,var(--gradient-second-color) -3.29%,var(--gradient-third-color) 33.07%,var(--gradient-first-color) 63.12%,var(--gradient-fourth-color) 97.91%);
 
-$header-bg-color: set-config('#000','color',$sectionColor,'headerBgColor', 'Header Background Color');
+$header-bg-color: set-config('#D61A29','color',$sectionColor,'headerBgColor', 'Header Background Color');
 
 $site-bg-color: set-config('#FFF','color', $sectionColor,'bodyBg', 'Page background color');
 $site-alt-bg-color: set-config('#FAFAFA','color', $sectionColor,'bodyBg', 'Page Alt background color');

@@ -4,7 +4,10 @@
 		<div class="panel_canvas">
             <a class="ow_logo" href="{$siteUrl}"></a>
             <div class="ow_navigation_wrap">
-                {component class='BASE_CMP_Console' cssClass='index_signin_button'}
+                <div class="ow_navs">
+                    {component class='BASE_CMP_Console' cssClass='index_signin_button'}
+                    <a href="{url_for_route for='base_join'}" class="register">{text key="mouse+register"}</a>
+                </div>
             </div>
         </div>
 	</div>		
@@ -16,7 +19,12 @@
             <div class="footer_about">
                 <a class="ow_logo" href="{$siteUrl}"></a>
                 <p class="footer_body">{text key="mouse+landing_page_footer_text"}</p>
-                {component class='MOUSE_CMP_SwitchLanguage'}
+                <div class="social_icons">
+                    <a href="#" class="social facebook"></a>
+                    <a href="#" class="social x"></a>
+                    <a href="#" class="social linkedin"></a>
+                    <a href="#" class="social instagram"></a>
+                </div>
             </div>
             {$bottom_menu}
         </div>

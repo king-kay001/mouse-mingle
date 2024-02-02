@@ -118,7 +118,7 @@
     --c-gc-body-bg: #f5f5f5;
     --font-family: "Segoe UI", sans-serif, Tahoma;
     ///** OW_Control type:font, key:fontFamily, section:1. General Settings, label: 1. Font **/
-    --logo: url(images/mekirim-logo.png);
+    --logo: url(images/mouse-logo.png);
     ///** OW_Control type:image, key:logoImage, section:1. General Settings, label: 2. Logo (Light)) **/
     --logo-alt: url(images/core-img/logo-alt.png);
     ///** OW_Control type:image, key:logoAlt, section:1. General Settings, label: 3. Logo (Dark) **/
@@ -172,7 +172,8 @@
     --ps-font-size: var(--font-size);
     --ps-line-height: 1.4;
     --ps-line-height: var(--line-height);
-    --ps-primary-font: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    // --ps-primary-font: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --ps-primary-font: "Droid Sans Regular";
     --ps-secondary-font: "source sans pro", helveticaneue, helvetica, arial, sans;
     --ps-beautifier-font-size: 16px;
     --ps-beautifier-line-height: 1.4;

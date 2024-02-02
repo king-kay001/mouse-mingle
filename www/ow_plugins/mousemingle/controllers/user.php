@@ -71,4 +71,10 @@ class MOUSE_CTRL_User extends BASE_CTRL_User
             ->getMasterPage()
             ->setTemplate(OW::getThemeManager()->getMasterPageTemplate($this->masterPageTpl));
     }
+
+    public function forgotPassword()
+    {
+        parent::forgotPassword();
+        // $this->setTemplate(OW::getPluginManger()->)
+    }
 }

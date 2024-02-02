@@ -159,11 +159,6 @@
             font-size: 32px;
             text-align: center;
           }
-          p{
-            font-size: 12px;
-            text-align: center;
-            margin-bottom: 30px;
-          }
 
           .reg-form{
             &::before{
@@ -171,7 +166,7 @@
                 width: 120%;
                 height: 230px;
                 display: block;
-                background-image: url(images/kissing-couple.png);
+                background-image: url(images/disney-couple.png);
                 background-size: 100% auto;
                 object-fit: cover;
                 background-position: center -64px;
@@ -184,153 +179,194 @@
     }
 
     .feature-section{
-        padding: 50px 20px;
-    
-        .feature-title{
-          margin-bottom: 50px;
-          
+      padding: 50px 20px;
+  
+      .feature-title{
+        margin-bottom: 60px;
+        text-align: center;
+        font-size: 24px;
+      }
+  
+      .features{
+        flex-direction: column;
+        gap: 30px;
+  
+        .feature{
+          width: 100%;
+          font-size: 24px;
+          padding: 40px 32px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-sizing: border-box;
+          border-top: 5px solid #ECF960;
+  
+  
+          h3{
+            font-size: 20px;
+            font-weight: 700;
+          }
+          p{
+            font-size: 16px;
+          }
         }
-    
-        .features{
-            flex-direction: column;
-            gap: 30px;
-
-            .feature{
-                width: 100%;
-                .icon{
-                  width: 75px;
-                  height: 72px;
-                  margin-bottom: 23px;
-                }
-                h3{
-                  font-size: 24px;
-                }
-                p{
-                  font-size: 18px;
-                }
-
-                padding: 37px 37px 75px 37px;
-            }
-        }
-    
+      }
+  
     }
 
     .testimony-section{
-        padding: 100px 25px;
-    
-        .testmony-title{
-          margin-bottom: 80px;
-          font-size: 24px;
-          
-    
-            &::before{
-                width: 50px;
-            }
+      padding: 5px;
+      min-height: 1000px;
+      background-position: 46px bottom;
+      background-size: 80% auto;
+  
+      .testimony-wrap{
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+  
+        .testimony-left{
+          width: 100%;
+          padding-right: 20px;
+          padding-left: 20px;
+          padding-top: 100px;
+          box-sizing: border-box;
+  
+          .mouse-about{
+            font-size: 24px;
+            text-align: center;
+          }
+  
+          p{
+            font-size: 16px;
+          }
+  
         }
+        .testimony-right{
+          width: 90%;
+          margin: 0 auto;
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+  
+          &::before{
+            content: '';
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 30px;
+            top: 50px;
+  
+            background-size: 25px 25px;
+          }
+  
+          .pic-container{
+            width: 250px;
+            height: 250px;
+            margin-left: 70px;
+    
+          }
+  
+          .testimony{
+            width: 200px;
+            height: 49px;
+            gap: 10px;
+            padding: 10px 10px;
+  
+            &.first{
+              bottom: 16px;
+              left: 0;
+            }
+            &.second{
+              bottom: -60px;
+              left: 96px;
+              transform: rotate(5.272deg);
+  
+              &::after{
+                content: '';
+                width: 14.5px;
+                height: 14.5px;
+                background-color: #D61A29;
+                border-radius: 50%;
+                display: inline-block;
+                position: absolute;
+                right: -16px;
+                top: -16px;
+              }
+            }
+  
+            .testi-pic{
+              width: 35px;
+              height: 35px;
 
-        .testimony{
-          flex-direction: column;
-          gap: 20px;
-    
-            .testimony-pic{
-                width: 300px;
-                height: 365px;
-                position: relative;
-                padding-left: 35px;
-                padding-bottom: 20px;
-                padding-right: 0;
-                .pic-container{
-                  width: 300px;
-                  height: 365px;
-        
-                  &::before{
-                    width: 252px;
-                    height: 263px;
-                    left: -30px;
-                    bottom: -30px;
-                  }
-                  .pic{
-                    width: 300px;
-                    height: 365px;
-                  }
-                }
             }
-    
             .testimony-text{
-                padding: 10px 0 10px 0 ;
-                color: #fff;
-                width: 100%;
-                margin-top: 60px;
-                font-size: 16px;
-        
-                .testimony-name{
-                    text-align: center;
-                    font-size: 34px;
-                    font-weight: 500;
-                }
-                span{
-                    display: block;
-                    text-align: center;
-                    font-style: italic;
-                } 
-                p{
-                  margin-top: 40px;
-                }
+              flex: 1;
+              h3{
+                font-weight: 700;
+                font-size: 10px;
+                margin-bottom: 8px;
+              }
+              p{
+                font-size: 8px;
+              }
             }
+          }
+  
         }
+  
+       
+      }
     }
 
-    .about-section{
-        flex-direction: column;
-        gap: 30px;
-        padding: 50px 20px;
-
-        .about-text{
-          margin-top: 30px;
-          width: 100%;
-          text-align: justify;
-
-          .about-title{
-            margin-bottom: 30px;
-            font-size: 24px;
-            padding-left: 50px;
-      
-            &::before{
-              width: 40px;
-            }
-          }
-    
-          .about-content{
-            padding: 0 0;
-    
-            .reg-button{
-              display: block;
-              padding: 12px;
-              margin-top: 40px;
-              text-align: center;
-            }
-          }
-    
+    .how-section{
+      background-color: #ECEFF1;
+      display: flex;
+      padding: 10px 20px 50px;
+      flex-direction: column;
+  
+      .how-left{
+        width: 100%;
+        height: 512px;
+        background-image: url('images/iphone-mousemingle.png');
+        background-repeat:  no-repeat;
+        object-fit: cover;
+        background-size: 100%;
+        background-position: center center;
+      }
+      .how-right{
+        h2{
+          color: #D61A29;
+          font-weight: 700;
+          font-size: 24px;
         }
-        .about-right{
-          width: 100%;
-          padding: 150px 0;
-
-          .about-graphics{
-            width: 370px;
-            height: 370px;
-            margin: 50px auto;
-    
-            .about-phone{
-              width: 500px;
-              height: 637;
-              top: -210px;
-              left: -50px;
-    
+  
+        .how-content-wrap{
+          position: relative;
+          border-left: 1px solid #ccc;
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+          margin-left: 25px;
+          margin-bottom: 50px;
+          
+          .how{
+            gap: 50px;
+            margin-left: -25px;
+  
+            .how-count{
+              width: 50px;
+              height: 50px;
+            }
+            .how-text {
+              font-size: 14px;
             }
           }
-    
         }
+  
+        .reg-button{
+          padding: 10px 20px;
+        }
+      }
     }
     
 }
@@ -355,14 +391,17 @@
           height: 35px;
           margin: 0 auto;
           background-position: center;
+
+        }
+        .social_icons{
+          justify-content: center;
         }
       }
 
       .ow_footer_menu{
           padding-left: 0;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        justify-content: space-between;
+        
         margin-bottom: 20px;
         a{
           font-size: 16px;
