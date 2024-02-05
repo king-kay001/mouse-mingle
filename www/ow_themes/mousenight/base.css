@@ -9287,8 +9287,8 @@ body #groups-list_widget .ow_lp_groups .ow_lp_wrapper a {
 }
 body #groups-list_widget .ow_lp_groups .ow_lp_wrapper a,
 body #groups-list_widget .ow_lp_groups .ow_lp_wrapper a img {
-  width: calc(40px - 2 * var(--padd--xs));
-  height: calc(40px - 2 * var(--padd--xs));
+  width: calc(40px - (2 * var(--padd--xs)));
+  height: calc(40px - (2 * var(--padd--xs)));
 }
 body #groups-list_widget .ow_lp_groups .ow_lp_wrapper a img {
   width: auto;
@@ -9375,8 +9375,8 @@ body #video_list_widget #video-widget-featured .ow_other_video_thumb a,
 body #video_list_widget #video-widget-featured .ow_other_video_thumb a img,
 body #video_list_widget #video-widget-toprated .ow_other_video_thumb a,
 body #video_list_widget #video-widget-toprated .ow_other_video_thumb a img {
-  width: calc(40px - 2 * var(--padd--xs));
-  height: calc(40px - 2 * var(--padd--xs));
+  width: calc(40px - (2 * var(--padd--xs)));
+  height: calc(40px - (2 * var(--padd--xs)));
 }
 body #video_list_widget #video-widget-latest .ow_other_video_thumb a,
 body #video_list_widget #video-widget-featured .ow_other_video_thumb a,
@@ -9457,8 +9457,8 @@ body .ow_dnd_widget .ow_box .ow_ipc .ow_ipc_picture .ow_avatar,
 body .ow_dnd_widget .ow_box .ow_ipc .ow_ipc_picture .ow_avatar img,
 body .ow_dnd_widget .ow_box_empty .ow_ipc .ow_ipc_picture .ow_avatar,
 body .ow_dnd_widget .ow_box_empty .ow_ipc .ow_ipc_picture .ow_avatar img {
-  width: calc(40px - 2 * var(--padd--xs));
-  height: calc(40px - 2 * var(--padd--xs));
+  width: calc(40px - (2 * var(--padd--xs)));
+  height: calc(40px - (2 * var(--padd--xs)));
 }
 body .ow_dnd_widget .ow_box .ow_ipc .ow_ipc_picture a,
 body .ow_dnd_widget .ow_box_empty .ow_ipc .ow_ipc_picture a {
@@ -9517,8 +9517,7 @@ body .ow_dnd_widget .ow_box_empty .ow_ipc .ow_ipc_info .ow_ipc_content .ow_small
 /*========================================================
 [13] Thumbnails & Icons        __icons
 ========================================================*/
-/* Thumbnail Styles */
-/* ---- Avatar styles ---- */
+/* Thumbnail Styles */ /* ---- Avatar styles ---- */
 .ow_change_avatar .avatar_current {
   border-right: 1px solid #eff2f5;
   padding-right: 3px;
@@ -9945,9 +9944,7 @@ table.ow_form td.ow_autowidth {
 }
 .ow_txtright {
   text-align: right;
-}
-
-/* Display */
+} /* Display */
 .ow_display_block {
   display: block;
 }
@@ -10289,8 +10286,7 @@ table.ow_form td.ow_autowidth {
 /*========================================================
 [16] Plugin Styles        __plugins
 ========================================================*/
-/* Plugin Styles */
-/* ---- Add content styles ---- */
+/* Plugin Styles */ /* ---- Add content styles ---- */
 .ow_add_content {
   background-image: url(images/ic_img/ic_add.svg);
   background-repeat: no-repeat;
@@ -12083,7 +12079,7 @@ body .newsfeed-attachment-preview.item_loaded {
   position: absolute;
   top: 10px;
   width: 100%;
-  height: calc(100% - 10px * 2.5);
+  height: calc(100% - (10px * 2.5));
   background-size: cover;
   background-repeat: no-repeat;
   -moz-filter: blur(10px);
@@ -16550,8 +16546,7 @@ span.ic_refresh {
   }
   .ow_xs_txtright {
     text-align: right;
-  }
-  /* Display */
+  } /* Display */
   .ow_display_xs_block {
     display: block;
   }
@@ -16961,8 +16956,7 @@ span.ic_refresh {
   }
   .ow_sm_txtright {
     text-align: right;
-  }
-  /* Display */
+  } /* Display */
   .ow_display_sm_block {
     display: block;
   }
@@ -17372,8 +17366,7 @@ span.ic_refresh {
   }
   .ow_md_txtright {
     text-align: right;
-  }
-  /* Display */
+  } /* Display */
   .ow_display_md_block {
     display: block;
   }
@@ -17783,8 +17776,7 @@ span.ic_refresh {
   }
   .ow_lg_txtright {
     text-align: right;
-  }
-  /* Display */
+  } /* Display */
   .ow_display_lg_block {
     display: block;
   }
@@ -18194,8 +18186,7 @@ span.ic_refresh {
   }
   .ow_xl_txtright {
     text-align: right;
-  }
-  /* Display */
+  } /* Display */
   .ow_display_xl_block {
     display: block;
   }
@@ -18605,8 +18596,7 @@ span.ic_refresh {
   }
   .ow_xxl_txtright {
     text-align: right;
-  }
-  /* Display */
+  } /* Display */
   .ow_display_xxl_block {
     display: block;
   }
@@ -20654,8 +20644,7 @@ span.ic_refresh {
   #conversationItemListWrapper::before {
     display: none !important;
   }
-  /*Photo*/
-  /*Video*/
+  /*Photo*/ /*Video*/
   .ow_video_list .clearfix.ow_alt1,
   .ow_video_list .clearfix.ow_alt2 {
     display: block;
