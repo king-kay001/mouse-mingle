@@ -21,7 +21,8 @@
                     <div class="ow_value">{input name="sex"}</div>
                     <div class="ow_error">{error name="sex"}</div>
                 </div>
-
+    
+                
     
                 <div class="input-wrap input-field-username">
                     <div class="ow_value">{input name="username"}</div>
@@ -36,10 +37,18 @@
 
             <!-- form controls -->
             <div class="input-wrap ow_nuesignup_control">
+                <div class="input-wrap input-field-email">
+                    <div class="ow_value">{input name="email"}</div>
+                    <div class="ow_error">{error name="email"}</div>
+                </div>
+    
+                <div class="input-wrap input-field-password">
+                    <div class="ow_value">{input name="password"}</div>
+                    <div class="ow_error">{error name="password"}</div>
+                </div>
                 <!-- continue button -->
-                <a class="ow_button step-btn btn-nuesignup-next" href="javascript://">{text key="mekirim+continue"}</a>
+                <a class="ow_button step-btn btn-nuesignup-next" href="javascript://">{text key="mouse+continue"}</a>
                 <!-- sign in button -->
-                <a class="ow_button btn-nuesignup-login" href="{url_for_route for='static_sign_in'}">{text key="mekirim+i_already_have_accout"}</a>
                 <!-- submit buttom -->
                 {submit name="register" class='btn-nuesignup-submit ow_hidden'}
             </div>

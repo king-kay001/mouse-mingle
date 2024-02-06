@@ -24,8 +24,6 @@ div.jhtmlarea,
         font-size: 100%;
         font-weight: $input-font-weight;
         line-height: 40px; //$input-line-height;
-        margin-bottom: 20px;
-        border-radius: 10px;
     }
     // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
     @include border-radius($input-border-radius, 0);
@@ -180,6 +178,9 @@ textarea {
 input[type=checkbox]~label,
 input[type=radio]~label {
     vertical-align: top;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 10;
 }
 
 textarea.invitation,

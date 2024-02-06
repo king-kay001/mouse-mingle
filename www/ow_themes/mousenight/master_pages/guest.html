@@ -1,6 +1,15 @@
 <div class="ow_page_wrap guest_master_page">
 	<div class="ow_site_panel">
-		<a class="ow_logo" href="{$siteUrl}"></a>
+		<div class="panel_canvas">
+            <a class="ow_logo" href="{$siteUrl}"></a>
+            <div class="ow_navigation_wrap">
+                <div class="ow_navs">
+                    {component class='BASE_CMP_Console' cssClass='index_signin_button'}
+                    <a href="{url_for_route for='base_join'}" class="register">{text key="mouse+register"}</a>
+                </div>
+            </div>
+        </div>
+		
 	</div>		
 	<div class="ow_page_container">
         <div class="guest-content">

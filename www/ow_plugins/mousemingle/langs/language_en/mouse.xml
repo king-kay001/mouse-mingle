@@ -80,11 +80,11 @@
 	<key name="available_coins"><value>Available coins</value></key>
 	<key name="coin_count_text"><value>Coin count</value></key>
 	<key name="back"><value>Back</value></key>
-	<key name="sign_up"><value>Sign up</value></key>
+	<key name="sign_up"><value>Register</value></key>
 	<key name="forgot_password"><value>Forgot password</value></key>
 	<key name="i_already_have_accout"><value>I already have account</value></key>
-	<key name="create_account"><value>Create Account</value></key>
-	<key name="create_account_description"><value>Signup to find love</value></key>
+	<key name="create_account"><value>Register your Profile</value></key>
+	<key name="create_account_description"><value>Create your profile and start connecting with Star-wars and Marvel Fans</value></key>
 	<key name="credits"><value>Credits</value></key>
 	<key name="location"><value>Location</value></key>
 	<key name="language_changed"><value>Language Changed</value></key>

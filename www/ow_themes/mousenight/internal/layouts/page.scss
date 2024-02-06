@@ -44,47 +44,10 @@ body {
   }
 }
 
-//styling and rearranging checkbox forgotpassword and signin button on a page using css
+
 .index_master_page{
   .ow_page_container{
     padding-top: var(--c-gc-header-height) !important;
-    .sign-in{
-      .ow_sign_in_wrap{
-        .ow_sign_in{
-          .ow_box{
-            .ow_password{
-
-            }
-            .ow_form_options{
-              display: block;
-              flex-direction: column-reverse;
-              margin-bottom: 40px;
-              p.ow_forgot_pass{
-                a{
-                  margin-top: 100px;
-                  display: block;
-                 
-                }
-                
-              }
-              p.ow_remember_me{
-                margin-top:5px;
-                margin-bottom: 40px;
-                text-align: left;
-                display: block;
-              }
-              
-              .ow_right{
-                span.ow_button{
-                  
-                }
-              }
-              
-            }
-          }
-        }
-      }
-    }
   }
   .ow_footer{
     background-color: #{$bg-black};
@@ -544,9 +507,9 @@ body {
   }
 }
 
-.index_master_page{
+.guest_master_page{
   .ow_page_container{
-    background-color: #ECEFF1;
+    background-color:#ECEFF1;
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
@@ -556,15 +519,12 @@ body {
     align-items: center;
     padding-bottom: 100px;
 
-    
-    
-
     .guest-content{
       width: 30%;
       margin-top: 100px;
       padding: 50px 100px;
       border-radius: 20px;
-      background: linear-gradient(123deg, #D9D9D9 -2.37%, rgba(255, 255, 255, 0.65) 93.32%);
+      background-color: #FFFFFF;
       backdrop-filter: blur(5px);
 
       .header{
@@ -580,7 +540,7 @@ body {
       .form-wrap{
         .hide-step{
           display: none;
-        }       
+        }
         .input-wrap{
           margin-bottom: 30px;
 
@@ -599,7 +559,26 @@ body {
         .ow_radio_group label{
           background: transparent;
           border: 1px solid #666;
-          border-radius: #{$radius-md};
+          border-radius: 10px;
+          background-image: url('images/mouse-icons/Lock.svg'); /* Specify the path to your background image */
+         background-size: 60px 24px; /* Specify the size of the background image */
+         background-position: left center; /* Position the background image */
+         background-repeat: no-repeat; 
+         font-size: 24px;
+         padding-left: 60px;
+        }
+        input[type="text"],
+        .ow_radio_group label{
+          background: transparent;
+          border: 1px solid #666;
+          border-radius: 10px;
+          background-image: url('images/mouse-icons/mail.svg'); /* Specify the path to your background image */
+         background-size: 60px 24px; /* Specify the size of the background image */
+         background-position: left center; /* Position the background image */
+         background-repeat: no-repeat; 
+         font-size: 24px;
+         padding-left: 60px;
+
         }
         .ow_radio_group{
           label{
@@ -609,6 +588,8 @@ body {
             padding: 0 10px;
             box-sizing: border-box;
             margin-bottom: 20px;
+            display: flex; /* Use flexbox to align items */
+            align-items: center;
           }
           input[type="radio"]{
             opacity: 0;
@@ -641,24 +622,20 @@ body {
           background-color: unset;
         }
       }
-      
+
       .sign-in{
-        
         .ow_sign_in_wrap{
           h2,
-          
-          .ow_sign_up{
-            display:none;
-          }
+          .ow_connect_buttons,
+          .ow_sign_up,
           .ow_forgot_pass
           {
-            display:none;
+            display: none;
           }
           
           h3{
             font-size: 30px;
             font-weight: bold;
-            margin-bottom: 30px;
             text-align: center;
           }
           .ow_box{
@@ -676,14 +653,10 @@ body {
               flex-direction: column-reverse;
 
               .ow_right{
-                  float: left;
                 .ow_button{
-                  
                   padding: unset;
-                  
                 }
               }
-              
             }
           }
         }
@@ -1635,29 +1608,23 @@ body {
 // Premium checkboxes
 input[type="checkbox"]{
   appearance: none;
-  height: 20.31px;
-  width: 20.31px;
+  height: 25px;
+  width: 25px;
   outline: none;
   border-radius: 5px;
   border: 1px solid #ccc;
   background-color: #fff;
   position: relative;
-  //How to style a check box that is not  checked with a text on same line
-  margin-right: 10px;
-  margin-top: -3px;
 
   &::after{
     content: "";
     position: absolute;
     display: none;
   }
- 
+
   &:checked{
-    background-color:#777777;
+    background-color: #777777;
     border-color: #777777;
-    //How to style a check box that is checked with a text on same line
-    margin-right: 10px;
-    margin-top: -3px;
 
     &::after{
       left: 6px;
@@ -1668,8 +1635,6 @@ input[type="checkbox"]{
       border-width: 0 3px 3px 0;
       transform: rotate(45deg);
       display: block;
-      margin-top: -2px;
-      margin-left: -2px;
     }
   }
 }

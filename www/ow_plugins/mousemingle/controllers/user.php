@@ -30,12 +30,12 @@ class MOUSE_CTRL_User extends BASE_CTRL_User
     {
         parent::__construct();
 
-        $this->masterPageTpl = 'index';
+        $this->masterPageTpl = 'guest';
     }
 
     public function index()
     {
-        // $this->masterPageTpl = 'index';
+        $this->masterPageTpl = 'index';
 
         $regForm = new MOUSE_CLASS_LandingRegForm();
         $this->addForm($regForm);
@@ -61,7 +61,6 @@ class MOUSE_CTRL_User extends BASE_CTRL_User
     public function signIn()
     {
         parent::standardSignIn();
-        $this->setTemplate(OW::getPluginManager()->getPlugin('mouse')->getCtrlViewDir() . 'user_sign_in.html');
     }
 
     public function onBeforeRender()

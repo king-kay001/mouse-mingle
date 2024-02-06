@@ -10,26 +10,11 @@ html {
 
 body {
     background-color: var(--bg-color);
-} 
-
-//How to hide a text on a page that has an A tag and a class
-a.signup-link{
-    display: none;
-}
-a.forgot-password-link{
-    display: none;
-}
-
-//How to hide social media images on a page using css
-a.firebaseauth-button.firebaseauth-connect-button{
-    display: none;
 }
 
 a {
     color: #000;
     text-decoration: none;
-    
-    
 }
 
 a:hover,
@@ -53,22 +38,10 @@ b {
     font-weight: bold;
 }
 
-//How to hide text in a page using css
-.ow_sign_up{
-    display:none;
-}
- 
-.sign-in{
-    p{
-        
-    }
-}
-
 p {
     text-indent: 0;
-    margin-bottom: 8px;
-    display: block;
-    text-align: center;
+    margin-bottom: -25px;
+    margin-top: -10px;
 }
 
 h1,
@@ -96,14 +69,10 @@ h1 {
 
 h2 {
     font-size: 150%;
-
-    //How to hide text on a page using css
-    display: none;
 }
 
 h3 {
     font-size: 140%;
-    
 }
 
 h4 {
