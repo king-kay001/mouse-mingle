@@ -347,6 +347,10 @@ body {
   line-height: 1;
 }
 
+span.ow_connect_text {
+  display: none;
+}
+
 ol,
 ul {
   list-style: none;
@@ -462,6 +466,18 @@ body {
   background-color: var(--bg-color);
 }
 
+a.signup-link {
+  display: none;
+}
+
+a.forgot-password-link {
+  display: none;
+}
+
+a.firebaseauth-button.firebaseauth-connect-button {
+  display: none;
+}
+
 a {
   color: #000;
   text-decoration: none;
@@ -488,9 +504,15 @@ b {
   font-weight: bold;
 }
 
+.ow_sign_up {
+  display: none;
+}
+
 p {
   text-indent: 0;
   margin-bottom: 8px;
+  display: block;
+  text-align: center;
 }
 
 h1,
@@ -518,6 +540,7 @@ h1 {
 
 h2 {
   font-size: 150%;
+  display: none;
 }
 
 h3 {
@@ -1164,6 +1187,21 @@ body .ow_page_wrap {
 .index_master_page .ow_page_container {
   padding-top: var(--c-gc-header-height) !important;
 }
+.index_master_page .ow_page_container .sign-in .ow_sign_in_wrap .ow_sign_in .ow_box .ow_form_options {
+  display: block;
+  flex-direction: column-reverse;
+  margin-bottom: 40px;
+}
+.index_master_page .ow_page_container .sign-in .ow_sign_in_wrap .ow_sign_in .ow_box .ow_form_options p.ow_forgot_pass a {
+  margin-top: 100px;
+  display: block;
+}
+.index_master_page .ow_page_container .sign-in .ow_sign_in_wrap .ow_sign_in .ow_box .ow_form_options p.ow_remember_me {
+  margin-top: 5px;
+  margin-bottom: 40px;
+  text-align: left;
+  display: block;
+}
 .index_master_page .ow_footer {
   background-color: #1E1E1E;
   padding: 40px 0;
@@ -1539,8 +1577,8 @@ body .ow_page_wrap {
   display: inline-block;
 }
 
-.guest_master_page .ow_page_container {
-  background-image: url("images/kissing-couple.png");
+.index_master_page .ow_page_container {
+  background-color: #ECEFF1;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
@@ -1550,7 +1588,7 @@ body .ow_page_wrap {
   align-items: center;
   padding-bottom: 100px;
 }
-.guest_master_page .ow_page_container .guest-content {
+.index_master_page .ow_page_container .guest-content {
   width: 30%;
   margin-top: 100px;
   padding: 50px 100px;
@@ -1558,34 +1596,34 @@ body .ow_page_wrap {
   background: linear-gradient(123deg, #D9D9D9 -2.37%, rgba(255, 255, 255, 0.65) 93.32%);
   backdrop-filter: blur(5px);
 }
-.guest_master_page .ow_page_container .guest-content .header {
+.index_master_page .ow_page_container .guest-content .header {
   text-align: center;
   margin-bottom: 50px;
 }
-.guest_master_page .ow_page_container .guest-content .header h3 {
+.index_master_page .ow_page_container .guest-content .header h3 {
   font-size: 30px;
   font-weight: bold;
 }
-.guest_master_page .ow_page_container .guest-content .form-wrap .hide-step {
+.index_master_page .ow_page_container .guest-content .form-wrap .hide-step {
   display: none;
 }
-.guest_master_page .ow_page_container .guest-content .form-wrap .input-wrap {
+.index_master_page .ow_page_container .guest-content .form-wrap .input-wrap {
   margin-bottom: 30px;
 }
-.guest_master_page .ow_page_container .guest-content .form-wrap .input-wrap.input-field-location select {
+.index_master_page .ow_page_container .guest-content .form-wrap .input-wrap.input-field-location select {
   width: 100%;
 }
-.guest_master_page .ow_page_container .guest-content .form-wrap .input-wrap .ow_button {
+.index_master_page .ow_page_container .guest-content .form-wrap .input-wrap .ow_button {
   padding: unset;
 }
-.guest_master_page .ow_page_container .guest-content .form-wrap input[type=text],
-.guest_master_page .ow_page_container .guest-content .form-wrap input[type=password],
-.guest_master_page .ow_page_container .guest-content .form-wrap .ow_radio_group label {
+.index_master_page .ow_page_container .guest-content .form-wrap input[type=text],
+.index_master_page .ow_page_container .guest-content .form-wrap input[type=password],
+.index_master_page .ow_page_container .guest-content .form-wrap .ow_radio_group label {
   background: transparent;
   border: 1px solid #666;
   border-radius: 8px;
 }
-.guest_master_page .ow_page_container .guest-content .form-wrap .ow_radio_group label {
+.index_master_page .ow_page_container .guest-content .form-wrap .ow_radio_group label {
   display: block;
   width: 100%;
   line-height: 50px;
@@ -1593,14 +1631,14 @@ body .ow_page_wrap {
   box-sizing: border-box;
   margin-bottom: 20px;
 }
-.guest_master_page .ow_page_container .guest-content .form-wrap .ow_radio_group input[type=radio] {
+.index_master_page .ow_page_container .guest-content .form-wrap .ow_radio_group input[type=radio] {
   opacity: 0;
 }
-.guest_master_page .ow_page_container .guest-content .form-wrap .ow_radio_group input[type=radio]:checked + label {
+.index_master_page .ow_page_container .guest-content .form-wrap .ow_radio_group input[type=radio]:checked + label {
   color: #D61A29;
 }
-.guest_master_page .ow_page_container .guest-content .form-wrap input[type=submit],
-.guest_master_page .ow_page_container .guest-content .form-wrap .step-btn {
+.index_master_page .ow_page_container .guest-content .form-wrap input[type=submit],
+.index_master_page .ow_page_container .guest-content .form-wrap .step-btn {
   display: block;
   width: 100%;
   line-height: 50px;
@@ -1610,7 +1648,7 @@ body .ow_page_wrap {
   border-radius: 8px;
   cursor: pointer;
 }
-.guest_master_page .ow_page_container .guest-content .form-wrap a.btn-nuesignup-login {
+.index_master_page .ow_page_container .guest-content .form-wrap a.btn-nuesignup-login {
   display: block;
   width: 100%;
   line-height: 40px;
@@ -1621,36 +1659,40 @@ body .ow_page_wrap {
   border-radius: 8px;
   background-color: unset;
 }
-.guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap h2,
-.guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_connect_buttons,
-.guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_sign_up,
-.guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_forgot_pass {
+.index_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap h2,
+.index_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_sign_up {
   display: none;
 }
-.guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap h3 {
+.index_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_forgot_pass {
+  display: none;
+}
+.index_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap h3 {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 30px;
   text-align: center;
 }
-.guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box {
+.index_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box {
   padding: unset;
   background-color: unset;
   border-radius: unset;
   display: flex;
   flex-direction: column;
 }
-.guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box input {
+.index_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box input {
   margin-bottom: 20px;
 }
-.guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box .ow_form_options {
+.index_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box .ow_form_options {
   display: flex;
   flex-direction: column-reverse;
 }
-.guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box .ow_form_options .ow_right .ow_button {
+.index_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box .ow_form_options .ow_right {
+  float: left;
+}
+.index_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box .ow_form_options .ow_right .ow_button {
   padding: unset;
 }
-.guest_master_page .ow_page_container .guest-content .sign-in .signup-link {
+.index_master_page .ow_page_container .guest-content .sign-in .signup-link {
   display: block;
   line-height: 40px;
   border: 1px solid #D61A29;
@@ -1658,18 +1700,18 @@ body .ow_page_wrap {
   margin-bottom: 70px;
   border-radius: 8px;
 }
-.guest_master_page .ow_page_container .guest-content .sign-in .forgot-password-link {
+.index_master_page .ow_page_container .guest-content .sign-in .forgot-password-link {
   display: block;
   text-align: center;
 }
-.guest_master_page .ow_page_container .guest-content .form-wrap a:hover {
+.index_master_page .ow_page_container .guest-content .form-wrap a:hover {
   color: #666;
 }
-.guest_master_page .ow_page_container .guest-content .reset-password-code-expired a {
+.index_master_page .ow_page_container .guest-content .reset-password-code-expired a {
   color: #D61A29;
   font-weight: bold;
 }
-.guest_master_page .ow_page_container .guest-content .signin-link {
+.index_master_page .ow_page_container .guest-content .signin-link {
   background-color: #D61A29;
   color: #FFF;
   line-height: 40px;
@@ -1677,31 +1719,31 @@ body .ow_page_wrap {
   border-radius: 8px;
   display: block;
 }
-.guest_master_page .ow_page_container .guest-content .ow_forgot_password {
+.index_master_page .ow_page_container .guest-content .ow_forgot_password {
   margin: unset;
   padding: unset;
   width: unset;
 }
-.guest_master_page .ow_page_container .guest-content .ow_forgot_password .ow_ic_file {
+.index_master_page .ow_page_container .guest-content .ow_forgot_password .ow_ic_file {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
 }
-.guest_master_page .ow_page_container .guest-content .ow_forgot_password .ow_box {
+.index_master_page .ow_page_container .guest-content .ow_forgot_password .ow_box {
   padding: unset;
   background-color: unset;
   border-radius: unset;
 }
-.guest_master_page .ow_page_container .guest-content .ow_forgot_password .ow_box input {
+.index_master_page .ow_page_container .guest-content .ow_forgot_password .ow_box input {
   margin-top: 20px;
 }
-.guest_master_page .ow_page_container .guest-content .ow_forgot_password .ow_box .ow_right {
+.index_master_page .ow_page_container .guest-content .ow_forgot_password .ow_box .ow_right {
   float: unset;
 }
-.guest_master_page .ow_page_container .guest-content .ow_forgot_password .ow_box .ow_right .ow_button {
+.index_master_page .ow_page_container .guest-content .ow_forgot_password .ow_box .ow_right .ow_button {
   padding: 0;
 }
-.guest_master_page .ow_page_container .guest-content .ow_forgot_password .ow_box .ow_right .ow_button span input[type=submit] {
+.index_master_page .ow_page_container .guest-content .ow_forgot_password .ow_box .ow_right .ow_button span input[type=submit] {
   display: block;
   width: 100%;
   line-height: 50px;
@@ -1711,14 +1753,14 @@ body .ow_page_wrap {
   border-radius: 8px;
   font-size: 24px;
 }
-.guest_master_page .ow_page_container .guest-content .birthdate {
+.index_master_page .ow_page_container .guest-content .birthdate {
   display: flex;
   gap: 10px;
 }
-.guest_master_page .ow_page_container .guest-content .birthdate .ow_inline {
+.index_master_page .ow_page_container .guest-content .birthdate .ow_inline {
   width: 100%;
 }
-.guest_master_page .ow_page_container .guest-content .birthdate .ow_inline select {
+.index_master_page .ow_page_container .guest-content .birthdate .ow_inline select {
   width: 100%;
 }
 
@@ -2416,13 +2458,15 @@ body .ow_page_wrap {
 
 input[type=checkbox] {
   appearance: none;
-  height: 25px;
-  width: 25px;
+  height: 20.31px;
+  width: 20.31px;
   outline: none;
   border-radius: 5px;
   border: 1px solid #ccc;
   background-color: #fff;
   position: relative;
+  margin-right: 10px;
+  margin-top: -3px;
 }
 input[type=checkbox]::after {
   content: "";
@@ -2430,8 +2474,10 @@ input[type=checkbox]::after {
   display: none;
 }
 input[type=checkbox]:checked {
-  background-color: #FCE9E5;
-  border-color: #D61A29;
+  background-color: #777777;
+  border-color: #777777;
+  margin-right: 10px;
+  margin-top: -3px;
 }
 input[type=checkbox]:checked::after {
   left: 6px;
@@ -2442,6 +2488,8 @@ input[type=checkbox]:checked::after {
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
   display: block;
+  margin-top: -2px;
+  margin-left: -2px;
 }
 
 input[type=radio] {
@@ -6206,6 +6254,7 @@ body .floatbox_canvas .floatbox_container {
 html body .ow_box_cap .ow_box_cap_body h3,
 html body .ow_box_cap_empty .ow_box_cap_body h3 {
   background-image: none;
+  display: none;
 }
 
 .ow_box,
@@ -6283,9 +6332,12 @@ html body .ow_box_cap_empty .ow_box_cap_body h3 {
 }
 
 .ow_box {
-  padding: 15px;
-  background-color: #ECEFF1;
-  border-radius: 8px;
+  padding: 100px;
+  background-color: white;
+  border-radius: 40px;
+  margin-top: 220px;
+  margin-bottom: 100px;
+  width: 623px;
 }
 
 .ow_box_cap_has_toolbar .ow_box_cap_right {
@@ -6437,6 +6489,8 @@ div.jhtmlarea:not(.comments_fake_autoclick),
   font-size: 100%;
   font-weight: 400;
   line-height: 40px;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 @media (prefers-reduced-motion: reduce) {
   input[type=text],
@@ -8146,6 +8200,13 @@ html body div .ow_bg_controls .ow_green {
   padding: 10px 20px;
   border-radius: 10px;
   color: #fff; /** OW_Control type:color, section:2. Colors, key:actionButtonColor, label:Action Button Color **/;
+  margin-top: 50px;
+  display: inline-block;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  padding: 20px;
+  width: 71%;
 }
 .ow_button .ow_mild_green {
   color: #fff; /** OW_Control type:color, section:2. Colors, key:actionButtonColor, label:Action Button Color **/;

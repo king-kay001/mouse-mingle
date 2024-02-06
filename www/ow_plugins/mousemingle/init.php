@@ -119,7 +119,7 @@ foreach ( $baseDecoratorsToRegister as $name )
 require_once( $plugin->getRootDir() . 'smarty/function.php' );
 
 // import lang (for dev only)
-// BOL_LanguageService::getInstance()->importPrefixFromDir($plugin->getRootDir() . 'langs', true, true, true);
+//BOL_LanguageService::getInstance()->importPrefixFromDir($plugin->getRootDir() . 'langs', true, true, true);
 
 // BOL_LanguageService::getInstance()->importPrefixFromDir($plugin->getRootDir() . 'defaultlangs', true, true, true);
 

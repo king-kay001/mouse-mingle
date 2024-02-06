@@ -231,6 +231,13 @@ html body div .#{$ow-prefix}bg_controls .#{$ow-prefix}green {
     padding: 10px 20px;
     border-radius: 10px;
     color: #{$action-button-color};
+    margin-top: 50px;
+    display: inline-block;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 20px;
+    width: 71%;
     .ow_mild_green{
         color: #{$action-button-color};
     }

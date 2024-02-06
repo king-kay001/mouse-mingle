@@ -44,10 +44,47 @@ body {
   }
 }
 
-
+//styling and rearranging checkbox forgotpassword and signin button on a page using css
 .index_master_page{
   .ow_page_container{
     padding-top: var(--c-gc-header-height) !important;
+    .sign-in{
+      .ow_sign_in_wrap{
+        .ow_sign_in{
+          .ow_box{
+            .ow_password{
+
+            }
+            .ow_form_options{
+              display: block;
+              flex-direction: column-reverse;
+              margin-bottom: 40px;
+              p.ow_forgot_pass{
+                a{
+                  margin-top: 100px;
+                  display: block;
+                 
+                }
+                
+              }
+              p.ow_remember_me{
+                margin-top:5px;
+                margin-bottom: 40px;
+                text-align: left;
+                display: block;
+              }
+              
+              .ow_right{
+                span.ow_button{
+                  
+                }
+              }
+              
+            }
+          }
+        }
+      }
+    }
   }
   .ow_footer{
     background-color: #{$bg-black};
@@ -507,9 +544,9 @@ body {
   }
 }
 
-.guest_master_page{
+.index_master_page{
   .ow_page_container{
-    background-image: url('images/kissing-couple.png');
+    background-color: #ECEFF1;
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
@@ -518,6 +555,9 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: 100px;
+
+    
+    
 
     .guest-content{
       width: 30%;
@@ -540,7 +580,7 @@ body {
       .form-wrap{
         .hide-step{
           display: none;
-        }
+        }       
         .input-wrap{
           margin-bottom: 30px;
 
@@ -601,15 +641,18 @@ body {
           background-color: unset;
         }
       }
-
+      
       .sign-in{
+        
         .ow_sign_in_wrap{
           h2,
-          .ow_connect_buttons,
-          .ow_sign_up,
+          
+          .ow_sign_up{
+            display:none;
+          }
           .ow_forgot_pass
           {
-            display: none;
+            display:none;
           }
           
           h3{
@@ -633,10 +676,14 @@ body {
               flex-direction: column-reverse;
 
               .ow_right{
+                  float: left;
                 .ow_button{
+                  
                   padding: unset;
+                  
                 }
               }
+              
             }
           }
         }
@@ -1588,23 +1635,29 @@ body {
 // Premium checkboxes
 input[type="checkbox"]{
   appearance: none;
-  height: 25px;
-  width: 25px;
+  height: 20.31px;
+  width: 20.31px;
   outline: none;
   border-radius: 5px;
   border: 1px solid #ccc;
   background-color: #fff;
   position: relative;
+  //How to style a check box that is not  checked with a text on same line
+  margin-right: 10px;
+  margin-top: -3px;
 
   &::after{
     content: "";
     position: absolute;
     display: none;
   }
-
+ 
   &:checked{
-    background-color: #FCE9E5;
-    border-color: #{$primary-color};
+    background-color:#777777;
+    border-color: #777777;
+    //How to style a check box that is checked with a text on same line
+    margin-right: 10px;
+    margin-top: -3px;
 
     &::after{
       left: 6px;
@@ -1615,6 +1668,8 @@ input[type="checkbox"]{
       border-width: 0 3px 3px 0;
       transform: rotate(45deg);
       display: block;
+      margin-top: -2px;
+      margin-left: -2px;
     }
   }
 }

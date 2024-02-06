@@ -33,6 +33,7 @@
 html body .#{$ow-prefix}box_cap .#{$ow-prefix}box_cap_body h3,
 html body .#{$ow-prefix}box_cap_empty .#{$ow-prefix}box_cap_body h3 {
     background-image: none;
+    display: none;
 }
 
 .#{$ow-prefix}box_cap .#{$ow-prefix}box_cap_body,
@@ -126,9 +127,12 @@ html body .#{$ow-prefix}box_cap_empty .#{$ow-prefix}box_cap_body h3 {
     }
 }
 .ow_box{
-    padding: 15px;
-    background-color: #{$bg-color};
-    border-radius: #{$radius-md};
+    padding: 100px;
+    background-color: white;
+    border-radius: 40px;
+    margin-top: 220px;
+    margin-bottom: 100px;
+    width: 623px;
 }
 .ow_box_cap_has_toolbar{
     .ow_box_cap_right{
