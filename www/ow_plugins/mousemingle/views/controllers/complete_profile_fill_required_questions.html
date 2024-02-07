@@ -8,12 +8,7 @@
         <div class="profile_edit_section_wrap">
             <div class="right_pane">
                 {foreach from=$questionArray key='section' item='questions' name='question'}
-
                 <div class="profile_edit_section">
-                    {if !empty($section) }
-                        <h2>{text key="base+questions_section_`$section`_label"}</h2>
-                    {/if}
-                    
                     <div class="questions_wrap">
                         {foreach from=$questions item='question' name='question'}
                             {cycle assign='alt' name=$section values='ow_alt1,ow_alt2'}
@@ -24,9 +19,7 @@
                                     <div style="height:1px;"></div> 
                                     {error name=$question.name}
                                 </div>
-                                <div class="question_description">
-                                    {question_description_lang name=$question.name}
-                                </div>
+                                
                             </div>
                         {/foreach}
                     </div>

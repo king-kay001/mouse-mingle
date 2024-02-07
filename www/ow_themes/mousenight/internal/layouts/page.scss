@@ -36,7 +36,7 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   padding-top: calc(var(--c-gc-header-height) + 40px);
-  background-color: #{$site-bg-color};
+  background-color: #ECEFF1;
   
 }
 
@@ -1630,20 +1630,23 @@ body {
 }
 
 // Premium checkboxes
+//styling the entire checkbox on its own
 input[type="checkbox"]{
   appearance: none;
-  height: 25px;
-  width: 25px;
+  height: 17.5px;
+  width: 17.5px;
   outline: none;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  //border-radius: 5px;
+  border: 2px solid #777777;
   background-color: #fff;
   position: relative;
+  
 
   &::after{
     content: "";
     position: absolute;
-    display: none;
+   
+    
   }
 
   &:checked{
@@ -1666,11 +1669,11 @@ input[type="checkbox"]{
 // Premium radio button
 input[type="radio"]{
   appearance: none;
-  height: 20px;
-  width: 20px;
+  height: 17.5px;
+  width: 17.5px;
   outline: none;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  border: 2px solid #777777;
   background-color: #fff;
   position: relative;
 
@@ -1707,7 +1710,13 @@ input[type="radio"]{
     gap: 4px;
     margin-bottom: 10px;
     flex-shrink: 0;
+    width: 20%;
   }
+}
+
+ul.ow_checkbox_group{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .ow_label{
@@ -1816,13 +1825,76 @@ input[type="radio"]{
   }
 }
 
+.profile_edit_section_wrap{
+  .input{
+    .birthdate{
+      .ow_inline{
+        select{
+          margin-right: 20px;
+          width: 200px;
+           text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.profile_edit_section_wrap{
+  .input_wrap{
+    margin-bottom: -4opx;
+  }
+  .input{
+    .match_age{
+      
+        select{
+          margin-right: 20px;
+          width: 200px;
+           text-align: center;
+        }
+      
+    }
+  }
+}
+
+profile_edit_section_wrap{
+  .input_wrap{
+    margin-bottom: -4opx;
+  }
+  
+}
+
 // Profile edit
 .profile_edit_wrap{
 
   .profile_edit_section_wrap{
+    
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
-  
+    //how to merge different pages on one page using css
+    background-color: white;
+    border-radius: 40px;
+       //styling a check box and a label to be on same line and wrap after 5chekboxes and a label
+      ul.ow_checkbox_group{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          flex-basis: 20%; 
+          margin-bottom: 10px; 
+        }
+      }
+
+        //styling a radio box and a label to be on same line and wrap after 5radioboxes and a label
+
+      ul.ow_radio_group{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          flex-basis: 20%; 
+          margin-bottom: 10px; 
+        }
+      }
+
     .left_pane{
       .user_photo{
         position: relative;
@@ -1923,8 +1995,12 @@ input[type="radio"]{
         }
   
         .input{
+          .birthdate{
+            
+          }
           select{
             width: 100%;
+            
           }
         }
       }
@@ -1932,9 +2008,9 @@ input[type="radio"]{
   
     .right_pane{
       .profile_edit_section{
-        background-color: #F7F7F7;
+        background-color:#FFFFFF;
         padding: 30px;
-        border-radius: 10px;
+        border-radius: 40px;
         margin-bottom: 20px;
         box-sizing: border-box;
       
@@ -2061,6 +2137,7 @@ input[type="radio"]{
   gap: 10px;
   min-height: 150px;
   margin-bottom: 20px;
+  text-align: center;
 
   .ow_button{
     cursor: pointer;

@@ -1148,18 +1148,12 @@ body .ow_page_wrap .signup-form a.forgot-password-link {
   padding-top: 20px;
 }
 
-body.ow .ow_page_wrap .ow_page_container .guest-content signup-wrap a.forgot-password-link {
-  display: block;
-  text-align: center;
-  padding-top: 20px;
-}
-
 .ow_page_container {
   box-sizing: border-box;
   margin: 0 auto;
   min-height: 100vh;
   padding-top: calc(var(--c-gc-header-height) + 40px);
-  background-color: #FFF; /** OW_Control type:color, section:2. Colors, key:bodyBg, label:Page background color **/;
+  background-color: #ECEFF1;
 }
 
 .ow_canvas {
@@ -2458,18 +2452,16 @@ body.ow .ow_page_wrap .ow_page_container .guest-content signup-wrap a.forgot-pas
 
 input[type=checkbox] {
   appearance: none;
-  height: 25px;
-  width: 25px;
+  height: 17.5px;
+  width: 17.5px;
   outline: none;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 2px solid #777777;
   background-color: #fff;
   position: relative;
 }
 input[type=checkbox]::after {
   content: "";
   position: absolute;
-  display: none;
 }
 input[type=checkbox]:checked {
   background-color: #777777;
@@ -2488,11 +2480,11 @@ input[type=checkbox]:checked::after {
 
 input[type=radio] {
   appearance: none;
-  height: 20px;
-  width: 20px;
+  height: 17.5px;
+  width: 17.5px;
   outline: none;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  border: 2px solid #777777;
   background-color: #fff;
   position: relative;
 }
@@ -2520,6 +2512,12 @@ input[type=radio]:checked {
   gap: 4px;
   margin-bottom: 10px;
   flex-shrink: 0;
+  width: 20%;
+}
+
+ul.ow_checkbox_group {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .ow_label {
@@ -2609,9 +2607,47 @@ input[type=radio]:checked {
   color: #999;
 }
 
+.profile_edit_section_wrap .input .birthdate .ow_inline select {
+  margin-right: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.profile_edit_section_wrap .input_wrap {
+  margin-bottom: -4opx;
+}
+.profile_edit_section_wrap .input .match_age select {
+  margin-right: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+profile_edit_section_wrap .input_wrap {
+  margin-bottom: -4opx;
+}
+
 .profile_edit_wrap .profile_edit_section_wrap {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
+  background-color: white;
+  border-radius: 40px;
+}
+.profile_edit_wrap .profile_edit_section_wrap ul.ow_checkbox_group {
+  display: flex;
+  flex-wrap: wrap;
+}
+.profile_edit_wrap .profile_edit_section_wrap ul.ow_checkbox_group li {
+  flex-basis: 20%;
+  margin-bottom: 10px;
+}
+.profile_edit_wrap .profile_edit_section_wrap ul.ow_radio_group {
+  display: flex;
+  flex-wrap: wrap;
+}
+.profile_edit_wrap .profile_edit_section_wrap ul.ow_radio_group li {
+  flex-basis: 20%;
+  margin-bottom: 10px;
 }
 .profile_edit_wrap .profile_edit_section_wrap .left_pane .user_photo {
   position: relative;
@@ -2699,9 +2735,9 @@ input[type=radio]:checked {
   width: 100%;
 }
 .profile_edit_wrap .profile_edit_section_wrap .right_pane .profile_edit_section {
-  background-color: #F7F7F7;
+  background-color: #FFFFFF;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 40px;
   margin-bottom: 20px;
   box-sizing: border-box;
 }
@@ -2797,6 +2833,7 @@ input[type=radio]:checked {
   gap: 10px;
   min-height: 150px;
   margin-bottom: 20px;
+  text-align: center;
 }
 .ow_user_question_input .ow_button {
   cursor: pointer;
@@ -6248,6 +6285,7 @@ body .floatbox_canvas .floatbox_container {
 html body .ow_box_cap .ow_box_cap_body h3,
 html body .ow_box_cap_empty .ow_box_cap_body h3 {
   background-image: none;
+  text-align: center;
 }
 
 .ow_box,
@@ -6479,6 +6517,7 @@ div.jhtmlarea:not(.comments_fake_autoclick),
   font-size: 100%;
   font-weight: 400;
   line-height: 40px;
+  border-radius: 10px;
 }
 @media (prefers-reduced-motion: reduce) {
   input[type=text],
@@ -6658,6 +6697,8 @@ ul.ow_radio_group li {
 
 ul.ow_checkbox_group li {
   float: left;
+  flex-basis: 20%; /* 5 checkboxes per row */
+  margin-bottom: 10px;
 }
 
 .form_auto_click textarea.invitation {
@@ -8191,6 +8232,7 @@ html body div .ow_bg_controls .ow_green {
   padding: 10px 20px;
   border-radius: 10px;
   color: #fff; /** OW_Control type:color, section:2. Colors, key:actionButtonColor, label:Action Button Color **/;
+  margin-top: 40px;
 }
 .ow_button .ow_mild_green {
   color: #fff; /** OW_Control type:color, section:2. Colors, key:actionButtonColor, label:Action Button Color **/;
@@ -8818,13 +8860,13 @@ a.avatar_list_more_icon {
   -moz-transition: all 0.15s ease-out 0;
   transition: all 0.15s ease-out 0;
   background: var(--color--primary-alpha-hard);
-  border: none;
   color: rgba(255, 255, 255, 0.97);
   cursor: pointer;
   display: inline-block;
   outline: none;
   position: relative;
   margin-right: 1rem;
+  margin-right: 20px;
 }
 .ow_uli_checkbox input[type=radio i] {
   float: left;

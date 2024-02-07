@@ -24,6 +24,7 @@ div.jhtmlarea,
         font-size: 100%;
         font-weight: $input-font-weight;
         line-height: 40px; //$input-line-height;
+        border-radius: 10px;
     }
     // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
     @include border-radius($input-border-radius, 0);
@@ -210,6 +211,8 @@ ul.#{$ow-prefix}radio_group li {
 
 ul.#{$ow-prefix}checkbox_group li {
     float: left;
+    flex-basis: 20%; /* 5 checkboxes per row */
+        margin-bottom: 10px; 
 }
 
 .form_auto_click textarea.invitation {

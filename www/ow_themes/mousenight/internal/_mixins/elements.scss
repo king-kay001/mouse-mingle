@@ -14,13 +14,13 @@
         -moz-transition: all 0.15s ease-out 0;
         transition: all 0.15s ease-out 0;
         background: var(--color--primary-alpha-hard);
-        border: none;
         color: rgba(255, 255, 255, 0.97);
         cursor: pointer;
         display: inline-block;
         outline: none;
         position: relative;
         margin-right: 1rem;
+        margin-right: 20px;
     }
 
     input[type="radio" i] {
