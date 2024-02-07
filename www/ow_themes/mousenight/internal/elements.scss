@@ -15,6 +15,9 @@ body {
 a {
     color: #000;
     text-decoration: none;
+    //styling an A tag to the middle of a page and shifting down below
+    display: block;
+    text-align: center;
 }
 
 a:hover,

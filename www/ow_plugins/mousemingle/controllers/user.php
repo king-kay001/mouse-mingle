@@ -75,6 +75,6 @@ class MOUSE_CTRL_User extends BASE_CTRL_User
     public function forgotPassword()
     {
         parent::forgotPassword();
-        // $this->setTemplate(OW::getPluginManger()->)
+        $this->setTemplate(OW::getPluginManager()->getPlugin('mouse')->getCtrlViewDir(). 'user_forgot_password.html');
     }
 }

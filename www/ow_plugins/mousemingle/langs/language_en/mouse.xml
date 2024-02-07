@@ -80,8 +80,10 @@
 	<key name="available_coins"><value>Available coins</value></key>
 	<key name="coin_count_text"><value>Coin count</value></key>
 	<key name="back"><value>Back</value></key>
+	<key name="sign_in_back"><value>Go Back to Sign-in</value></key>
 	<key name="sign_up"><value>Register</value></key>
 	<key name="forgot_password"><value>Forgot password</value></key>
+	<key name="forgot_password_description"><value>Horem ipsum dolor sit amet, consectetur adipisNunc vulputate libero et velit interdum</value></key>
 	<key name="i_already_have_accout"><value>I already have account</value></key>
 	<key name="create_account"><value>Register your Profile</value></key>
 	<key name="create_account_description"><value>Create your profile and start connecting with Star-wars and Marvel Fans</value></key>

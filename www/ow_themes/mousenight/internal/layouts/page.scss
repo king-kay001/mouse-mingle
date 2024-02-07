@@ -17,9 +17,19 @@ body {
     min-height: 100%;
     overflow: hidden;
     width: 100%;
+
+    .signup-form{
+      a.forgot-password-link{
+        display: block;
+        text-align: center;
+        padding-top: 20px;
+      }
+    }
    
   }
 }
+
+
 
 .#{$ow-prefix}page_container {
   box-sizing: border-box;
@@ -538,6 +548,7 @@ body {
       }
 
       .form-wrap{
+        
         .hide-step{
           display: none;
         }
@@ -564,19 +575,21 @@ body {
          background-size: 60px 24px; /* Specify the size of the background image */
          background-position: left center; /* Position the background image */
          background-repeat: no-repeat; 
-         font-size: 24px;
+         font-size: 15px;
          padding-left: 60px;
+         margin-bottom: -15px;
         }
         input[type="text"],
         .ow_radio_group label{
           background: transparent;
           border: 1px solid #666;
           border-radius: 10px;
+          //styling and adding a background image to an input field with a text in front
           background-image: url('images/mouse-icons/mail.svg'); /* Specify the path to your background image */
          background-size: 60px 24px; /* Specify the size of the background image */
          background-position: left center; /* Position the background image */
          background-repeat: no-repeat; 
-         font-size: 24px;
+         font-size: 15px;
          padding-left: 60px;
 
         }
@@ -644,9 +657,15 @@ body {
             border-radius: unset;
             display: flex;
             flex-direction: column;
+
+            .ow_password{
+              margin-top: -20px;
+            }
       
             input{
               margin-bottom: 20px;
+              margin-top: 20px;
+              vertical-align: middle;
             }
             .ow_form_options{
               display: flex;
@@ -655,6 +674,11 @@ body {
               .ow_right{
                 .ow_button{
                   padding: unset;
+                  span{
+                    input{
+                      margin-top: 30px;
+                    }
+                  }
                 }
               }
             }

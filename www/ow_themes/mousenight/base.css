@@ -465,6 +465,8 @@ body {
 a {
   color: #000;
   text-decoration: none;
+  display: block;
+  text-align: center;
 }
 
 a:hover,
@@ -1140,6 +1142,17 @@ body .ow_page_wrap {
   overflow: hidden;
   width: 100%;
 }
+body .ow_page_wrap .signup-form a.forgot-password-link {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+}
+
+body.ow .ow_page_wrap .ow_page_container .guest-content signup-wrap a.forgot-password-link {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+}
 
 .ow_page_container {
   box-sizing: border-box;
@@ -1589,8 +1602,9 @@ body .ow_page_wrap {
   background-size: 60px 24px; /* Specify the size of the background image */
   background-position: left center; /* Position the background image */
   background-repeat: no-repeat;
-  font-size: 24px;
+  font-size: 15px;
   padding-left: 60px;
+  margin-bottom: -15px;
 }
 .guest_master_page .ow_page_container .guest-content .form-wrap input[type=text],
 .guest_master_page .ow_page_container .guest-content .form-wrap .ow_radio_group label {
@@ -1601,7 +1615,7 @@ body .ow_page_wrap {
   background-size: 60px 24px; /* Specify the size of the background image */
   background-position: left center; /* Position the background image */
   background-repeat: no-repeat;
-  font-size: 24px;
+  font-size: 15px;
   padding-left: 60px;
 }
 .guest_master_page .ow_page_container .guest-content .form-wrap .ow_radio_group label {
@@ -1660,8 +1674,13 @@ body .ow_page_wrap {
   display: flex;
   flex-direction: column;
 }
+.guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box .ow_password {
+  margin-top: -20px;
+}
 .guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box input {
   margin-bottom: 20px;
+  margin-top: 20px;
+  vertical-align: middle;
 }
 .guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box .ow_form_options {
   display: flex;
@@ -1669,6 +1688,9 @@ body .ow_page_wrap {
 }
 .guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box .ow_form_options .ow_right .ow_button {
   padding: unset;
+}
+.guest_master_page .ow_page_container .guest-content .sign-in .ow_sign_in_wrap .ow_box .ow_form_options .ow_right .ow_button span input {
+  margin-top: 30px;
 }
 .guest_master_page .ow_page_container .guest-content .sign-in .signup-link {
   display: block;
@@ -6603,9 +6625,9 @@ textarea {
 
 input[type=checkbox] ~ label,
 input[type=radio] ~ label {
-  vertical-align: top;
+  vertical-align: middle;
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 10;
 }
 
