@@ -1662,6 +1662,8 @@ input[type="checkbox"]{
       border-width: 0 3px 3px 0;
       transform: rotate(45deg);
       display: block;
+      margin-top: -6px;
+      margin-left: -2px;
     }
   }
 }
@@ -1676,12 +1678,15 @@ input[type="radio"]{
   border: 2px solid #777777;
   background-color: #fff;
   position: relative;
+  cursor: pointer;
 
 
 
   &:checked{
-    background-color: #FCE9E5;
-    border-color: #{$primary-color};
+    background-color: #777777;
+    border-color: #fff;
+    outline: 2px solid #777777;
+
 
   }
 }
@@ -1841,19 +1846,31 @@ ul.ow_checkbox_group{
 
 .profile_edit_section_wrap{
   .input_wrap{
-    margin-bottom: -4opx;
   }
   .input{
+  
     .match_age{
       
         select{
           margin-right: 20px;
+          margin-left: 10px;
           width: 200px;
            text-align: center;
         }
       
     }
   }
+}
+
+//styling of the Height inpuit field with a drop down
+.profile_edit_section{
+  .questions_wrap{
+    .input{
+      
+    
+    }
+  }
+  
 }
 
 profile_edit_section_wrap{
@@ -2011,7 +2028,7 @@ profile_edit_section_wrap{
         background-color:#FFFFFF;
         padding: 30px;
         border-radius: 40px;
-        margin-bottom: 20px;
+        margin-bottom: -20px;
         box-sizing: border-box;
       
         h2{

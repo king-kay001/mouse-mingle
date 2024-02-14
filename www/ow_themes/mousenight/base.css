@@ -2476,6 +2476,8 @@ input[type=checkbox]:checked::after {
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
   display: block;
+  margin-top: -6px;
+  margin-left: -2px;
 }
 
 input[type=radio] {
@@ -2487,10 +2489,12 @@ input[type=radio] {
   border: 2px solid #777777;
   background-color: #fff;
   position: relative;
+  cursor: pointer;
 }
 input[type=radio]:checked {
-  background-color: #FCE9E5;
-  border-color: #D61A29;
+  background-color: #777777;
+  border-color: #fff;
+  outline: 2px solid #777777;
 }
 
 .my_preference_wrap .header {
@@ -2613,11 +2617,9 @@ ul.ow_checkbox_group {
   text-align: center;
 }
 
-.profile_edit_section_wrap .input_wrap {
-  margin-bottom: -4opx;
-}
 .profile_edit_section_wrap .input .match_age select {
   margin-right: 20px;
+  margin-left: 10px;
   width: 200px;
   text-align: center;
 }
@@ -2738,7 +2740,7 @@ profile_edit_section_wrap .input_wrap {
   background-color: #FFFFFF;
   padding: 30px;
   border-radius: 40px;
-  margin-bottom: 20px;
+  margin-bottom: -20px;
   box-sizing: border-box;
 }
 .profile_edit_wrap .profile_edit_section_wrap .right_pane .profile_edit_section h2 {
